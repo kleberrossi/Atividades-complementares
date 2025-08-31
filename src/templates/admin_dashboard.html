@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% block title %}Dashboard (Admin){% endblock %}
+{% block content %}
+<h1 class="main-title">Dashboard</h1>
+
+<div class="stat-grid">
+  <div class="stat-item">
+    <span class="value">{{ total_alunos or 0 }}</span>
+    <span class="label"><i class="lucide" data-lucide="users"></i>Alunos</span>
+  </div>
+  <div class="stat-item">
+    <span class="value">{{ total_atividades or 0 }}</span>
+    <span class="label"><i class="lucide" data-lucide="clipboard-list"></i>Atividades</span>
+  </div>
+  <div class="stat-item">
+    <span class="value">{{ total_requisicoes or 0 }}</span>
+    <span class="label"><i class="lucide" data-lucide="file-check-2"></i>Requisições</span>
+  </div>
+  <div class="stat-item">
+    <span class="value">{{ requisicoes_pendentes or 0 }}</span>
+    <span class="label"><i class="lucide" data-lucide="clock-3"></i>Pendentes</span>
+  </div>
+</div>
+
+<div class="content-grid">
+  <div class="content-block">
+    <div class="content-block-header">Atividades por Tipo</div>
+    <div class="content-block-body">
+      <div class="item"><span class="value">{{ total_atividades_academicas or 0 }}</span><span class="label">Acadêmicas</span></div>
+      <div class="item"><span class="value">{{ total_atividades_extensao or 0 }}</span><span class="label">Extensão</span></div>
+      <a class="btn" href="{{ url_for('admin_atividades') }}">Gerenciar</a>
+    </div>
+  </div>
+  <div class="content-block">
+    <div class="content-block-header">Requisições por Tipo</div>
+    <div class="content-block-body">
+      <div class="item"><span class="value">{{ requisicoes_academicas or 0 }}</span><span class="label">Acadêmicas</span></div>
+      <div class="item"><span class="value">{{ requisicoes_extensao or 0 }}</span><span class="label">Extensão</span></div>
+      <a class="btn" href="{{ url_for('admin_requisicoes') }}">Ver Requisições</a>
+    </div>
+  </div>
+</div>
+
+<div class="chips">
+  <a class="btn primary" href="{{ url_for('admin_requisicoes') }}"><i class="lucide" data-lucide="play-circle"></i>Processar Pendentes</a>
+  <a class="btn" href="{{ url_for('admin_adicionar_atividade') }}"><i class="lucide" data-lucide="plus-circle"></i>Adicionar Atividade</a>
+</div>
+{% endblock %}

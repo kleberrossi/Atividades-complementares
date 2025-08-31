@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% block title %}Nova Requisição{% endblock %}
+{% block content %}
+<h1 class="main-title">Nova Requisição</h1>
+
+<form method="get" style="margin-bottom:12px;">
+  <span class="help">Filtrar por tipo</span>
+  <select class="input" name="tipo" onchange="this.form.submit()">
+    {% set t = tipo_atual or 'Acadêmica Complementar' %}
+    {% for opt in ['Todas','Acadêmica Complementar','Extensão Universitária'] %}
+      <option value="{{ opt }}" {% if t==opt %}selected{% endif %}>{{ opt }}</option>
+    {% endfor %}
+  </select>
+</form>
+
+<form method="post" enctype="multipart/form-data" class="form-grid" style="max-width:720px;">
+  <label>
+    <div class="help">Atividade</div>
+    <select class="input" name="atividade_id" required>
+      {% for a in atividades %}
+        <option value="{{ a.id }}">{{ a.nome }} — {{ a.tipo_atividade }}</option>
+      {% endfor %}
+    </select>
+  </label>
+
+  <label>
+    <div class="help">Data do Evento</div>
+    <input class="input" type="date" name="data_evento" required/>
+  </label>
+
+  <label>
+    <div class="help">Horas Solicitadas</div>
+    <input class="input" type="number" name="horas_solicitadas" min="0" step="0.01" required/>
+  </label>
+
+  <label>
+    <div class="help">Observação (opcional)</div>
+    <textarea class="input" name="observacao" rows="3"></textarea>
+  </label>
+
+  <label>
+    <div class="help">Comprovante (opcional)</div>
+    <input class="input" type="file" name="arquivo_comprovante"/>
+  </label>
+
+  <div style="display:flex; gap:8px;">
+    <button class="btn primary" type="submit"><i class="lucide" data-lucide="send"></i>Enviar</button>
+    <a class="btn" href="{{ url_for('aluno_dashboard') }}">Cancelar</a>
+  </div>
+</form>
+{% endblock %}

@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% set active_page = 'requisicoes' %}
+{% block title %}Detalhes da Requisição{% endblock %}
+{% block content %}
+<h1 class="main-title">Detalhes da Requisição #{{ requisicao.id }}</h1>
+
+<div class="grid-2">
+  <div class="content-block">
+    <div class="content-block-header">Aluno</div>
+    <div class="content-block-body" style="justify-content:flex-start;">
+      <div class="item">
+        <span class="value">{{ requisicao.AlunoNome }}</span>
+        <span class="label">Nome</span>
+      </div>
+      <div class="item">
+        <span class="value">{{ requisicao.AlunoMatricula }}</span>
+        <span class="label">Matrícula</span>
+      </div>
+    </div>
+  </div>
+  <div class="content-block">
+    <div class="content-block-header">Atividade</div>
+    <div class="content-block-body" style="justify-content:flex-start;">
+      <div class="item">
+        <span class="value">{{ requisicao.AtividadeNome }}</span>
+        <span class="label">{{ requisicao.tipo_atividade }}</span>
+      </div>
+      <div class="item">
+        <span class="value">{{ requisicao.data_evento }}</span>
+        <span class="label">Data do Evento</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="content-block">
+  <div class="content-block-header">Solicitação</div>
+  <div class="grid-1">
+    <div style="display:flex;gap:24px;flex-wrap:wrap">
+      <div><strong>Solicitada:</strong> {{ requisicao.horas_solicitadas }} h</div>
+      <div><strong>Deferida:</strong> {{ requisicao.horas_deferidas or '—' }} h</div>
+      <div><strong>Status:</strong> {{ requisicao.status }}</div>
+    </div>
+    <div><strong>Observação:</strong> {{ requisicao.observacao or '—' }}</div>
+  </div>
+</div>
+
+<div style="display:flex;gap:8px;">
+  <a class="btn" href="{{ url_for('admin_requisicoes') }}"><i class="lucide" data-lucide="arrow-left"></i>Voltar</a>
+  <a class="btn primary" href="{{ url_for('admin_processar_requisicao', req_id=requisicao.id) }}"><i class="lucide" data-lucide="check-circle"></i>Processar</a>
+</div>
+{% endblock %}

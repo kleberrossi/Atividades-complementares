@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% set active_page = 'requisicoes' %}
+{% block title %}Requisições{% endblock %}
+{% block content %}
+<h1 class="main-title">Requisições ({{ status_atual or 'Todas' }})</h1>
+
+<div style="display:flex;gap:8px;margin-bottom:16px;">
+  {% for st in ['Todas','Pendente','Deferida','Deferida Parcialmente','Indeferida'] %}
+    <a class="btn {% if (status_atual or 'Todas')==st %}primary{% endif %}" href="{{ url_for('admin_requisicoes', status=st) }}">
+      {{ st }}
+    </a>
+  {% endfor %}
+</div>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>ID</th><th>Aluno</th><th>Matrícula</th><th>Atividade</th>
+      <th>Solicitação</th><th>Evento</th><th>Horas</th><th>Status</th><th>Ações</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for r in requisicoes %}
+    <tr>
+      <td>{{ r.id }}</td>
+      <td>{{ r.AlunoNome or '—' }}</td>
+      <td>{{ r.AlunoMatricula or '—' }}</td>
+      <td>{{ r.AtividadeNome }}</td>
+      <td>{{ r.data_solicitacao }}</td>
+      <td>{{ r.data_evento }}</td>
+      <td>{{ '%.2f'|format((r.horas_solicitadas or 0)|float) }}</td>
+      <td>
+        <span class="badge
+          {% if r.status=='Pendente' %}warning
+          {% elif r.status=='Deferida' %}success
+          {% elif r.status=='Deferida Parcialmente' %}{% else %}danger{% endif %}">
+          {{ r.status }}
+        </span>
+      </td>
+      <td>
+        <a class="btn" href="{{ url_for('admin_detalhes_requisicao', req_id=r.id) }}"><i class="lucide" data-lucide="eye"></i>Detalhes</a>
+        <a class="btn primary" href="{{ url_for('admin_processar_requisicao', req_id=r.id) }}"><i class="lucide" data-lucide="check-circle"></i>Processar</a>
+      </td>
+    </tr>
+    {% else %}
+    <tr><td colspan="9">Nenhuma requisição encontrada.</td></tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock %}

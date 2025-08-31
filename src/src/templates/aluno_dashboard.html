@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% set active_page = 'dashboard' %}
+{% block title %}Dashboard do Aluno{% endblock %}
+{% block content %}
+<h1 class="main-title">Meu Painel</h1>
+
+<div class="content-grid">
+  <div class="content-block">
+    <div class="content-block-header">Minhas Horas</div>
+    <div class="content-block-body">
+      <div class="item"><span class="value">{{ horas_academicas or 0 }}</span><span class="label">Acadêmicas</span></div>
+      <div class="item"><span class="value">{{ horas_extensao or 0 }}</span><span class="label">Extensão</span></div>
+      <a class="btn" href="{{ url_for('aluno_nova_requisicao') }}"><i class="lucide" data-lucide="plus-circle"></i>Nova Requisição</a>
+    </div>
+  </div>
+  <div class="content-block">
+    <div class="content-block-header">Últimas Requisições</div>
+    <div class="grid-1">
+      <table class="table">
+        <thead><tr><th>ID</th><th>Atividade</th><th>Data</th><th>Status</th></tr></thead>
+        <tbody>
+          {% for r in ultimas %}
+          <tr><td>{{ r.id }}</td><td>{{ r.AtividadeNome }}</td><td>{{ r.data_evento }}</td><td>{{ r.status }}</td></tr>
+          {% else %}
+          <tr><td colspan="4">Nenhum registro.</td></tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+{% endblock %}

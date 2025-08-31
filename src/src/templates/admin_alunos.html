@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% set active_page = 'alunos' %}
+{% block title %}Alunos{% endblock %}
+{% block content %}
+<h1 class="main-title">Alunos</h1>
+
+<div style="display:flex;gap:8px;margin-bottom:16px;">
+  <a class="btn primary" href="{{ url_for('admin_adicionar_aluno') }}"><i class="lucide" data-lucide="user-plus"></i>Novo Aluno</a>
+</div>
+
+<form method="POST" action="{{ url_for('admin_alterar_status_alunos') }}">
+  <table class="table">
+    <thead>
+      <tr>
+        <th><input type="checkbox" id="chk_all"></th>
+        <th>Nome</th><th>E-mail</th><th>Matrícula</th><th>Turma</th><th>Status</th><th>Ações</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for a in alunos %}
+      <tr>
+        <td><input type="checkbox" name="selected_alunos" value="{{ a.usuario_id }}"></td>
+        <td>{{ a.nome }}</td>
+        <td>{{ a.email }}</td>
+        <td>{{ a.matricula }}</td>
+        <td>{{ a.turma or '—' }}</td>
+        <td><span class="badge {% if a.status=='Ativo' %}success{% else %}{% endif %}">{{ a.status }}</span></td>
+        <td>
+          <a class="btn" href="{{ url_for('admin_editar_aluno', usuario_id=a.usuario_id) }}"><i class="lucide" data-lucide="pencil"></i>Editar</a>
+          <form method="POST" action="{{ url_for('admin_deletar_aluno', usuario_id=a.usuario_id) }}" style="display:inline" onsubmit="return confirm('Excluir este aluno?')">
+            <button class="btn" type="submit"><i class="lucide" data-lucide="trash-2"></i>Excluir</button>
+          </form>
+        </td>
+      </tr>
+      {% else %}
+      <tr><td colspan="7">Nenhum aluno cadastrado.</td></tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
+  <div style="display:flex;gap:8px;align-items:center;margin-top:10px;">
+    <select name="novo_status" required>
+      <option value="Ativo">Ativo</option>
+      <option value="Inativo">Inativo</option>
+    </select>
+    <button class="btn"><i class="lucide" data-lucide="refresh-cw"></i>Alterar Status Selecionados</button>
+  </div>
+</form>
+
+<script>
+document.getElementById('chk_all')?.addEventListener('change', e=>{
+  document.querySelectorAll('input[name="selected_alunos"]').forEach(cb=>cb.checked=e.target.checked);
+});
+</script>
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block title %}Meus Dados{% endblock %}
+{% block content %}
+<h1 class="main-title">Meus Dados</h1>
+
+<form method="post" class="form-grid form-2" style="max-width:720px;">
+  <label><div class="help">Nome</div><input class="input" type="text" name="nome" value="{{ aluno.nome }}" required/></label>
+  <label><div class="help">E-mail</div><input class="input" type="email" name="email" value="{{ aluno.email }}" required/></label>
+  <label><div class="help">Matrícula</div><input class="input" type="text" name="matricula" value="{{ aluno.matricula }}" required/></label>
+  <label><div class="help">Turma</div><input class="input" type="text" name="turma" value="{{ aluno.turma }}"/></label>
+  <label style="grid-column:1/-1;">
+    <div class="help">Senha (opcional)</div>
+    <input class="input" type="password" name="senha" placeholder="Deixe em branco para manter"/>
+  </label>
+
+  <div style="grid-column:1/-1; display:flex; gap:8px;">
+    <button class="btn primary" type="submit"><i class="lucide" data-lucide="save"></i>Salvar</button>
+    <a class="btn" href="{{ url_for('aluno_dashboard') }}">Cancelar</a>
+  </div>
+</form>
+{% endblock %}

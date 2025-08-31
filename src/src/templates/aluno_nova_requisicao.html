@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% set active_page = 'dashboard' %}
+{% block title %}Nova Requisição{% endblock %}
+{% block content %}
+<h1 class="main-title">Nova Requisição de Atividade</h1>
+
+<div style="display:flex;gap:8px;margin-bottom:16px;">
+  <a class="btn {% if tipo_atual=='Acadêmica Complementar' %}primary{% endif %}" href="{{ url_for('aluno_nova_requisicao', tipo='Acadêmica Complementar') }}">Acadêmica Complementar</a>
+  <a class="btn {% if tipo_atual=='Extensão Universitária' %}primary{% endif %}" href="{{ url_for('aluno_nova_requisicao', tipo='Extensão Universitária') }}">Extensão Universitária</a>
+</div>
+
+<form method="POST" enctype="multipart/form-data" class="grid-2">
+  <div class="content-block">
+    <div class="grid-1">
+      <div class="field">
+        <label>Atividade</label>
+        <select name="atividade_id" required>
+          <option value="">Selecione...</option>
+          {% for atividade in atividades %}
+            <option value="{{ atividade.id }}">
+              {{ atividade.grupo }} - {{ atividade.nome }}{% if atividade.limite_horas %} (Limite: {{ atividade.limite_horas }}h){% endif %}
+            </option>
+          {% endfor %}
+        </select>
+      </div>
+      <div class="field"><label>Data do Evento</label><input type="date" name="data_evento" required></div>
+      <div class="field"><label>Horas Solicitadas</label><input type="number" name="horas_solicitadas" min="0.5" step="0.5" required></div>
+      <div class="field"><label>Observação (opcional)</label><textarea name="observacao" rows="3"></textarea></div>
+      <div class="field"><label>Comprovante (opcional)</label><input type="file" name="arquivo_comprovante" accept=".pdf,.jpg,.jpeg,.png,.doc,.docx"></div>
+      <div class="flash">
+        <strong>Importante:</strong>
+        {% if tipo_atual == 'Acadêmica Complementar' %}
+          Você precisa cumprir 160 horas de Atividades Acadêmicas Complementares.
+        {% else %}
+          Você precisa cumprir 160 horas de Atividades de Extensão Universitária.
+        {% endif %}
+      </div>
+      <div style="display:flex;gap:8px;">
+        <a class="btn" href="{{ url_for('aluno_dashboard') }}"><i class="lucide" data-lucide="arrow-left"></i>Cancelar</a>
+        <button class="btn primary" type="submit"><i class="lucide" data-lucide="send"></i>Enviar</button>
+      </div>
+    </div>
+  </div>
+</form>
+{% endblock %}

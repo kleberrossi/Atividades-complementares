@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% set active_page = 'dashboard' %}
+{% block title %}Dashboard{% endblock %}
+{% block content %}
+<h1 class="main-title">Dashboard</h1>
+
+<div class="stat-grid">
+  <div class="stat-item">
+    <span class="value">{{ kpi_alunos or 0 }}</span>
+    <span class="label"><i class="lucide" data-lucide="users"></i>Alunos</span>
+  </div>
+  <div class="stat-item">
+    <span class="value">{{ kpi_atividades or 0 }}</span>
+    <span class="label"><i class="lucide" data-lucide="clipboard-list"></i>Atividades</span>
+  </div>
+  <div class="stat-item">
+    <span class="value">{{ kpi_requisicoes or 0 }}</span>
+    <span class="label"><i class="lucide" data-lucide="file-check-2"></i>Requisições</span>
+  </div>
+  <div class="stat-item">
+    <span class="value">{{ kpi_pendentes or 0 }}</span>
+    <span class="label"><i class="lucide" data-lucide="clock-3"></i>Pendentes</span>
+  </div>
+</div>
+
+<div class="content-grid">
+  <div class="content-block">
+    <div class="content-block-header">Resumo por Status</div>
+    <div class="content-block-body">
+      <div class="item"><span class="value">{{ resumo.Pendente or 0 }}</span><span class="label">Pendente</span></div>
+      <div class="item"><span class="value">{{ resumo.Deferida or 0 }}</span><span class="label">Deferida</span></div>
+      <div class="item"><span class="value">{{ resumo['Deferida Parcialmente'] or 0 }}</span><span class="label">Parcial</span></div>
+      <div class="item"><span class="value">{{ resumo.Indeferida or 0 }}</span><span class="label">Indeferida</span></div>
+    </div>
+  </div>
+  <div class="content-block">
+    <div class="content-block-header">Ações rápidas</div>
+    <div class="content-block-body">
+      <a class="btn primary" href="{{ url_for('admin_requisicoes', status='Pendente') }}"><i class="lucide" data-lucide="play-circle"></i>Processar Pendentes</a>
+      <a class="btn" href="{{ url_for('admin_adicionar_atividade') }}"><i class="lucide" data-lucide="plus-circle"></i>Adicionar Atividade</a>
+    </div>
+  </div>
+</div>
+{% endblock %}

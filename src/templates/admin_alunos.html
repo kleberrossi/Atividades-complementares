@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block title %}Alunos (Admin){% endblock %}
+{% block content %}
+<h1 class="main-title">Alunos</h1>
+
+<form method="post" action="{{ url_for('admin_alterar_status_alunos') }}" style="margin-bottom:12px;">
+  <div class="chips">
+    <select class="input" name="novo_status" style="max-width:220px;">
+      <option value="Ativo">Ativo</option>
+      <option value="Inativo">Inativo</option>
+    </select>
+    <button class="btn" type="submit"><i class="lucide" data-lucide="check"></i>Alterar status selecionados</button>
+    <a class="btn" href="{{ url_for('admin_adicionar_aluno') }}"><i class="lucide" data-lucide="plus-circle"></i>Novo Aluno</a>
+  </div>
+
+  <table class="table" style="margin-top:12px;">
+    <thead>
+      <tr>
+        <th style="width:36px;"></th>
+        <th>Nome</th><th>Email</th><th>Matrícula</th><th>Turma</th><th>Status</th><th>Ações</th>
+      </tr>
+    </thead>
+    <tbody>
+    {% for a in alunos %}
+      <tr>
+        <td><input type="checkbox" name="selected_alunos" value="{{ a.usuario_id }}"/></td>
+        <td>{{ a.nome }}</td>
+        <td>{{ a.email }}</td>
+        <td>{{ a.matricula }}</td>
+        <td>{{ a.turma }}</td>
+        <td>{{ a.status }}</td>
+        <td style="display:flex; gap:8px;">
+          <a class="btn" href="{{ url_for('admin_editar_aluno', usuario_id=a.usuario_id) }}">Editar</a>
+          <form method="post" action="{{ url_for('admin_deletar_aluno', usuario_id=a.usuario_id) }}" onsubmit="return confirm('Deletar este aluno?');">
+            <button class="btn" type="submit"><i class="lucide" data-lucide="trash-2"></i>Excluir</button>
+          </form>
+        </td>
+      </tr>
+    {% else %}
+      <tr><td colspan="7">Nenhum aluno cadastrado.</td></tr>
+    {% endfor %}
+    </tbody>
+  </table>
+</form>
+{% endblock %}

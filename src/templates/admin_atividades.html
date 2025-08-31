@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% block title %}Atividades (Admin){% endblock %}
+{% block content %}
+<h1 class="main-title">Atividades</h1>
+
+<form method="get" style="margin-bottom:12px; display:flex; gap:8px; align-items:center;">
+  <span class="help">Filtrar por tipo</span>
+  <select class="input" name="tipo" onchange="this.form.submit()">
+    {% set t = tipo_atual or 'Todas' %}
+    {% for opt in ['Todas','Acadêmica Complementar','Extensão Universitária'] %}
+      <option value="{{ opt }}" {% if t==opt %}selected{% endif %}>{{ opt }}</option>
+    {% endfor %}
+  </select>
+  <a class="btn" href="{{ url_for('admin_adicionar_atividade') }}"><i class="lucide" data-lucide="plus-circle"></i>Nova</a>
+</form>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>#</th><th>Grupo</th><th>Nome</th><th>Tipo</th><th>Limite Horas (grupo)</th><th>Limitações</th><th>Ações</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for a in atividades %}
+    <tr>
+      <td>{{ a.id }}</td>
+      <td>{{ a.grupo }}</td>
+      <td>{{ a.nome }}</td>
+      <td>{{ a.tipo_atividade }}</td>
+      <td>{{ a.limite_horas or '-' }}</td>
+      <td>
+        {% if a.tem_limitacao %}
+          {{ a.tipo_limitacao }}
+          {% if a.tipo_limitacao=='total' %} ({{ a.limite_horas_total }}h){% endif %}
+          {% if a.tipo_limitacao=='semestral' %} ({{ a.limite_horas_semestral }}h/sem){% endif %}
+        {% else %}
+          -
+        {% endif %}
+      </td>
+      <td style="display:flex; gap:8px;">
+        <a class="btn" href="{{ url_for('admin_editar_atividade', atividade_id=a.id) }}">Editar</a>
+        <form method="post" action="{{ url_for('admin_deletar_atividade', atividade_id=a.id) }}" onsubmit="return confirm('Deletar esta atividade?');">
+          <button class="btn" type="submit"><i class="lucide" data-lucide="trash-2"></i>Excluir</button>
+        </form>
+      </td>
+    </tr>
+  {% else %}
+    <tr><td colspan="7">Nenhuma atividade encontrada.</td></tr>
+  {% endfor %}
+  </tbody>
+</table>
+{% endblock %}

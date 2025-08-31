@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/modern-style.css') }}" />
+  </head>
+  <body>
+    <main class="login-page">
+      <div class="login-card">
+        <img src="{{ url_for('static', filename='images/ej_logo_dark.jpg') }}" alt="Logo" width="100" />
+        <h1 class="login-title">Sistema de Atividades Complementares</h1>
+        <p class="login-subtitle">Faculdade de Tecnologia em Aviação Civil</p>
+        <form method="POST" action="{{ url_for('login') }}" class="login-form">
+          <label for="email">E-mail</label>
+          <input type="email" id="email" name="email" placeholder="Seu e-mail institucional" required />
+
+          <label for="senha">Senha</label>
+          <input type="password" id="senha" name="senha" placeholder="Sua senha" required />
+
+          <button type="submit">Entrar</button>
+        </form>
+        <p class="login-footer">
+          Em caso de problemas de acesso, entre em contato com a coordenação.
+        </p>
+      </div>
+    </main>
+  </body>
+</html>

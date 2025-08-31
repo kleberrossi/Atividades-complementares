@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% set active_page = 'alunos' %}
+{% block title %}Editar Aluno{% endblock %}
+{% block content %}
+<h1 class="main-title">Editar Aluno</h1>
+
+<form method="POST" class="grid-2">
+  <div class="content-block">
+    <div class="grid-1">
+      <div class="field"><label>Nome</label><input name="nome" value="{{ aluno.nome }}" required></div>
+      <div class="field"><label>E-mail</label><input type="email" name="email" value="{{ aluno.email }}" required></div>
+      <div class="field"><label>Matrícula</label><input name="matricula" value="{{ aluno.matricula }}" required></div>
+      <div class="field"><label>Turma</label><input name="turma" value="{{ aluno.turma or '' }}"></div>
+      <div class="field">
+        <label>Status</label>
+        <select name="status">
+          <option value="Ativo" {% if aluno.status=='Ativo' %}selected{% endif %}>Ativo</option>
+          <option value="Inativo" {% if aluno.status=='Inativo' %}selected{% endif %}>Inativo</option>
+        </select>
+      </div>
+      <div style="display:flex;gap:8px">
+        <button class="btn primary"><i class="lucide" data-lucide="save"></i>Salvar</button>
+        <a class="btn" href="{{ url_for('admin_alunos') }}">Cancelar</a>
+      </div>
+    </div>
+  </div>
+</form>
+{% endblock %}

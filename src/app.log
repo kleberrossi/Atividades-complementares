@@ -1,0 +1,1156 @@
+2025-08-09 13:42:45,577 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://169.254.0.21:5000
+2025-08-09 13:42:45,577 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-08-09 13:42:45,583 - werkzeug - INFO -  * Restarting with stat
+2025-08-09 13:42:45,919 - werkzeug - WARNING -  * Debugger is active!
+2025-08-09 13:42:45,919 - werkzeug - INFO -  * Debugger PIN: 972-938-100
+2025-08-09 13:43:24,546 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://169.254.0.21:5000
+2025-08-09 13:43:24,546 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-08-09 13:43:44,054 - werkzeug - INFO - 127.0.0.1 - - [09/Aug/2025 13:43:44] "[32mGET / HTTP/1.1[0m" 302 -
+2025-08-09 13:43:44,059 - main - ERROR - Exception on /login [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/dist-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/sistema_final_completo/src/main.py", line 820, in login
+    return render_template("login.html")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/flask/templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/jinja2/environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/jinja2/environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/jinja2/environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/jinja2/loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/flask/templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/flask/templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: login.html
+2025-08-09 13:43:44,061 - werkzeug - INFO - 127.0.0.1 - - [09/Aug/2025 13:43:44] "[35m[1mGET /login HTTP/1.1[0m" 500 -
+2025-08-09 13:43:44,130 - werkzeug - INFO - 127.0.0.1 - - [09/Aug/2025 13:43:44] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-08-09 13:43:57,217 - werkzeug - INFO - 127.0.0.1 - - [09/Aug/2025 13:43:57] "[32mGET / HTTP/1.1[0m" 302 -
+2025-08-09 13:43:57,221 - main - ERROR - Exception on /login [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/dist-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/sistema_final_completo/src/main.py", line 820, in login
+    return render_template("login.html")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/flask/templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/jinja2/environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/jinja2/environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/jinja2/environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/jinja2/loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/flask/templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/flask/templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: login.html
+2025-08-09 13:43:57,222 - werkzeug - INFO - 127.0.0.1 - - [09/Aug/2025 13:43:57] "[35m[1mGET /login HTTP/1.1[0m" 500 -
+2025-08-09 13:44:45,945 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://169.254.0.21:5000
+2025-08-09 13:44:45,945 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-08-09 13:44:45,946 - werkzeug - INFO -  * Restarting with stat
+2025-08-09 13:44:46,264 - werkzeug - WARNING -  * Debugger is active!
+2025-08-09 13:44:46,264 - werkzeug - INFO -  * Debugger PIN: 704-054-423
+2025-08-09 13:45:18,599 - werkzeug - INFO - 127.0.0.1 - - [09/Aug/2025 13:45:18] "[32mGET / HTTP/1.1[0m" 302 -
+2025-08-09 13:45:18,608 - werkzeug - INFO - 127.0.0.1 - - [09/Aug/2025 13:45:18] "GET /login HTTP/1.1" 200 -
+2025-08-09 13:45:42,702 - werkzeug - INFO - 127.0.0.1 - - [09/Aug/2025 13:45:42] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-08-09 13:45:42,715 - werkzeug - INFO - 127.0.0.1 - - [09/Aug/2025 13:45:42] "GET /admin/dashboard HTTP/1.1" 200 -
+2025-08-09 13:45:51,598 - werkzeug - INFO - 127.0.0.1 - - [09/Aug/2025 13:45:51] "[35m[1mGET /admin/atividades/extensao HTTP/1.1[0m" 500 -
+2025-08-09 13:45:51,612 - werkzeug - INFO - 127.0.0.1 - - [09/Aug/2025 13:45:51] "GET /admin/atividades/extensao?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-08-09 13:45:51,614 - werkzeug - INFO - 127.0.0.1 - - [09/Aug/2025 13:45:51] "GET /admin/atividades/extensao?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-08-09 13:45:51,633 - werkzeug - INFO - 127.0.0.1 - - [09/Aug/2025 13:45:51] "GET /admin/atividades/extensao?__debugger__=yes&cmd=resource&f=console.png&s=5LHx1QoQKMrMVAxBi3fX HTTP/1.1" 200 -
+2025-08-09 13:45:51,677 - werkzeug - INFO - 127.0.0.1 - - [09/Aug/2025 13:45:51] "GET /admin/atividades/extensao?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-08-09 13:45:51,685 - werkzeug - INFO - 127.0.0.1 - - [09/Aug/2025 13:45:51] "[36mGET /admin/atividades/extensao?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-08-09 13:46:33,713 - werkzeug - INFO - 127.0.0.1 - - [09/Aug/2025 13:46:33] "GET /admin/atividades/extensao HTTP/1.1" 200 -
+2025-08-09 13:46:41,077 - werkzeug - INFO - 127.0.0.1 - - [09/Aug/2025 13:46:41] "GET /admin/adicionar_atividade HTTP/1.1" 200 -
+2025-08-12 08:15:05,928 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://169.254.0.21:5000
+2025-08-12 08:15:05,928 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-08-12 08:15:39,091 - werkzeug - INFO - 10.99.111.1 - - [12/Aug/2025 08:15:39] "[32mGET / HTTP/1.1[0m" 302 -
+2025-08-12 08:15:39,109 - werkzeug - INFO - 10.99.111.1 - - [12/Aug/2025 08:15:39] "GET /login HTTP/1.1" 200 -
+2025-08-12 08:15:39,395 - werkzeug - INFO - 10.99.111.1 - - [12/Aug/2025 08:15:39] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-08-12 08:16:04,136 - werkzeug - INFO - 10.99.111.1 - - [12/Aug/2025 08:16:04] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-08-12 08:16:04,155 - werkzeug - INFO - 10.99.111.1 - - [12/Aug/2025 08:16:04] "GET /admin/dashboard HTTP/1.1" 200 -
+2025-08-12 08:16:28,317 - werkzeug - INFO - 10.99.111.1 - - [12/Aug/2025 08:16:28] "[32mHEAD / HTTP/1.1[0m" 302 -
+2025-08-12 08:16:28,325 - werkzeug - INFO - 10.99.111.1 - - [12/Aug/2025 08:16:28] "HEAD /login HTTP/1.1" 200 -
+2025-08-12 08:16:28,332 - werkzeug - INFO - 10.99.111.1 - - [12/Aug/2025 08:16:28] "[32mGET / HTTP/1.1[0m" 302 -
+2025-08-12 08:16:28,354 - werkzeug - INFO - 10.99.111.1 - - [12/Aug/2025 08:16:28] "GET /login HTTP/1.1" 200 -
+2025-08-12 08:22:04,300 - werkzeug - INFO - 10.99.111.1 - - [12/Aug/2025 08:22:04] "[32mGET / HTTP/1.1[0m" 302 -
+2025-08-12 08:22:04,443 - werkzeug - INFO - 10.99.111.1 - - [12/Aug/2025 08:22:04] "GET /login HTTP/1.1" 200 -
+2025-08-12 08:22:06,582 - werkzeug - INFO - 10.99.111.1 - - [12/Aug/2025 08:22:06] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-08-12 08:22:37,532 - werkzeug - INFO - 10.99.111.1 - - [12/Aug/2025 08:22:37] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-08-12 08:22:37,683 - werkzeug - INFO - 10.99.111.1 - - [12/Aug/2025 08:22:37] "GET /admin/dashboard HTTP/1.1" 200 -
+2025-08-12 08:22:53,813 - werkzeug - INFO - 10.99.111.1 - - [12/Aug/2025 08:22:53] "GET /admin/atividades/academicas HTTP/1.1" 200 -
+2025-08-12 08:23:04,684 - werkzeug - INFO - 10.99.111.1 - - [12/Aug/2025 08:23:04] "GET /admin/atividades HTTP/1.1" 200 -
+2025-08-12 08:23:09,810 - werkzeug - INFO - 10.99.111.1 - - [12/Aug/2025 08:23:09] "GET /admin/atividades?tipo=Acadêmica+Complementar HTTP/1.1" 200 -
+2025-08-12 08:23:17,693 - main - ERROR - Exception on /admin/alunos [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/dist-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/sistema_final_completo/src/main.py", line 23, in decorated_function
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/sistema_final_completo/src/main.py", line 522, in admin_alunos
+    return render_template("admin_alunos.html", alunos=alunos)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/flask/templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/jinja2/environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/jinja2/environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/jinja2/environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/jinja2/loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/flask/templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/flask/templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: admin_alunos.html
+2025-08-12 08:23:17,695 - werkzeug - INFO - 10.99.111.1 - - [12/Aug/2025 08:23:17] "[35m[1mGET /admin/alunos HTTP/1.1[0m" 500 -
+2025-08-12 08:24:57,284 - werkzeug - INFO - 10.99.111.1 - - [12/Aug/2025 08:24:57] "[32mGET / HTTP/1.1[0m" 302 -
+2025-08-12 08:24:57,294 - werkzeug - INFO - 10.99.111.1 - - [12/Aug/2025 08:24:57] "GET /login HTTP/1.1" 200 -
+2025-08-12 18:19:57,982 - werkzeug - INFO - 10.155.36.1 - - [12/Aug/2025 18:19:57] "[32mGET / HTTP/1.1[0m" 302 -
+2025-08-12 18:19:58,133 - werkzeug - INFO - 10.155.36.1 - - [12/Aug/2025 18:19:58] "GET /login HTTP/1.1" 200 -
+2025-08-12 18:19:59,369 - werkzeug - INFO - 10.155.36.1 - - [12/Aug/2025 18:19:59] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-08-13 07:37:42,888 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://169.254.0.21:5000
+2025-08-13 07:37:42,888 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-08-13 07:38:50,825 - werkzeug - INFO - 10.240.121.1 - - [13/Aug/2025 07:38:50] "[32mGET / HTTP/1.1[0m" 302 -
+2025-08-13 07:38:50,844 - werkzeug - INFO - 10.240.121.1 - - [13/Aug/2025 07:38:50] "GET /login HTTP/1.1" 200 -
+2025-08-13 07:38:50,878 - werkzeug - INFO - 10.240.121.1 - - [13/Aug/2025 07:38:50] "GET /static/images/ej_logo_blue.png HTTP/1.1" 200 -
+2025-08-13 07:39:22,914 - werkzeug - INFO - 10.240.121.1 - - [13/Aug/2025 07:39:22] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-08-13 07:39:22,934 - werkzeug - INFO - 10.240.121.1 - - [13/Aug/2025 07:39:22] "GET /admin/dashboard HTTP/1.1" 200 -
+2025-08-13 07:39:22,963 - werkzeug - INFO - 10.240.121.1 - - [13/Aug/2025 07:39:22] "GET /static/images/ej_logo_dark.jpg HTTP/1.1" 200 -
+2025-08-13 07:39:31,803 - werkzeug - INFO - 10.240.121.1 - - [13/Aug/2025 07:39:31] "GET /admin/atividades/extensao HTTP/1.1" 200 -
+2025-08-14 06:16:00,290 - werkzeug - INFO - 10.118.19.1 - - [14/Aug/2025 06:16:00] "GET /admin/adicionar_atividade HTTP/1.1" 200 -
+2025-08-14 06:17:07,009 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://169.254.0.21:5000
+2025-08-14 06:17:07,009 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-08-14 06:18:41,261 - werkzeug - INFO - 10.118.19.1 - - [14/Aug/2025 06:18:41] "[32mHEAD / HTTP/1.1[0m" 302 -
+2025-08-14 06:18:41,273 - werkzeug - INFO - 10.118.19.1 - - [14/Aug/2025 06:18:41] "HEAD /login HTTP/1.1" 200 -
+2025-08-14 06:18:41,313 - werkzeug - INFO - 10.118.19.1 - - [14/Aug/2025 06:18:41] "[32mGET / HTTP/1.1[0m" 302 -
+2025-08-14 06:18:41,448 - werkzeug - INFO - 10.118.19.1 - - [14/Aug/2025 06:18:41] "GET /login HTTP/1.1" 200 -
+2025-08-14 06:21:16,827 - werkzeug - INFO - 10.118.19.1 - - [14/Aug/2025 06:21:16] "[32mGET / HTTP/1.1[0m" 302 -
+2025-08-14 06:21:16,970 - werkzeug - INFO - 10.118.19.1 - - [14/Aug/2025 06:21:16] "GET /login HTTP/1.1" 200 -
+2025-08-14 06:21:17,187 - werkzeug - INFO - 10.118.19.1 - - [14/Aug/2025 06:21:17] "GET /static/images/ej_logo_blue.png HTTP/1.1" 200 -
+2025-08-14 06:21:18,066 - werkzeug - INFO - 10.118.19.1 - - [14/Aug/2025 06:21:18] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-08-14 06:21:58,721 - werkzeug - INFO - 10.118.19.1 - - [14/Aug/2025 06:21:58] "POST /login HTTP/1.1" 200 -
+2025-08-14 06:21:58,901 - werkzeug - INFO - 10.118.19.1 - - [14/Aug/2025 06:21:58] "[36mGET /static/images/ej_logo_blue.png HTTP/1.1[0m" 304 -
+2025-08-14 06:22:54,092 - werkzeug - INFO - 10.118.19.1 - - [14/Aug/2025 06:22:54] "POST /login HTTP/1.1" 200 -
+2025-08-14 06:22:54,313 - werkzeug - INFO - 10.118.19.1 - - [14/Aug/2025 06:22:54] "[36mGET /static/images/ej_logo_blue.png HTTP/1.1[0m" 304 -
+2025-08-14 06:23:24,269 - werkzeug - INFO - 10.118.19.1 - - [14/Aug/2025 06:23:24] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-08-14 06:23:24,420 - werkzeug - INFO - 10.118.19.1 - - [14/Aug/2025 06:23:24] "GET /admin/dashboard HTTP/1.1" 200 -
+2025-08-14 06:23:24,651 - werkzeug - INFO - 10.118.19.1 - - [14/Aug/2025 06:23:24] "GET /static/images/ej_logo_dark.jpg HTTP/1.1" 200 -
+2025-08-14 06:23:41,544 - main - ERROR - Exception on /admin/requisicoes [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/dist-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/sistema_final_completo/src/main.py", line 23, in decorated_function
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/sistema_final_completo/src/main.py", line 384, in admin_requisicoes
+    return render_template("admin_requisicoes.html", requisicoes=requisicoes, status_atual=status_filtro)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/flask/templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/jinja2/environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/jinja2/environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/jinja2/environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/jinja2/loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/flask/templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/flask/templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: admin_requisicoes.html
+2025-08-14 06:23:41,547 - werkzeug - INFO - 10.118.19.1 - - [14/Aug/2025 06:23:41] "[35m[1mGET /admin/requisicoes HTTP/1.1[0m" 500 -
+2025-08-14 06:23:45,754 - werkzeug - INFO - 10.118.19.1 - - [14/Aug/2025 06:23:45] "GET /admin/atividades HTTP/1.1" 200 -
+2025-08-14 06:23:49,586 - werkzeug - INFO - 10.118.19.1 - - [14/Aug/2025 06:23:49] "GET /admin/adicionar_atividade HTTP/1.1" 200 -
+2025-08-14 06:24:04,734 - werkzeug - INFO - 10.118.19.1 - - [14/Aug/2025 06:24:04] "GET /admin/atividades HTTP/1.1" 200 -
+2025-08-14 06:24:08,106 - werkzeug - INFO - 10.118.19.1 - - [14/Aug/2025 06:24:08] "GET /admin/dashboard HTTP/1.1" 200 -
+2025-08-14 06:24:08,323 - werkzeug - INFO - 10.118.19.1 - - [14/Aug/2025 06:24:08] "[36mGET /static/images/ej_logo_dark.jpg HTTP/1.1[0m" 304 -
+2025-08-14 06:24:11,814 - main - ERROR - Exception on /admin/alunos [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/dist-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/sistema_final_completo/src/main.py", line 23, in decorated_function
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/sistema_final_completo/src/main.py", line 522, in admin_alunos
+    return render_template("admin_alunos.html", alunos=alunos)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/flask/templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/jinja2/environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/jinja2/environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/jinja2/environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/jinja2/loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/flask/templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/flask/templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: admin_alunos.html
+2025-08-14 06:24:11,815 - werkzeug - INFO - 10.118.19.1 - - [14/Aug/2025 06:24:11] "[35m[1mGET /admin/alunos HTTP/1.1[0m" 500 -
+2025-08-14 06:24:15,101 - main - ERROR - Exception on /admin/alunos [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/dist-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/sistema_final_completo/src/main.py", line 23, in decorated_function
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/sistema_final_completo/src/main.py", line 522, in admin_alunos
+    return render_template("admin_alunos.html", alunos=alunos)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/flask/templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/jinja2/environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/jinja2/environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/jinja2/environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/jinja2/loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/flask/templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/flask/templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: admin_alunos.html
+2025-08-14 06:24:15,102 - werkzeug - INFO - 10.118.19.1 - - [14/Aug/2025 06:24:15] "[35m[1mGET /admin/alunos HTTP/1.1[0m" 500 -
+2025-08-15 07:56:38,185 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://169.254.0.21:5000
+2025-08-15 07:56:38,185 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-08-15 07:57:01,863 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://169.254.0.21:5000
+2025-08-15 07:57:01,863 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-08-16 06:19:43,208 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://169.254.0.21:5000
+2025-08-16 06:19:43,208 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-08-16 06:20:22,696 - werkzeug - INFO - 10.36.50.1 - - [16/Aug/2025 06:20:22] "[32mGET / HTTP/1.1[0m" 302 -
+2025-08-16 06:20:22,712 - werkzeug - INFO - 10.36.50.1 - - [16/Aug/2025 06:20:22] "GET /login HTTP/1.1" 200 -
+2025-08-16 06:20:22,749 - werkzeug - INFO - 10.36.50.1 - - [16/Aug/2025 06:20:22] "GET /static/css/modern-style.css HTTP/1.1" 200 -
+2025-08-16 06:20:22,750 - werkzeug - INFO - 10.36.50.1 - - [16/Aug/2025 06:20:22] "[36mGET /static/images/ej_logo_blue.png HTTP/1.1[0m" 304 -
+2025-08-16 06:20:51,458 - werkzeug - INFO - 10.36.50.1 - - [16/Aug/2025 06:20:51] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-08-16 06:20:51,648 - werkzeug - INFO - 10.36.50.1 - - [16/Aug/2025 06:20:51] "GET /admin/dashboard HTTP/1.1" 200 -
+2025-08-16 06:20:51,685 - werkzeug - INFO - 10.36.50.1 - - [16/Aug/2025 06:20:51] "[36mGET /static/images/ej_logo_dark.jpg HTTP/1.1[0m" 304 -
+2025-08-16 06:20:51,686 - werkzeug - INFO - 10.36.50.1 - - [16/Aug/2025 06:20:51] "[36mGET /static/css/modern-style.css HTTP/1.1[0m" 304 -
+2025-08-16 06:21:08,320 - werkzeug - INFO - 10.36.50.1 - - [16/Aug/2025 06:21:08] "GET /admin/atividades/extensao HTTP/1.1" 200 -
+2025-08-16 06:21:39,069 - werkzeug - INFO - 10.36.50.1 - - [16/Aug/2025 06:21:39] "[32mHEAD / HTTP/1.1[0m" 302 -
+2025-08-16 06:21:39,078 - werkzeug - INFO - 10.36.50.1 - - [16/Aug/2025 06:21:39] "HEAD /login HTTP/1.1" 200 -
+2025-08-16 06:21:39,085 - werkzeug - INFO - 10.36.50.1 - - [16/Aug/2025 06:21:39] "[32mGET / HTTP/1.1[0m" 302 -
+2025-08-16 06:21:39,105 - werkzeug - INFO - 10.36.50.1 - - [16/Aug/2025 06:21:39] "GET /login HTTP/1.1" 200 -
+2025-08-16 06:32:20,822 - werkzeug - INFO - 10.36.50.1 - - [16/Aug/2025 06:32:20] "[32mGET / HTTP/1.1[0m" 302 -
+2025-08-16 06:32:20,970 - werkzeug - INFO - 10.36.50.1 - - [16/Aug/2025 06:32:20] "GET /login HTTP/1.1" 200 -
+2025-08-16 06:32:21,131 - werkzeug - INFO - 10.36.50.1 - - [16/Aug/2025 06:32:21] "GET /static/images/ej_logo_blue.png HTTP/1.1" 200 -
+2025-08-16 06:32:21,133 - werkzeug - INFO - 10.36.50.1 - - [16/Aug/2025 06:32:21] "GET /static/css/modern-style.css HTTP/1.1" 200 -
+2025-08-16 06:32:22,019 - werkzeug - INFO - 10.36.50.1 - - [16/Aug/2025 06:32:22] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-08-16 06:32:41,456 - werkzeug - INFO - 10.36.50.1 - - [16/Aug/2025 06:32:41] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-08-16 06:32:41,602 - werkzeug - INFO - 10.36.50.1 - - [16/Aug/2025 06:32:41] "GET /admin/dashboard HTTP/1.1" 200 -
+2025-08-16 06:32:42,414 - werkzeug - INFO - 10.36.50.1 - - [16/Aug/2025 06:32:42] "GET /static/images/ej_logo_dark.jpg HTTP/1.1" 200 -
+2025-08-16 06:32:42,420 - werkzeug - INFO - 10.36.50.1 - - [16/Aug/2025 06:32:42] "[36mGET /static/css/modern-style.css HTTP/1.1[0m" 304 -
+2025-08-16 06:32:58,516 - werkzeug - INFO - 10.36.50.1 - - [16/Aug/2025 06:32:58] "GET /admin/adicionar_atividade HTTP/1.1" 200 -
+2025-08-16 06:33:24,889 - werkzeug - INFO - 10.36.50.1 - - [16/Aug/2025 06:33:24] "[32mPOST /admin/adicionar_atividade HTTP/1.1[0m" 302 -
+2025-08-16 06:33:25,042 - werkzeug - INFO - 10.36.50.1 - - [16/Aug/2025 06:33:25] "GET /admin/atividades HTTP/1.1" 200 -
+2025-08-16 06:33:38,201 - main - ERROR - Exception on /admin/requisicoes [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/dist-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/sistema_final_completo/src/main.py", line 23, in decorated_function
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/sistema_final_completo/src/main.py", line 384, in admin_requisicoes
+    return render_template("admin_requisicoes.html", requisicoes=requisicoes, status_atual=status_filtro)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/flask/templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/jinja2/environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/jinja2/environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/jinja2/environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/jinja2/loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/flask/templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/flask/templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: admin_requisicoes.html
+2025-08-16 06:33:38,204 - werkzeug - INFO - 10.36.50.1 - - [16/Aug/2025 06:33:38] "[35m[1mGET /admin/requisicoes?status=Pendente HTTP/1.1[0m" 500 -
+2025-08-17 11:45:23,227 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://169.254.0.21:5000
+2025-08-17 11:45:23,227 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-08-17 11:46:00,592 - werkzeug - INFO - 10.197.16.1 - - [17/Aug/2025 11:46:00] "[32mGET / HTTP/1.1[0m" 302 -
+2025-08-17 11:46:00,606 - werkzeug - INFO - 10.197.16.1 - - [17/Aug/2025 11:46:00] "GET /login HTTP/1.1" 200 -
+2025-08-17 11:46:00,639 - werkzeug - INFO - 10.197.16.1 - - [17/Aug/2025 11:46:00] "[36mGET /static/images/ej_logo_blue.png HTTP/1.1[0m" 304 -
+2025-08-17 11:46:00,641 - werkzeug - INFO - 10.197.16.1 - - [17/Aug/2025 11:46:00] "[36mGET /static/css/modern-style.css HTTP/1.1[0m" 304 -
+2025-08-17 11:46:01,008 - werkzeug - INFO - 10.197.16.1 - - [17/Aug/2025 11:46:01] "[36mGET /static/css/modern-style.css HTTP/1.1[0m" 304 -
+2025-08-17 11:46:32,720 - werkzeug - INFO - 10.197.16.1 - - [17/Aug/2025 11:46:32] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-08-17 11:46:32,748 - werkzeug - INFO - 10.197.16.1 - - [17/Aug/2025 11:46:32] "GET /admin/dashboard HTTP/1.1" 200 -
+2025-08-17 11:46:32,791 - werkzeug - INFO - 10.197.16.1 - - [17/Aug/2025 11:46:32] "[36mGET /static/images/ej_logo_dark.jpg HTTP/1.1[0m" 304 -
+2025-08-17 11:46:32,793 - werkzeug - INFO - 10.197.16.1 - - [17/Aug/2025 11:46:32] "[36mGET /static/css/modern-style.css HTTP/1.1[0m" 304 -
+2025-08-17 11:46:33,620 - werkzeug - INFO - 10.197.16.1 - - [17/Aug/2025 11:46:33] "[36mGET /static/css/modern-style.css HTTP/1.1[0m" 304 -
+2025-08-17 11:46:42,825 - werkzeug - INFO - 10.197.16.1 - - [17/Aug/2025 11:46:42] "GET /admin/adicionar_atividade HTTP/1.1" 200 -
+2025-08-17 11:46:42,881 - werkzeug - INFO - 10.197.16.1 - - [17/Aug/2025 11:46:42] "[36mGET /static/images/ej_logo_dark.jpg HTTP/1.1[0m" 304 -
+2025-08-17 11:46:42,883 - werkzeug - INFO - 10.197.16.1 - - [17/Aug/2025 11:46:42] "[36mGET /static/css/modern-style.css HTTP/1.1[0m" 304 -
+2025-08-17 11:46:43,327 - werkzeug - INFO - 10.197.16.1 - - [17/Aug/2025 11:46:43] "[36mGET /static/css/modern-style.css HTTP/1.1[0m" 304 -
+2025-08-18 09:05:39,473 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://169.254.0.21:5000
+2025-08-18 09:05:39,474 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-08-18 09:07:28,249 - werkzeug - INFO - 10.35.125.1 - - [18/Aug/2025 09:07:28] "[32mHEAD / HTTP/1.1[0m" 302 -
+2025-08-18 09:07:28,261 - werkzeug - INFO - 10.35.125.1 - - [18/Aug/2025 09:07:28] "HEAD /login HTTP/1.1" 200 -
+2025-08-18 09:07:28,267 - werkzeug - INFO - 10.35.125.1 - - [18/Aug/2025 09:07:28] "[32mGET / HTTP/1.1[0m" 302 -
+2025-08-18 09:07:28,286 - werkzeug - INFO - 10.35.125.1 - - [18/Aug/2025 09:07:28] "GET /login HTTP/1.1" 200 -
+2025-08-18 09:20:15,983 - werkzeug - INFO - 10.108.198.1 - - [18/Aug/2025 09:20:15] "[32mGET / HTTP/1.1[0m" 302 -
+2025-08-18 09:20:16,305 - werkzeug - INFO - 10.108.198.1 - - [18/Aug/2025 09:20:16] "GET /login HTTP/1.1" 200 -
+2025-08-18 09:20:17,021 - werkzeug - INFO - 10.108.198.1 - - [18/Aug/2025 09:20:17] "GET /static/css/modern-style.css HTTP/1.1" 200 -
+2025-08-18 09:20:17,023 - werkzeug - INFO - 10.108.198.1 - - [18/Aug/2025 09:20:17] "GET /static/images/ej_logo_blue.png HTTP/1.1" 200 -
+2025-08-18 09:20:18,339 - werkzeug - INFO - 10.108.198.1 - - [18/Aug/2025 09:20:18] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-08-18 09:20:29,787 - werkzeug - INFO - 10.108.198.1 - - [18/Aug/2025 09:20:29] "POST /login HTTP/1.1" 200 -
+2025-08-18 09:20:31,389 - werkzeug - INFO - 10.108.198.1 - - [18/Aug/2025 09:20:31] "[36mGET /static/css/modern-style.css HTTP/1.1[0m" 304 -
+2025-08-18 09:20:31,453 - werkzeug - INFO - 10.108.198.1 - - [18/Aug/2025 09:20:31] "[36mGET /static/images/ej_logo_blue.png HTTP/1.1[0m" 304 -
+2025-08-18 09:20:44,617 - werkzeug - INFO - 10.108.198.1 - - [18/Aug/2025 09:20:44] "POST /login HTTP/1.1" 200 -
+2025-08-18 09:20:44,880 - werkzeug - INFO - 10.108.198.1 - - [18/Aug/2025 09:20:44] "[36mGET /static/css/modern-style.css HTTP/1.1[0m" 304 -
+2025-08-18 09:20:44,882 - werkzeug - INFO - 10.108.198.1 - - [18/Aug/2025 09:20:44] "[36mGET /static/images/ej_logo_blue.png HTTP/1.1[0m" 304 -
+2025-08-18 09:21:04,287 - werkzeug - INFO - 10.108.198.1 - - [18/Aug/2025 09:21:04] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-08-18 09:21:05,036 - werkzeug - INFO - 10.108.198.1 - - [18/Aug/2025 09:21:05] "GET /admin/dashboard HTTP/1.1" 200 -
+2025-08-18 09:21:07,405 - werkzeug - INFO - 10.108.198.1 - - [18/Aug/2025 09:21:07] "GET /static/images/ej_logo_dark.jpg HTTP/1.1" 200 -
+2025-08-18 09:21:07,405 - werkzeug - INFO - 10.108.198.1 - - [18/Aug/2025 09:21:07] "[36mGET /static/css/modern-style.css HTTP/1.1[0m" 304 -
+2025-08-18 09:21:37,675 - main - ERROR - Exception on /admin/requisicoes [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/dist-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/sistema_final_completo/src/main.py", line 23, in decorated_function
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/sistema_final_completo/src/main.py", line 409, in admin_requisicoes
+    return render_template("admin_requisicoes.html", requisicoes=requisicoes, status_atual=status_filtro)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/flask/templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/jinja2/environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/jinja2/environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/jinja2/environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/jinja2/loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/flask/templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/flask/templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: admin_requisicoes.html
+2025-08-18 09:21:37,677 - werkzeug - INFO - 10.108.198.1 - - [18/Aug/2025 09:21:37] "[35m[1mGET /admin/requisicoes HTTP/1.1[0m" 500 -
+2025-08-19 00:34:36,696 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://169.254.0.21:5000
+2025-08-19 00:34:36,696 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-08-19 00:35:19,729 - werkzeug - INFO - 10.193.219.1 - - [19/Aug/2025 00:35:19] "[32mGET / HTTP/1.1[0m" 302 -
+2025-08-19 00:35:19,746 - werkzeug - INFO - 10.193.219.1 - - [19/Aug/2025 00:35:19] "GET /login HTTP/1.1" 200 -
+2025-08-19 00:35:19,781 - werkzeug - INFO - 10.193.219.1 - - [19/Aug/2025 00:35:19] "[36mGET /static/images/ej_logo_blue.png HTTP/1.1[0m" 304 -
+2025-08-19 00:35:19,783 - werkzeug - INFO - 10.193.219.1 - - [19/Aug/2025 00:35:19] "[36mGET /static/css/modern-style.css HTTP/1.1[0m" 304 -
+2025-08-19 00:35:20,216 - werkzeug - INFO - 10.193.219.1 - - [19/Aug/2025 00:35:20] "[36mGET /static/css/modern-style.css HTTP/1.1[0m" 304 -
+2025-08-19 00:35:44,988 - werkzeug - INFO - 10.193.219.1 - - [19/Aug/2025 00:35:44] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-08-19 00:35:45,007 - werkzeug - INFO - 10.193.219.1 - - [19/Aug/2025 00:35:45] "GET /admin/dashboard HTTP/1.1" 200 -
+2025-08-19 00:35:45,047 - werkzeug - INFO - 10.193.219.1 - - [19/Aug/2025 00:35:45] "[36mGET /static/css/modern-style.css HTTP/1.1[0m" 304 -
+2025-08-19 00:35:45,048 - werkzeug - INFO - 10.193.219.1 - - [19/Aug/2025 00:35:45] "[36mGET /static/images/ej_logo_dark.jpg HTTP/1.1[0m" 304 -
+2025-08-19 00:35:45,908 - werkzeug - INFO - 10.193.219.1 - - [19/Aug/2025 00:35:45] "[36mGET /static/css/modern-style.css HTTP/1.1[0m" 304 -
+2025-08-19 00:35:52,316 - werkzeug - INFO - 10.193.219.1 - - [19/Aug/2025 00:35:52] "GET /admin/atividades/extensao HTTP/1.1" 200 -
+2025-08-19 00:36:00,539 - werkzeug - INFO - 10.193.219.1 - - [19/Aug/2025 00:36:00] "GET /admin/adicionar_atividade HTTP/1.1" 200 -
+2025-08-19 00:36:00,578 - werkzeug - INFO - 10.193.219.1 - - [19/Aug/2025 00:36:00] "[36mGET /static/css/modern-style.css HTTP/1.1[0m" 304 -
+2025-08-19 00:36:00,579 - werkzeug - INFO - 10.193.219.1 - - [19/Aug/2025 00:36:00] "[36mGET /static/images/ej_logo_dark.jpg HTTP/1.1[0m" 304 -
+2025-08-19 00:36:01,077 - werkzeug - INFO - 10.193.219.1 - - [19/Aug/2025 00:36:01] "[36mGET /static/css/modern-style.css HTTP/1.1[0m" 304 -
+2025-08-28 00:14:01,526 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://169.254.0.21:5000
+2025-08-28 00:14:01,526 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-08-28 00:14:34,481 - werkzeug - INFO - 10.148.137.1 - - [28/Aug/2025 00:14:34] "[32mGET / HTTP/1.1[0m" 302 -
+2025-08-28 00:14:34,499 - werkzeug - INFO - 10.148.137.1 - - [28/Aug/2025 00:14:34] "GET /login HTTP/1.1" 200 -
+2025-08-28 00:14:34,753 - werkzeug - INFO - 10.148.137.1 - - [28/Aug/2025 00:14:34] "GET /static/images/ej_logo_blue.png HTTP/1.1" 200 -
+2025-08-28 00:14:34,754 - werkzeug - INFO - 10.148.137.1 - - [28/Aug/2025 00:14:34] "GET /static/css/modern-style.css HTTP/1.1" 200 -
+2025-08-28 00:14:35,250 - werkzeug - INFO - 10.148.137.1 - - [28/Aug/2025 00:14:35] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-08-28 00:14:50,809 - werkzeug - INFO - 10.148.137.1 - - [28/Aug/2025 00:14:50] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-08-28 00:14:50,831 - werkzeug - INFO - 10.148.137.1 - - [28/Aug/2025 00:14:50] "GET /admin/dashboard HTTP/1.1" 200 -
+2025-08-28 00:14:50,865 - werkzeug - INFO - 10.148.137.1 - - [28/Aug/2025 00:14:50] "[36mGET /static/css/modern-style.css HTTP/1.1[0m" 304 -
+2025-08-28 00:14:50,865 - werkzeug - INFO - 10.148.137.1 - - [28/Aug/2025 00:14:50] "GET /static/images/ej_logo_dark.jpg HTTP/1.1" 200 -
+2025-08-28 00:14:52,069 - werkzeug - INFO - 10.148.137.1 - - [28/Aug/2025 00:14:52] "[36mGET /static/css/modern-style.css HTTP/1.1[0m" 304 -
+2025-08-28 00:14:59,696 - werkzeug - INFO - 10.148.137.1 - - [28/Aug/2025 00:14:59] "GET /admin/adicionar_atividade HTTP/1.1" 200 -
+2025-08-28 00:14:59,752 - werkzeug - INFO - 10.148.137.1 - - [28/Aug/2025 00:14:59] "[36mGET /static/css/modern-style.css HTTP/1.1[0m" 304 -
+2025-08-28 00:14:59,753 - werkzeug - INFO - 10.148.137.1 - - [28/Aug/2025 00:14:59] "[36mGET /static/images/ej_logo_dark.jpg HTTP/1.1[0m" 304 -
+2025-08-28 00:15:00,550 - werkzeug - INFO - 10.148.137.1 - - [28/Aug/2025 00:15:00] "[36mGET /static/css/modern-style.css HTTP/1.1[0m" 304 -
+2025-08-28 00:16:24,765 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://169.254.0.21:5000
+2025-08-28 00:16:24,765 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-08-28 00:17:01,593 - werkzeug - INFO - 10.148.137.1 - - [28/Aug/2025 00:17:01] "GET /admin/dashboard HTTP/1.1" 200 -
+2025-08-28 00:17:01,645 - werkzeug - INFO - 10.148.137.1 - - [28/Aug/2025 00:17:01] "[36mGET /static/css/modern-style.css HTTP/1.1[0m" 304 -
+2025-08-28 00:17:01,649 - werkzeug - INFO - 10.148.137.1 - - [28/Aug/2025 00:17:01] "[36mGET /static/images/ej_logo_dark.jpg HTTP/1.1[0m" 304 -
+2025-08-28 00:17:02,375 - werkzeug - INFO - 10.148.137.1 - - [28/Aug/2025 00:17:02] "[36mGET /static/css/modern-style.css HTTP/1.1[0m" 304 -
+2025-08-28 00:17:08,690 - werkzeug - INFO - 10.148.137.1 - - [28/Aug/2025 00:17:08] "GET /admin/atividades/extensao HTTP/1.1" 200 -
+2025-08-30 12:44:25,255 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.100.103:5000
+2025-08-30 12:44:25,256 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-08-30 12:44:31,809 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 12:44:31] "[32mGET / HTTP/1.1[0m" 302 -
+2025-08-30 12:44:31,821 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 12:44:31] "GET /login HTTP/1.1" 200 -
+2025-08-30 12:44:31,944 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 12:44:31] "GET /static/images/ej_logo_blue.png HTTP/1.1" 200 -
+2025-08-30 12:44:48,595 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 12:44:48] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-08-30 12:44:48,615 - main - ERROR - Exception on /admin/dashboard [GET]
+Traceback (most recent call last):
+  File "C:\Users\klebe\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\klebe\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\klebe\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\klebe\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "D:\Manus\sistema_final_completo\src\main.py", line 23, in decorated_function
+    return f(*args, **kwargs)
+  File "D:\Manus\sistema_final_completo\src\main.py", line 219, in admin_dashboard
+    return render_template("admin_dashboard.html",
+                           total_alunos=total_alunos,
+    ...<5 lines>...
+                           requisicoes_academicas=requisicoes_academicas,
+                           requisicoes_extensao=requisicoes_extensao)
+  File "C:\Users\klebe\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "C:\Users\klebe\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\templating.py", line 131, in _render
+    rv = template.render(context)
+  File "C:\Users\klebe\AppData\Local\Programs\Python\Python313\Lib\site-packages\jinja2\environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\klebe\AppData\Local\Programs\Python\Python313\Lib\site-packages\jinja2\environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "D:\Manus\sistema_final_completo\src\templates\admin_dashboard.html", line 2, in top-level template code
+    {% set active_page = 'dashboard' %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Manus\sistema_final_completo\src\templates\base.html", line 99, in top-level template code
+    {% block content %}{% endblock %}
+    ^^^^^^^^^^^^^^^^^^^
+  File "D:\Manus\sistema_final_completo\src\templates\admin_dashboard.html", line 30, in block 'content'
+    <div class="item"><span class="value">{{ resumo.Pendente or 0 }}</span><span class="label">Pendente</span></div>
+    ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\klebe\AppData\Local\Programs\Python\Python313\Lib\site-packages\jinja2\environment.py", line 490, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'resumo' is undefined
+2025-08-30 12:44:48,618 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 12:44:48] "[35m[1mGET /admin/dashboard HTTP/1.1[0m" 500 -
+2025-08-30 12:51:11,211 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.100.103:5000
+2025-08-30 12:51:11,211 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-08-30 12:51:20,357 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 12:51:20] "[32mGET / HTTP/1.1[0m" 302 -
+2025-08-30 12:51:20,394 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 12:51:20] "GET /login HTTP/1.1" 200 -
+2025-08-30 12:51:20,512 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 12:51:20] "[36mGET /static/images/ej_logo_blue.png HTTP/1.1[0m" 304 -
+2025-08-30 12:51:27,313 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 12:51:27] "[31m[1mPOST /login HTTP/1.1[0m" 400 -
+2025-08-30 13:15:59,592 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.100.103:5000
+2025-08-30 13:15:59,592 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-08-30 13:16:26,720 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 13:16:26] "[32mGET /admin/alunos HTTP/1.1[0m" 302 -
+2025-08-30 13:16:27,000 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 13:16:27] "GET /login HTTP/1.1" 200 -
+2025-08-30 13:16:27,064 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 13:16:27] "GET /static/images/ej_logo_blue.png HTTP/1.1" 200 -
+2025-08-30 13:16:27,894 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 13:16:27] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-08-30 13:16:35,834 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 13:16:35] "[31m[1mPOST /login HTTP/1.1[0m" 400 -
+2025-08-30 14:04:36,327 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.100.103:5000
+2025-08-30 14:04:36,327 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-08-30 14:05:05,337 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 14:05:05] "[32mGET /?utm_source=chatgpt.com HTTP/1.1[0m" 302 -
+2025-08-30 14:05:05,389 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 14:05:05] "GET /login HTTP/1.1" 200 -
+2025-08-30 14:05:22,387 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 14:05:22] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-08-30 14:05:22,410 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 14:05:22] "GET /admin/dashboard HTTP/1.1" 200 -
+2025-08-30 14:05:30,331 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 14:05:30] "GET /admin/requisicoes HTTP/1.1" 200 -
+2025-08-30 14:05:30,901 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 14:05:30] "GET /admin/atividades HTTP/1.1" 200 -
+2025-08-30 14:05:32,192 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 14:05:32] "GET /admin/alunos HTTP/1.1" 200 -
+2025-08-30 14:05:33,071 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 14:05:33] "GET /admin/importar_requisicoes HTTP/1.1" 200 -
+2025-08-30 14:05:34,345 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 14:05:34] "GET /admin/importar_requisicoes HTTP/1.1" 200 -
+2025-08-30 14:05:34,818 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 14:05:34] "GET /admin/alunos HTTP/1.1" 200 -
+2025-08-30 14:05:35,346 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 14:05:35] "GET /admin/atividades HTTP/1.1" 200 -
+2025-08-30 14:05:35,899 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 14:05:35] "GET /admin/requisicoes HTTP/1.1" 200 -
+2025-08-30 14:05:36,287 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 14:05:36] "GET /admin/dashboard HTTP/1.1" 200 -
+2025-08-30 14:11:35,825 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.100.103:5000
+2025-08-30 14:11:35,825 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-08-30 14:11:39,913 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 14:11:39] "GET /login HTTP/1.1" 200 -
+2025-08-30 14:11:40,121 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 14:11:40] "[33mGET /static/img/logo.png HTTP/1.1[0m" 404 -
+2025-08-30 14:11:55,882 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 14:11:55] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-08-30 14:11:56,203 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 14:11:56] "GET /admin/dashboard HTTP/1.1" 200 -
+2025-08-30 14:11:56,454 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 14:11:56] "[33mGET /static/img/logo.png HTTP/1.1[0m" 404 -
+2025-08-30 14:12:02,071 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 14:12:02] "GET /admin/requisicoes HTTP/1.1" 200 -
+2025-08-30 14:12:02,461 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 14:12:02] "[33mGET /static/img/logo.png HTTP/1.1[0m" 404 -
+2025-08-30 14:12:03,783 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 14:12:03] "GET /admin/atividades HTTP/1.1" 200 -
+2025-08-30 14:12:04,172 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 14:12:04] "[33mGET /static/img/logo.png HTTP/1.1[0m" 404 -
+2025-08-30 14:12:04,441 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 14:12:04] "GET /admin/alunos HTTP/1.1" 200 -
+2025-08-30 14:12:04,711 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 14:12:04] "[33mGET /static/img/logo.png HTTP/1.1[0m" 404 -
+2025-08-30 14:12:05,156 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 14:12:05] "GET /admin/importar_requisicoes HTTP/1.1" 200 -
+2025-08-30 14:12:05,523 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 14:12:05] "[33mGET /static/img/logo.png HTTP/1.1[0m" 404 -
+2025-08-30 14:12:08,007 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 14:12:08] "GET /admin/dashboard HTTP/1.1" 200 -
+2025-08-30 14:12:08,391 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 14:12:08] "[33mGET /static/img/logo.png HTTP/1.1[0m" 404 -
+2025-08-30 14:16:00,376 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 14:16:00] "GET /admin/requisicoes HTTP/1.1" 200 -
+2025-08-30 14:16:00,619 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 14:16:00] "[33mGET /static/img/logo.png HTTP/1.1[0m" 404 -
+2025-08-30 14:16:01,906 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 14:16:01] "GET /admin/atividades HTTP/1.1" 200 -
+2025-08-30 14:16:02,293 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 14:16:02] "[33mGET /static/img/logo.png HTTP/1.1[0m" 404 -
+2025-08-30 14:16:03,563 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 14:16:03] "GET /admin/alunos HTTP/1.1" 200 -
+2025-08-30 14:16:03,929 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 14:16:03] "[33mGET /static/img/logo.png HTTP/1.1[0m" 404 -
+2025-08-30 14:16:04,442 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 14:16:04] "GET /admin/importar_requisicoes HTTP/1.1" 200 -
+2025-08-30 14:16:04,828 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 14:16:04] "[33mGET /static/img/logo.png HTTP/1.1[0m" 404 -
+2025-08-30 14:16:07,235 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 14:16:07] "GET /admin/requisicoes HTTP/1.1" 200 -
+2025-08-30 14:16:07,620 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 14:16:07] "[33mGET /static/img/logo.png HTTP/1.1[0m" 404 -
+2025-08-30 14:16:07,888 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 14:16:07] "GET /admin/requisicoes HTTP/1.1" 200 -
+2025-08-30 14:16:08,160 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 14:16:08] "GET /admin/dashboard HTTP/1.1" 200 -
+2025-08-30 14:16:08,283 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 14:16:08] "[33mGET /static/img/logo.png HTTP/1.1[0m" 404 -
+2025-08-30 14:16:08,453 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 14:16:08] "[33mGET /static/img/logo.png HTTP/1.1[0m" 404 -
+2025-08-30 14:16:18,407 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 14:16:18] "GET /admin/requisicoes HTTP/1.1" 200 -
+2025-08-30 14:16:18,793 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 14:16:18] "[33mGET /static/img/logo.png HTTP/1.1[0m" 404 -
+2025-08-30 14:16:19,049 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 14:16:19] "GET /admin/dashboard HTTP/1.1" 200 -
+2025-08-30 14:16:19,264 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 14:16:19] "[33mGET /static/img/logo.png HTTP/1.1[0m" 404 -
+2025-08-30 14:16:41,280 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 14:16:41] "[33mGET /admin/login HTTP/1.1[0m" 404 -
+2025-08-30 14:16:46,049 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 14:16:46] "GET /login HTTP/1.1" 200 -
+2025-08-30 14:16:46,314 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 14:16:46] "[33mGET /static/img/logo.png HTTP/1.1[0m" 404 -
+2025-08-30 14:30:36,004 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.100.103:5000
+2025-08-30 14:30:36,004 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-08-30 14:30:39,216 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 14:30:39] "[32mGET / HTTP/1.1[0m" 302 -
+2025-08-30 14:30:39,257 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 14:30:39] "GET /login HTTP/1.1" 200 -
+2025-08-30 14:30:39,331 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 14:30:39] "[36mGET /static/images/ej_logo_blue.png HTTP/1.1[0m" 304 -
+2025-08-30 14:30:39,694 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 14:30:39] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-08-30 14:30:53,786 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 14:30:53] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-08-30 14:30:53,799 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 14:30:53] "GET /admin/dashboard HTTP/1.1" 200 -
+2025-08-30 14:30:53,869 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 14:30:53] "GET /static/images/ej_logo_dark.jpg HTTP/1.1" 200 -
+2025-08-30 14:45:39,348 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.100.103:5000
+2025-08-30 14:45:39,348 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-08-30 14:45:49,931 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 14:45:49] "[32mGET /admin/alunos HTTP/1.1[0m" 302 -
+2025-08-30 14:45:50,227 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 14:45:50] "GET /login HTTP/1.1" 200 -
+2025-08-30 14:45:50,293 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 14:45:50] "GET /static/images/ej_logo_blue.png HTTP/1.1" 200 -
+2025-08-30 14:45:50,976 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 14:45:50] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-08-30 14:45:58,620 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 14:45:58] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-08-30 14:45:58,931 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 14:45:58] "GET /admin/dashboard HTTP/1.1" 200 -
+2025-08-30 14:45:59,181 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 14:45:59] "GET /static/images/ej_logo_dark.jpg HTTP/1.1" 200 -
+2025-08-30 14:47:47,243 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 14:47:47] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-08-30 14:47:47,496 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 14:47:47] "GET /admin/dashboard HTTP/1.1" 200 -
+2025-08-30 14:47:47,611 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 14:47:47] "[36mGET /static/images/ej_logo_dark.jpg HTTP/1.1[0m" 304 -
+2025-08-30 15:52:56,902 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.100.103:5000
+2025-08-30 15:52:56,902 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-08-30 15:53:02,556 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 15:53:02] "GET /admin/alunos HTTP/1.1" 200 -
+2025-08-30 15:53:02,789 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 15:53:02] "[36mGET /static/images/ej_logo_dark.jpg HTTP/1.1[0m" 304 -
+2025-08-30 15:53:04,319 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 15:53:04] "GET /admin/dashboard HTTP/1.1" 200 -
+2025-08-30 15:53:04,748 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 15:53:04] "[36mGET /static/images/ej_logo_dark.jpg HTTP/1.1[0m" 304 -
+2025-08-30 15:53:05,756 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 15:53:05] "GET /admin/dashboard HTTP/1.1" 200 -
+2025-08-30 15:53:06,126 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 15:53:06] "[36mGET /static/images/ej_logo_dark.jpg HTTP/1.1[0m" 304 -
+2025-08-30 15:53:06,565 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 15:53:06] "GET /admin/dashboard HTTP/1.1" 200 -
+2025-08-30 15:53:06,932 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 15:53:06] "[36mGET /static/images/ej_logo_dark.jpg HTTP/1.1[0m" 304 -
+2025-08-30 15:53:10,466 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 15:53:10] "GET /login HTTP/1.1" 200 -
+2025-08-30 15:53:10,851 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 15:53:10] "[36mGET /static/images/ej_logo_blue.png HTTP/1.1[0m" 304 -
+2025-08-30 15:53:14,655 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 15:53:14] "GET /login HTTP/1.1" 200 -
+2025-08-30 15:53:15,023 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 15:53:15] "[36mGET /static/images/ej_logo_blue.png HTTP/1.1[0m" 304 -
+2025-08-30 16:18:24,155 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.100.103:5000
+2025-08-30 16:18:24,155 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-08-30 16:18:34,608 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 16:18:34] "GET /admin/alunos HTTP/1.1" 200 -
+2025-08-30 16:18:34,829 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 16:18:34] "GET /static/images/ej_logo_dark.jpg HTTP/1.1" 200 -
+2025-08-30 16:18:54,441 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 16:18:54] "GET /login HTTP/1.1" 200 -
+2025-08-30 16:20:33,462 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.100.103:5000
+2025-08-30 16:20:33,463 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-08-30 16:21:06,851 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 16:21:06] "GET /login HTTP/1.1" 200 -
+2025-08-30 16:21:07,100 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 16:21:07] "GET /static/images/ej_logo_blue.png HTTP/1.1" 200 -
+2025-08-30 16:25:31,387 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.100.103:5000
+2025-08-30 16:25:31,387 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-08-30 16:25:37,985 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 16:25:37] "GET /login HTTP/1.1" 200 -
+2025-08-30 16:25:38,255 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 16:25:38] "GET /static/css/modern-style.css HTTP/1.1" 200 -
+2025-08-30 16:25:38,346 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 16:25:38] "[36mGET /static/images/ej_logo_blue.png HTTP/1.1[0m" 304 -
+2025-08-30 16:27:02,067 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.100.103:5000
+2025-08-30 16:27:02,067 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-08-30 16:27:06,714 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 16:27:06] "GET /login HTTP/1.1" 200 -
+2025-08-30 16:27:06,931 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 16:27:06] "[36mGET /static/css/modern-style.css HTTP/1.1[0m" 304 -
+2025-08-30 16:27:07,077 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 16:27:07] "[36mGET /static/images/ej_logo_blue.png HTTP/1.1[0m" 304 -
+2025-08-30 16:29:17,262 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.100.103:5000
+2025-08-30 16:29:17,263 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-08-30 16:29:22,152 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 16:29:22] "GET /login HTTP/1.1" 200 -
+2025-08-30 16:29:22,379 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 16:29:22] "[36mGET /static/css/modern-style.css HTTP/1.1[0m" 304 -
+2025-08-30 16:29:22,520 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 16:29:22] "[36mGET /static/images/ej_logo_blue.png HTTP/1.1[0m" 304 -
+2025-08-30 16:33:38,907 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.100.103:5000
+2025-08-30 16:33:38,907 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-08-30 16:33:47,902 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 16:33:47] "GET /login HTTP/1.1" 200 -
+2025-08-30 16:33:48,127 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 16:33:48] "[36mGET /static/images/ej_logo_blue.png HTTP/1.1[0m" 304 -
+2025-08-30 16:34:04,111 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 16:34:04] "[31m[1mPOST /login HTTP/1.1[0m" 400 -
+2025-08-30 16:34:18,671 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 16:34:18] "[31m[1mPOST /login HTTP/1.1[0m" 400 -
+2025-08-30 16:40:29,231 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.100.103:5000
+2025-08-30 16:40:29,231 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-08-30 16:40:33,436 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 16:40:33] "GET /login HTTP/1.1" 200 -
+2025-08-30 16:40:33,685 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 16:40:33] "[36mGET /static/images/ej_logo_blue.png HTTP/1.1[0m" 304 -
+2025-08-30 16:40:45,876 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 16:40:45] "[31m[1mPOST /login HTTP/1.1[0m" 400 -
+2025-08-30 16:42:19,102 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 16:42:19] "[31m[1mPOST /login HTTP/1.1[0m" 400 -
+2025-08-30 16:51:10,038 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 16:51:10] "[31m[1mPOST /login HTTP/1.1[0m" 400 -
+2025-08-30 16:54:31,756 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.100.103:5000
+2025-08-30 16:54:31,756 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-08-30 16:54:44,141 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 16:54:44] "GET /login HTTP/1.1" 200 -
+2025-08-30 16:54:44,392 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 16:54:44] "[36mGET /static/css/modern-style.css HTTP/1.1[0m" 304 -
+2025-08-30 16:54:44,510 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 16:54:44] "[36mGET /static/images/ej_logo_blue.png HTTP/1.1[0m" 304 -
+2025-08-30 16:56:24,523 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 16:56:24] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-08-30 16:56:24,804 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 16:56:24] "GET /admin/dashboard HTTP/1.1" 200 -
+2025-08-30 16:56:24,913 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 16:56:24] "[36mGET /static/images/ej_logo_dark.jpg HTTP/1.1[0m" 304 -
+2025-08-30 16:56:35,535 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 16:56:35] "GET /admin/atividades HTTP/1.1" 200 -
+2025-08-30 16:56:35,771 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 16:56:35] "[36mGET /static/images/ej_logo_dark.jpg HTTP/1.1[0m" 304 -
+2025-08-30 16:56:36,270 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 16:56:36] "GET /admin/requisicoes HTTP/1.1" 200 -
+2025-08-30 16:56:36,647 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 16:56:36] "[36mGET /static/images/ej_logo_dark.jpg HTTP/1.1[0m" 304 -
+2025-08-30 16:56:36,992 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 16:56:36] "GET /admin/atividades HTTP/1.1" 200 -
+2025-08-30 16:56:37,367 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 16:56:37] "[36mGET /static/images/ej_logo_dark.jpg HTTP/1.1[0m" 304 -
+2025-08-30 16:56:37,635 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 16:56:37] "GET /admin/alunos HTTP/1.1" 200 -
+2025-08-30 16:56:37,918 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 16:56:37] "[36mGET /static/images/ej_logo_dark.jpg HTTP/1.1[0m" 304 -
+2025-08-30 16:56:38,608 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 16:56:38] "GET /admin/importar_requisicoes HTTP/1.1" 200 -
+2025-08-30 16:56:38,967 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 16:56:38] "[36mGET /static/images/ej_logo_dark.jpg HTTP/1.1[0m" 304 -
+2025-08-30 16:56:40,302 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 16:56:40] "[32mGET /logout HTTP/1.1[0m" 302 -
+2025-08-30 16:56:40,619 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 16:56:40] "GET /login HTTP/1.1" 200 -
+2025-08-30 16:56:40,870 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 16:56:40] "[36mGET /static/css/modern-style.css HTTP/1.1[0m" 304 -
+2025-08-30 16:56:41,000 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 16:56:41] "[36mGET /static/images/ej_logo_blue.png HTTP/1.1[0m" 304 -
+2025-08-30 16:57:27,484 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.100.103:5000
+2025-08-30 16:57:27,484 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-08-30 16:57:32,767 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 16:57:32] "GET /login HTTP/1.1" 200 -
+2025-08-30 16:57:33,001 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 16:57:33] "[36mGET /static/css/modern-style.css HTTP/1.1[0m" 304 -
+2025-08-30 16:57:33,124 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 16:57:33] "[36mGET /static/images/ej_logo_blue.png HTTP/1.1[0m" 304 -
+2025-08-30 17:03:19,791 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.100.103:5000
+2025-08-30 17:03:19,791 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-08-30 17:03:23,378 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 17:03:23] "GET /login HTTP/1.1" 200 -
+2025-08-30 17:03:23,581 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 17:03:23] "[36mGET /static/css/modern-style.css HTTP/1.1[0m" 304 -
+2025-08-30 17:03:23,747 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 17:03:23] "[36mGET /static/images/ej_logo_blue.png HTTP/1.1[0m" 304 -
+2025-08-30 17:08:32,119 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.100.103:5000
+2025-08-30 17:08:32,119 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-08-30 17:08:42,492 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 17:08:42] "GET /login HTTP/1.1" 200 -
+2025-08-30 17:08:42,729 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 17:08:42] "GET /static/css/modern-style.css HTTP/1.1" 200 -
+2025-08-30 17:08:42,864 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 17:08:42] "[36mGET /static/images/ej_logo_blue.png HTTP/1.1[0m" 304 -
+2025-08-30 17:08:52,971 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 17:08:52] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-08-30 17:08:53,306 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 17:08:53] "GET /admin/dashboard HTTP/1.1" 200 -
+2025-08-30 17:08:53,543 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 17:08:53] "[36mGET /static/images/ej_logo_dark.jpg HTTP/1.1[0m" 304 -
+2025-08-30 17:08:59,783 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 17:08:59] "GET /admin/requisicoes HTTP/1.1" 200 -
+2025-08-30 17:09:00,159 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 17:09:00] "[36mGET /static/images/ej_logo_dark.jpg HTTP/1.1[0m" 304 -
+2025-08-30 17:09:00,584 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 17:09:00] "GET /admin/atividades HTTP/1.1" 200 -
+2025-08-30 17:09:00,966 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 17:09:00] "[36mGET /static/images/ej_logo_dark.jpg HTTP/1.1[0m" 304 -
+2025-08-30 17:09:01,777 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 17:09:01] "GET /admin/dashboard HTTP/1.1" 200 -
+2025-08-30 17:09:02,154 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 17:09:02] "[36mGET /static/images/ej_logo_dark.jpg HTTP/1.1[0m" 304 -
+2025-08-30 17:09:04,321 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 17:09:04] "GET /admin/requisicoes HTTP/1.1" 200 -
+2025-08-30 17:09:04,692 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 17:09:04] "[36mGET /static/images/ej_logo_dark.jpg HTTP/1.1[0m" 304 -
+2025-08-30 17:09:05,488 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 17:09:05] "GET /admin/atividades HTTP/1.1" 200 -
+2025-08-30 17:09:05,873 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 17:09:05] "[36mGET /static/images/ej_logo_dark.jpg HTTP/1.1[0m" 304 -
+2025-08-30 17:09:06,538 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 17:09:06] "GET /admin/dashboard HTTP/1.1" 200 -
+2025-08-30 17:09:06,924 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 17:09:06] "[36mGET /static/images/ej_logo_dark.jpg HTTP/1.1[0m" 304 -
+2025-08-30 17:09:08,492 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 17:09:08] "GET /admin/requisicoes HTTP/1.1" 200 -
+2025-08-30 17:09:09,013 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 17:09:09] "[36mGET /static/images/ej_logo_dark.jpg HTTP/1.1[0m" 304 -
+2025-08-30 17:09:09,917 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 17:09:09] "GET /admin/dashboard HTTP/1.1" 200 -
+2025-08-30 17:09:10,290 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 17:09:10] "[36mGET /static/images/ej_logo_dark.jpg HTTP/1.1[0m" 304 -
+2025-08-30 17:09:10,663 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 17:09:10] "GET /admin/requisicoes HTTP/1.1" 200 -
+2025-08-30 17:09:11,035 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 17:09:11] "[36mGET /static/images/ej_logo_dark.jpg HTTP/1.1[0m" 304 -
+2025-08-30 17:09:13,289 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 17:09:13] "GET /admin/atividades HTTP/1.1" 200 -
+2025-08-30 17:09:13,672 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 17:09:13] "[36mGET /static/images/ej_logo_dark.jpg HTTP/1.1[0m" 304 -
+2025-08-30 17:09:45,570 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 17:09:45] "GET /admin/dashboard HTTP/1.1" 200 -
+2025-08-30 17:09:45,944 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 17:09:45] "[36mGET /static/images/ej_logo_dark.jpg HTTP/1.1[0m" 304 -
+2025-08-30 17:09:48,033 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 17:09:48] "GET /admin/requisicoes HTTP/1.1" 200 -
+2025-08-30 17:09:48,411 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 17:09:48] "[36mGET /static/images/ej_logo_dark.jpg HTTP/1.1[0m" 304 -
+2025-08-30 17:09:48,899 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 17:09:48] "GET /admin/atividades HTTP/1.1" 200 -
+2025-08-30 17:09:49,262 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 17:09:49] "[36mGET /static/images/ej_logo_dark.jpg HTTP/1.1[0m" 304 -
+2025-08-30 17:09:49,572 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 17:09:49] "GET /admin/alunos HTTP/1.1" 200 -
+2025-08-30 17:09:49,935 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 17:09:49] "[36mGET /static/images/ej_logo_dark.jpg HTTP/1.1[0m" 304 -
+2025-08-30 17:09:50,295 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 17:09:50] "GET /admin/atividades HTTP/1.1" 200 -
+2025-08-30 17:09:50,675 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 17:09:50] "[36mGET /static/images/ej_logo_dark.jpg HTTP/1.1[0m" 304 -
+2025-08-30 17:10:02,455 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 17:10:02] "GET /admin/requisicoes HTTP/1.1" 200 -
+2025-08-30 17:10:02,832 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 17:10:02] "[36mGET /static/images/ej_logo_dark.jpg HTTP/1.1[0m" 304 -
+2025-08-30 17:10:04,350 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 17:10:04] "GET /admin/alunos HTTP/1.1" 200 -
+2025-08-30 17:10:04,725 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 17:10:04] "[36mGET /static/images/ej_logo_dark.jpg HTTP/1.1[0m" 304 -
+2025-08-30 17:10:05,210 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 17:10:05] "GET /admin/atividades HTTP/1.1" 200 -
+2025-08-30 17:10:05,588 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 17:10:05] "[36mGET /static/images/ej_logo_dark.jpg HTTP/1.1[0m" 304 -
+2025-08-30 17:10:10,578 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 17:10:10] "GET /admin/dashboard HTTP/1.1" 200 -
+2025-08-30 17:10:10,971 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 17:10:10] "[36mGET /static/images/ej_logo_dark.jpg HTTP/1.1[0m" 304 -
+2025-08-30 17:15:38,396 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.100.103:5000
+2025-08-30 17:15:38,396 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-08-30 17:15:50,775 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 17:15:50] "GET /admin/dashboard HTTP/1.1" 200 -
+2025-08-30 17:15:50,976 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 17:15:50] "[36mGET /static/images/ej_logo_blue.png HTTP/1.1[0m" 304 -
+2025-08-30 17:15:56,832 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 17:15:56] "GET /login HTTP/1.1" 200 -
+2025-08-30 17:15:57,207 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 17:15:57] "[36mGET /static/css/modern-style.css HTTP/1.1[0m" 304 -
+2025-08-30 17:15:57,208 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 17:15:57] "[36mGET /static/images/ej_logo_dark.jpg HTTP/1.1[0m" 304 -
+2025-08-30 17:25:21,720 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.100.103:5000
+2025-08-30 17:25:21,721 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-08-30 17:25:32,059 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 17:25:32] "GET /login HTTP/1.1" 200 -
+2025-08-30 17:25:32,307 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 17:25:32] "GET /static/css/modern-style.css HTTP/1.1" 200 -
+2025-08-30 17:25:32,412 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 17:25:32] "[36mGET /static/images/ej_logo_dark.jpg HTTP/1.1[0m" 304 -
+2025-08-30 17:25:34,745 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 17:25:34] "GET /login HTTP/1.1" 200 -
+2025-08-30 17:25:35,116 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 17:25:35] "[36mGET /static/css/modern-style.css HTTP/1.1[0m" 304 -
+2025-08-30 17:25:35,123 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 17:25:35] "[36mGET /static/images/ej_logo_dark.jpg HTTP/1.1[0m" 304 -
+2025-08-30 17:30:30,120 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.100.103:5000
+2025-08-30 17:30:30,120 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-08-30 17:30:33,550 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 17:30:33] "GET /login HTTP/1.1" 200 -
+2025-08-30 17:30:33,825 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 17:30:33] "GET /static/css/modern-style.css HTTP/1.1" 200 -
+2025-08-30 17:30:33,893 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 17:30:33] "[36mGET /static/images/ej_logo_dark.jpg HTTP/1.1[0m" 304 -
+2025-08-30 17:30:39,422 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 17:30:39] "POST /login HTTP/1.1" 200 -
+2025-08-30 17:30:39,788 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 17:30:39] "[36mGET /static/css/modern-style.css HTTP/1.1[0m" 304 -
+2025-08-30 17:30:39,790 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 17:30:39] "[36mGET /static/images/ej_logo_dark.jpg HTTP/1.1[0m" 304 -
+2025-08-30 17:30:45,777 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 17:30:45] "POST /login HTTP/1.1" 200 -
+2025-08-30 17:30:46,129 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 17:30:46] "[36mGET /static/images/ej_logo_dark.jpg HTTP/1.1[0m" 304 -
+2025-08-30 17:30:46,129 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 17:30:46] "[36mGET /static/css/modern-style.css HTTP/1.1[0m" 304 -
+2025-08-30 17:30:58,381 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 17:30:58] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-08-30 17:30:58,743 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 17:30:58] "GET /admin/dashboard HTTP/1.1" 200 -
+2025-08-30 17:30:58,954 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 17:30:58] "[36mGET /static/images/ej_logo_dark.jpg HTTP/1.1[0m" 304 -
+2025-08-30 17:35:53,679 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 17:35:53] "GET /login HTTP/1.1" 200 -
+2025-08-30 17:35:53,935 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 17:35:53] "[36mGET /static/css/modern-style.css HTTP/1.1[0m" 304 -
+2025-08-30 17:35:54,047 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 17:35:54] "[36mGET /static/images/ej_logo_dark.jpg HTTP/1.1[0m" 304 -
+2025-08-30 17:46:15,870 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.100.103:5000
+2025-08-30 17:46:15,871 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-08-30 17:46:21,086 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 17:46:21] "GET /login HTTP/1.1" 200 -
+2025-08-30 17:46:21,341 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 17:46:21] "GET /static/css/modern-style.css HTTP/1.1" 200 -
+2025-08-30 17:46:21,444 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 17:46:21] "[36mGET /static/images/ej_logo_dark.jpg HTTP/1.1[0m" 304 -
+2025-08-30 17:46:29,598 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 17:46:29] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-08-30 17:46:29,968 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 17:46:29] "GET /admin/dashboard HTTP/1.1" 200 -
+2025-08-30 17:46:30,177 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 17:46:30] "[36mGET /static/images/ej_logo_dark.jpg HTTP/1.1[0m" 304 -
+2025-08-30 17:47:25,227 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 17:47:25] "GET /login HTTP/1.1" 200 -
+2025-08-30 17:47:25,586 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 17:47:25] "[36mGET /static/css/modern-style.css HTTP/1.1[0m" 304 -
+2025-08-30 17:47:25,608 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 17:47:25] "[36mGET /static/images/ej_logo_dark.jpg HTTP/1.1[0m" 304 -
+2025-08-30 17:47:32,032 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 17:47:32] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-08-30 17:47:32,345 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 17:47:32] "GET /admin/dashboard HTTP/1.1" 200 -
+2025-08-30 17:47:32,600 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 17:47:32] "[36mGET /static/images/ej_logo_dark.jpg HTTP/1.1[0m" 304 -
+2025-08-30 17:47:35,211 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 17:47:35] "GET /admin/atividades HTTP/1.1" 200 -
+2025-08-30 17:47:35,573 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 17:47:35] "[36mGET /static/images/ej_logo_dark.jpg HTTP/1.1[0m" 304 -
+2025-08-30 17:47:36,105 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 17:47:36] "GET /admin/requisicoes HTTP/1.1" 200 -
+2025-08-30 17:47:36,472 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 17:47:36] "[36mGET /static/images/ej_logo_dark.jpg HTTP/1.1[0m" 304 -
+2025-08-30 17:54:14,335 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.100.103:5000
+2025-08-30 17:54:14,335 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-08-30 17:54:22,098 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 17:54:22] "GET /login HTTP/1.1" 200 -
+2025-08-30 17:54:22,354 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 17:54:22] "[36mGET /static/css/modern-style.css HTTP/1.1[0m" 304 -
+2025-08-30 17:54:22,469 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 17:54:22] "[36mGET /static/images/ej_logo_dark.jpg HTTP/1.1[0m" 304 -
+2025-08-30 17:54:27,878 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 17:54:27] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-08-30 17:54:28,260 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 17:54:28] "GET /admin/dashboard HTTP/1.1" 200 -
+2025-08-30 17:54:28,444 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 17:54:28] "[36mGET /static/images/ej_logo_dark.jpg HTTP/1.1[0m" 304 -
+2025-08-30 18:02:50,204 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.100.103:5000
+2025-08-30 18:02:50,204 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-08-30 18:02:53,376 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 18:02:53] "GET /login HTTP/1.1" 200 -
+2025-08-30 18:02:53,633 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 18:02:53] "[36mGET /static/css/modern-style.css HTTP/1.1[0m" 304 -
+2025-08-30 18:02:53,742 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 18:02:53] "[36mGET /static/images/ej_logo_dark.jpg HTTP/1.1[0m" 304 -
+2025-08-30 18:02:59,868 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 18:02:59] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-08-30 18:03:00,204 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 18:03:00] "GET /admin/dashboard HTTP/1.1" 200 -
+2025-08-30 18:03:00,429 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 18:03:00] "[36mGET /static/images/ej_logo_dark.jpg HTTP/1.1[0m" 304 -
+2025-08-30 18:12:06,568 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.100.103:5000
+2025-08-30 18:12:06,568 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-08-30 18:12:15,206 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 18:12:15] "GET /login HTTP/1.1" 200 -
+2025-08-30 18:12:15,450 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 18:12:15] "[36mGET /static/css/modern-style.css HTTP/1.1[0m" 304 -
+2025-08-30 18:12:15,564 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 18:12:15] "[36mGET /static/images/ej_logo_dark.jpg HTTP/1.1[0m" 304 -
+2025-08-30 18:12:21,271 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 18:12:21] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-08-30 18:12:21,609 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 18:12:21] "GET /admin/dashboard HTTP/1.1" 200 -
+2025-08-30 18:12:21,846 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 18:12:21] "[36mGET /static/images/ej_logo_blue.png HTTP/1.1[0m" 304 -
+2025-08-30 18:16:35,969 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.100.103:5000
+2025-08-30 18:16:35,970 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-08-30 18:16:49,154 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 18:16:49] "GET /login HTTP/1.1" 200 -
+2025-08-30 18:16:49,419 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 18:16:49] "GET /static/css/modern-style.css HTTP/1.1" 200 -
+2025-08-30 18:16:49,522 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 18:16:49] "[36mGET /static/images/ej_logo_dark.jpg HTTP/1.1[0m" 304 -
+2025-08-30 18:16:53,266 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 18:16:53] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-08-30 18:16:53,597 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 18:16:53] "GET /admin/dashboard HTTP/1.1" 200 -
+2025-08-30 18:16:53,838 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 18:16:53] "[36mGET /static/images/ej_logo_blue.png HTTP/1.1[0m" 304 -
+2025-08-30 18:22:37,025 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.100.103:5000
+2025-08-30 18:22:37,025 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-08-30 18:22:41,984 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 18:22:41] "GET /login HTTP/1.1" 200 -
+2025-08-30 18:22:42,257 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 18:22:42] "GET /static/css/modern-style.css HTTP/1.1" 200 -
+2025-08-30 18:22:42,366 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 18:22:42] "[36mGET /static/images/ej_logo_dark.jpg HTTP/1.1[0m" 304 -
+2025-08-30 18:22:47,709 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 18:22:47] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-08-30 18:22:48,057 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 18:22:48] "GET /admin/dashboard HTTP/1.1" 200 -
+2025-08-30 18:22:48,284 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 18:22:48] "[36mGET /static/images/ej_logo_blue.png HTTP/1.1[0m" 304 -
+2025-08-30 18:30:19,595 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.100.103:5000
+2025-08-30 18:30:19,595 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-08-30 18:30:23,979 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 18:30:23] "GET /login HTTP/1.1" 200 -
+2025-08-30 18:30:24,242 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 18:30:24] "[36mGET /static/css/modern-style.css HTTP/1.1[0m" 304 -
+2025-08-30 18:30:24,342 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 18:30:24] "[36mGET /static/images/ej_logo_dark.jpg HTTP/1.1[0m" 304 -
+2025-08-30 18:30:27,986 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 18:30:27] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-08-30 18:30:28,334 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 18:30:28] "GET /admin/dashboard HTTP/1.1" 200 -
+2025-08-30 18:30:28,559 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 18:30:28] "[36mGET /static/images/ej_logo_dark.jpg HTTP/1.1[0m" 304 -
+2025-08-30 18:35:38,670 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.100.103:5000
+2025-08-30 18:35:38,670 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-08-30 18:35:43,644 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 18:35:43] "GET /login HTTP/1.1" 200 -
+2025-08-30 18:35:43,894 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 18:35:43] "[36mGET /static/css/modern-style.css HTTP/1.1[0m" 304 -
+2025-08-30 18:35:43,998 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 18:35:43] "[36mGET /static/images/ej_logo_dark.jpg HTTP/1.1[0m" 304 -
+2025-08-30 18:35:49,381 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 18:35:49] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-08-30 18:35:49,713 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 18:35:49] "GET /admin/dashboard HTTP/1.1" 200 -
+2025-08-30 18:35:49,939 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 18:35:49] "[36mGET /static/images/ej_logo_dark.jpg HTTP/1.1[0m" 304 -
+2025-08-30 19:01:36,901 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.100.103:5000
+2025-08-30 19:01:36,902 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-08-30 19:01:43,239 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 19:01:43] "GET /login HTTP/1.1" 200 -
+2025-08-30 19:01:43,478 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 19:01:43] "[36mGET /static/css/modern-style.css HTTP/1.1[0m" 304 -
+2025-08-30 19:01:43,608 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 19:01:43] "[36mGET /static/images/ej_logo_dark.jpg HTTP/1.1[0m" 304 -
+2025-08-30 19:01:47,765 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 19:01:47] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-08-30 19:01:48,125 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 19:01:48] "GET /admin/dashboard HTTP/1.1" 200 -
+2025-08-30 19:01:48,330 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 19:01:48] "[36mGET /static/images/ej_logo_dark.jpg HTTP/1.1[0m" 304 -
+2025-08-30 19:10:43,713 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.100.103:5000
+2025-08-30 19:10:43,713 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-08-30 19:10:48,400 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 19:10:48] "GET /login HTTP/1.1" 200 -
+2025-08-30 19:10:48,649 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 19:10:48] "[36mGET /static/css/modern-style.css HTTP/1.1[0m" 304 -
+2025-08-30 19:10:48,782 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 19:10:48] "[36mGET /static/images/ej_logo_dark.jpg HTTP/1.1[0m" 304 -
+2025-08-30 19:10:53,143 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 19:10:53] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-08-30 19:10:53,511 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 19:10:53] "GET /admin/dashboard HTTP/1.1" 200 -
+2025-08-30 19:10:53,718 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 19:10:53] "[36mGET /static/images/ej_logo_dark.jpg HTTP/1.1[0m" 304 -
+2025-08-30 19:16:18,149 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.100.103:5000
+2025-08-30 19:16:18,149 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-08-30 19:16:24,039 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 19:16:24] "GET /login HTTP/1.1" 200 -
+2025-08-30 19:16:24,279 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 19:16:24] "[36mGET /static/css/modern-style.css HTTP/1.1[0m" 304 -
+2025-08-30 19:16:24,398 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 19:16:24] "[36mGET /static/images/ej_logo_dark.jpg HTTP/1.1[0m" 304 -
+2025-08-30 19:16:29,470 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 19:16:29] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-08-30 19:16:29,825 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 19:16:29] "GET /admin/dashboard HTTP/1.1" 200 -
+2025-08-30 19:16:30,032 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 19:16:30] "[36mGET /static/images/ej_logo_dark.jpg HTTP/1.1[0m" 304 -
+2025-08-30 20:26:29,930 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.100.103:5000
+2025-08-30 20:26:29,930 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-08-30 20:26:34,279 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 20:26:34] "GET /login HTTP/1.1" 200 -
+2025-08-30 20:26:34,542 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 20:26:34] "[36mGET /static/css/modern-style.css HTTP/1.1[0m" 304 -
+2025-08-30 20:26:34,661 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 20:26:34] "[36mGET /static/images/ej_logo_dark.jpg HTTP/1.1[0m" 304 -
+2025-08-30 20:26:40,016 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 20:26:40] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-08-30 20:26:40,362 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 20:26:40] "GET /admin/dashboard HTTP/1.1" 200 -
+2025-08-30 20:26:40,592 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 20:26:40] "[36mGET /static/images/ej_logo_blue.png HTTP/1.1[0m" 304 -
+2025-08-30 20:27:43,907 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 20:27:43] "GET /admin/dashboard HTTP/1.1" 200 -
+2025-08-30 20:27:44,157 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 20:27:44] "[36mGET /static/images/ej_logo_blue.png HTTP/1.1[0m" 304 -
+2025-08-30 20:27:45,240 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 20:27:45] "GET /admin/requisicoes HTTP/1.1" 200 -
+2025-08-30 20:27:45,622 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 20:27:45] "[36mGET /static/images/ej_logo_blue.png HTTP/1.1[0m" 304 -
+2025-08-30 20:27:46,493 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 20:27:46] "GET /admin/atividades HTTP/1.1" 200 -
+2025-08-30 20:27:46,883 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 20:27:46] "[36mGET /static/images/ej_logo_blue.png HTTP/1.1[0m" 304 -
+2025-08-30 20:31:44,761 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.100.103:5000
+2025-08-30 20:31:44,762 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-08-30 20:32:01,162 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 20:32:01] "GET /login HTTP/1.1" 200 -
+2025-08-30 20:32:01,410 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 20:32:01] "[36mGET /static/css/modern-style.css HTTP/1.1[0m" 304 -
+2025-08-30 20:32:01,539 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 20:32:01] "[36mGET /static/images/ej_logo_dark.jpg HTTP/1.1[0m" 304 -
+2025-08-30 20:32:05,565 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 20:32:05] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-08-30 20:32:05,912 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 20:32:05] "GET /admin/dashboard HTTP/1.1" 200 -
+2025-08-30 20:32:06,142 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 20:32:06] "[36mGET /static/images/ej_logo_blue.png HTTP/1.1[0m" 304 -
+2025-08-30 20:41:28,809 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.100.103:5000
+2025-08-30 20:41:28,809 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-08-30 20:41:31,796 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 20:41:31] "GET /admin/dashboard HTTP/1.1" 200 -
+2025-08-30 20:41:32,045 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 20:41:32] "[36mGET /static/images/ej_logo_blue.png HTTP/1.1[0m" 304 -
+2025-08-30 20:41:34,660 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 20:41:34] "GET /admin/requisicoes HTTP/1.1" 200 -
+2025-08-30 20:41:35,093 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 20:41:35] "[36mGET /static/images/ej_logo_blue.png HTTP/1.1[0m" 304 -
+2025-08-30 20:41:36,116 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 20:41:36] "GET /admin/alunos HTTP/1.1" 200 -
+2025-08-30 20:41:36,508 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 20:41:36] "[36mGET /static/images/ej_logo_blue.png HTTP/1.1[0m" 304 -
+2025-08-30 20:41:38,354 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 20:41:38] "GET /login HTTP/1.1" 200 -
+2025-08-30 20:41:38,726 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 20:41:38] "[36mGET /static/css/modern-style.css HTTP/1.1[0m" 304 -
+2025-08-30 20:41:38,792 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 20:41:38] "[36mGET /static/images/ej_logo_dark.jpg HTTP/1.1[0m" 304 -
+2025-08-31 12:46:51,472 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.100.103:5000
+2025-08-31 12:46:51,472 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-08-31 12:47:04,430 - werkzeug - INFO - 127.0.0.1 - - [31/Aug/2025 12:47:04] "GET /login HTTP/1.1" 200 -
+2025-08-31 12:47:04,801 - werkzeug - INFO - 127.0.0.1 - - [31/Aug/2025 12:47:04] "[36mGET /static/css/modern-style.css HTTP/1.1[0m" 304 -
+2025-08-31 12:47:04,845 - werkzeug - INFO - 127.0.0.1 - - [31/Aug/2025 12:47:04] "[36mGET /static/images/ej_logo_dark.jpg HTTP/1.1[0m" 304 -
+2025-08-31 12:47:27,812 - werkzeug - INFO - 127.0.0.1 - - [31/Aug/2025 12:47:27] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-08-31 12:47:28,158 - werkzeug - INFO - 127.0.0.1 - - [31/Aug/2025 12:47:28] "GET /admin/dashboard HTTP/1.1" 200 -
+2025-08-31 12:47:28,384 - werkzeug - INFO - 127.0.0.1 - - [31/Aug/2025 12:47:28] "[36mGET /static/images/ej_logo_blue.png HTTP/1.1[0m" 304 -
+2025-08-31 13:05:59,314 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.100.103:5000
+2025-08-31 13:05:59,314 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-08-31 13:06:04,009 - werkzeug - INFO - 127.0.0.1 - - [31/Aug/2025 13:06:04] "GET /login HTTP/1.1" 200 -
+2025-08-31 13:06:04,250 - werkzeug - INFO - 127.0.0.1 - - [31/Aug/2025 13:06:04] "[36mGET /static/css/modern-style.css HTTP/1.1[0m" 304 -
+2025-08-31 13:06:04,364 - werkzeug - INFO - 127.0.0.1 - - [31/Aug/2025 13:06:04] "[36mGET /static/images/ej_logo_dark.jpg HTTP/1.1[0m" 304 -
+2025-08-31 13:06:08,721 - werkzeug - INFO - 127.0.0.1 - - [31/Aug/2025 13:06:08] "POST /login HTTP/1.1" 200 -
+2025-08-31 13:06:09,088 - werkzeug - INFO - 127.0.0.1 - - [31/Aug/2025 13:06:09] "[36mGET /static/css/modern-style.css HTTP/1.1[0m" 304 -
+2025-08-31 13:06:09,089 - werkzeug - INFO - 127.0.0.1 - - [31/Aug/2025 13:06:09] "[36mGET /static/images/ej_logo_dark.jpg HTTP/1.1[0m" 304 -
+2025-08-31 13:06:14,567 - werkzeug - INFO - 127.0.0.1 - - [31/Aug/2025 13:06:14] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-08-31 13:06:14,914 - werkzeug - INFO - 127.0.0.1 - - [31/Aug/2025 13:06:14] "GET /admin/dashboard HTTP/1.1" 200 -
+2025-08-31 13:06:15,145 - werkzeug - INFO - 127.0.0.1 - - [31/Aug/2025 13:06:15] "[36mGET /static/images/ej_logo_blue.png HTTP/1.1[0m" 304 -
+2025-08-31 13:06:36,253 - werkzeug - INFO - 127.0.0.1 - - [31/Aug/2025 13:06:36] "GET /admin/requisicoes HTTP/1.1" 200 -
+2025-08-31 13:06:36,627 - werkzeug - INFO - 127.0.0.1 - - [31/Aug/2025 13:06:36] "[36mGET /static/images/ej_logo_blue.png HTTP/1.1[0m" 304 -
+2025-08-31 13:06:41,322 - werkzeug - INFO - 127.0.0.1 - - [31/Aug/2025 13:06:41] "GET /admin/requisicoes HTTP/1.1" 200 -
+2025-08-31 13:06:41,696 - werkzeug - INFO - 127.0.0.1 - - [31/Aug/2025 13:06:41] "[36mGET /static/images/ej_logo_blue.png HTTP/1.1[0m" 304 -
+2025-08-31 13:06:41,959 - werkzeug - INFO - 127.0.0.1 - - [31/Aug/2025 13:06:41] "GET /admin/atividades HTTP/1.1" 200 -
+2025-08-31 13:06:42,044 - werkzeug - INFO - 127.0.0.1 - - [31/Aug/2025 13:06:42] "[36mGET /static/images/ej_logo_blue.png HTTP/1.1[0m" 304 -
+2025-08-31 13:06:42,650 - werkzeug - INFO - 127.0.0.1 - - [31/Aug/2025 13:06:42] "GET /admin/alunos HTTP/1.1" 200 -
+2025-08-31 13:06:42,982 - werkzeug - INFO - 127.0.0.1 - - [31/Aug/2025 13:06:42] "[36mGET /static/images/ej_logo_blue.png HTTP/1.1[0m" 304 -
+2025-08-31 13:06:43,338 - werkzeug - INFO - 127.0.0.1 - - [31/Aug/2025 13:06:43] "GET /admin/atividades HTTP/1.1" 200 -
+2025-08-31 13:06:43,692 - werkzeug - INFO - 127.0.0.1 - - [31/Aug/2025 13:06:43] "[36mGET /static/images/ej_logo_blue.png HTTP/1.1[0m" 304 -
+2025-08-31 13:06:49,078 - werkzeug - INFO - 127.0.0.1 - - [31/Aug/2025 13:06:49] "GET /admin/alunos HTTP/1.1" 200 -
+2025-08-31 13:06:49,472 - werkzeug - INFO - 127.0.0.1 - - [31/Aug/2025 13:06:49] "[36mGET /static/images/ej_logo_blue.png HTTP/1.1[0m" 304 -
+2025-08-31 13:06:50,074 - werkzeug - INFO - 127.0.0.1 - - [31/Aug/2025 13:06:50] "GET /admin/importar_requisicoes HTTP/1.1" 200 -
+2025-08-31 13:06:50,460 - werkzeug - INFO - 127.0.0.1 - - [31/Aug/2025 13:06:50] "[36mGET /static/images/ej_logo_blue.png HTTP/1.1[0m" 304 -
+2025-08-31 13:06:55,159 - werkzeug - INFO - 127.0.0.1 - - [31/Aug/2025 13:06:55] "GET /admin/requisicoes HTTP/1.1" 200 -
+2025-08-31 13:06:55,528 - werkzeug - INFO - 127.0.0.1 - - [31/Aug/2025 13:06:55] "[36mGET /static/images/ej_logo_blue.png HTTP/1.1[0m" 304 -
+2025-08-31 13:06:55,860 - werkzeug - INFO - 127.0.0.1 - - [31/Aug/2025 13:06:55] "GET /admin/requisicoes HTTP/1.1" 200 -
+2025-08-31 13:06:56,242 - werkzeug - INFO - 127.0.0.1 - - [31/Aug/2025 13:06:56] "[36mGET /static/images/ej_logo_blue.png HTTP/1.1[0m" 304 -
+2025-08-31 13:06:56,660 - werkzeug - INFO - 127.0.0.1 - - [31/Aug/2025 13:06:56] "GET /admin/dashboard HTTP/1.1" 200 -
+2025-08-31 13:06:57,043 - werkzeug - INFO - 127.0.0.1 - - [31/Aug/2025 13:06:57] "[36mGET /static/images/ej_logo_blue.png HTTP/1.1[0m" 304 -
+2025-08-31 13:06:58,172 - werkzeug - INFO - 127.0.0.1 - - [31/Aug/2025 13:06:58] "GET /admin/dashboard HTTP/1.1" 200 -
+2025-08-31 13:06:58,523 - werkzeug - INFO - 127.0.0.1 - - [31/Aug/2025 13:06:58] "[36mGET /static/images/ej_logo_blue.png HTTP/1.1[0m" 304 -
+2025-08-31 13:06:58,814 - werkzeug - INFO - 127.0.0.1 - - [31/Aug/2025 13:06:58] "GET /admin/requisicoes HTTP/1.1" 200 -
+2025-08-31 13:06:59,273 - werkzeug - INFO - 127.0.0.1 - - [31/Aug/2025 13:06:59] "[36mGET /static/images/ej_logo_blue.png HTTP/1.1[0m" 304 -
+2025-08-31 13:06:59,607 - werkzeug - INFO - 127.0.0.1 - - [31/Aug/2025 13:06:59] "GET /admin/atividades HTTP/1.1" 200 -
+2025-08-31 13:06:59,975 - werkzeug - INFO - 127.0.0.1 - - [31/Aug/2025 13:06:59] "[36mGET /static/images/ej_logo_blue.png HTTP/1.1[0m" 304 -
+2025-08-31 13:07:00,720 - werkzeug - INFO - 127.0.0.1 - - [31/Aug/2025 13:07:00] "GET /admin/alunos HTTP/1.1" 200 -
+2025-08-31 13:07:01,093 - werkzeug - INFO - 127.0.0.1 - - [31/Aug/2025 13:07:01] "[36mGET /static/images/ej_logo_blue.png HTTP/1.1[0m" 304 -
+2025-08-31 13:07:02,247 - werkzeug - INFO - 127.0.0.1 - - [31/Aug/2025 13:07:02] "GET /admin/importar_requisicoes HTTP/1.1" 200 -
+2025-08-31 13:07:02,621 - werkzeug - INFO - 127.0.0.1 - - [31/Aug/2025 13:07:02] "[36mGET /static/images/ej_logo_blue.png HTTP/1.1[0m" 304 -
+2025-08-31 13:07:03,085 - werkzeug - INFO - 127.0.0.1 - - [31/Aug/2025 13:07:03] "[32mGET /logout HTTP/1.1[0m" 302 -
+2025-08-31 13:07:03,397 - werkzeug - INFO - 127.0.0.1 - - [31/Aug/2025 13:07:03] "GET /login HTTP/1.1" 200 -
+2025-08-31 13:07:03,645 - werkzeug - INFO - 127.0.0.1 - - [31/Aug/2025 13:07:03] "[36mGET /static/css/modern-style.css HTTP/1.1[0m" 304 -
+2025-08-31 13:07:03,759 - werkzeug - INFO - 127.0.0.1 - - [31/Aug/2025 13:07:03] "[36mGET /static/images/ej_logo_dark.jpg HTTP/1.1[0m" 304 -

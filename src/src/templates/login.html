@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login</title>
+
+  <!-- Fontes e Ícones -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    body {
+      margin:0;
+      font-family:'Inter',sans-serif;
+      background:#f9fafb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      height:100vh;
+    }
+    .login-card {
+      width:100%;
+      max-width:420px;
+      background:#fff;
+      border:1px solid #e5e7eb;
+      border-radius:6px;
+      padding:24px;
+    }
+    .main-title { font-size:20px; font-weight:600; margin-bottom:16px; text-align:center; }
+    .form-grid { display:grid; gap:12px; }
+    .input {
+      width:100%; padding:10px 12px;
+      border:1px solid #e5e7eb; border-radius:6px;
+    }
+    .btn {
+      display:inline-flex; align-items:center; justify-content:center;
+      gap:8px; padding:8px 14px;
+      border-radius:6px; border:1px solid #003366;
+      background:#003366; color:#fff;
+      font-weight:500; cursor:pointer;
+    }
+    .btn:hover { filter:brightness(.9); }
+  </style>
+</head>
+<body>
+  <div class="login-card">
+    <h1 class="main-title">Acessar</h1>
+    <form method="post" class="form-grid">
+      <label>
+        <div style="font-size:12px;color:#6b7280;">E-mail</div>
+        <input class="input" type="email" name="email" required>
+      </label>
+      <label>
+        <div style="font-size:12px;color:#6b7280;">Senha</div>
+        <input class="input" type="password" name="senha" required>
+      </label>
+      <button class="btn" type="submit">
+        <i class="lucide" data-lucide="log-in"></i> Entrar
+      </button>
+    </form>
+  </div>
+  <script>lucide.createIcons();</script>
+</body>
+</html>

@@ -1,0 +1,1361 @@
+2025-08-29 22:48:43,178 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.100.103:5000
+2025-08-29 22:48:43,178 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-08-29 22:48:58,716 - werkzeug - INFO - 127.0.0.1 - - [29/Aug/2025 22:48:58] "[32mGET / HTTP/1.1[0m" 302 -
+2025-08-29 22:48:58,761 - werkzeug - INFO - 127.0.0.1 - - [29/Aug/2025 22:48:58] "GET /login HTTP/1.1" 200 -
+2025-08-29 22:48:59,249 - werkzeug - INFO - 127.0.0.1 - - [29/Aug/2025 22:48:59] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-08-29 22:49:09,585 - werkzeug - INFO - 127.0.0.1 - - [29/Aug/2025 22:49:09] "POST /login HTTP/1.1" 200 -
+2025-08-29 22:49:16,769 - werkzeug - INFO - 127.0.0.1 - - [29/Aug/2025 22:49:16] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-08-29 22:49:16,797 - werkzeug - INFO - 127.0.0.1 - - [29/Aug/2025 22:49:16] "GET /admin/dashboard HTTP/1.1" 200 -
+2025-08-29 22:49:25,971 - main - ERROR - Exception on /admin/requisicoes [GET]
+Traceback (most recent call last):
+  File "D:\Manus\sistema_final_completo\src\src\venv\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "D:\Manus\sistema_final_completo\src\src\venv\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "D:\Manus\sistema_final_completo\src\src\venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\Manus\sistema_final_completo\src\src\venv\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "D:\Manus\sistema_final_completo\src\src\main.py", line 23, in decorated_function
+    return f(*args, **kwargs)
+  File "D:\Manus\sistema_final_completo\src\src\main.py", line 384, in admin_requisicoes
+    return render_template("admin_requisicoes.html", requisicoes=requisicoes, status_atual=status_filtro)
+  File "D:\Manus\sistema_final_completo\src\src\venv\Lib\site-packages\flask\templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "D:\Manus\sistema_final_completo\src\src\venv\Lib\site-packages\jinja2\environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Manus\sistema_final_completo\src\src\venv\Lib\site-packages\jinja2\environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "D:\Manus\sistema_final_completo\src\src\venv\Lib\site-packages\jinja2\environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "D:\Manus\sistema_final_completo\src\src\venv\Lib\site-packages\jinja2\loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "D:\Manus\sistema_final_completo\src\src\venv\Lib\site-packages\flask\templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Manus\sistema_final_completo\src\src\venv\Lib\site-packages\flask\templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: admin_requisicoes.html
+2025-08-29 22:49:25,975 - werkzeug - INFO - 127.0.0.1 - - [29/Aug/2025 22:49:25] "[35m[1mGET /admin/requisicoes HTTP/1.1[0m" 500 -
+2025-08-30 07:39:58,753 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.100.103:5000
+2025-08-30 07:39:58,753 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-08-30 07:40:44,291 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 07:40:44] "[32mGET / HTTP/1.1[0m" 302 -
+2025-08-30 07:40:44,543 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 07:40:44] "GET /login HTTP/1.1" 200 -
+2025-08-30 07:40:44,725 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 07:40:44] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-08-30 07:40:52,124 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 07:40:52] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-08-30 07:40:52,405 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 07:40:52] "GET /admin/dashboard HTTP/1.1" 200 -
+2025-08-30 07:40:57,457 - main - ERROR - Exception on /admin/requisicoes [GET]
+Traceback (most recent call last):
+  File "C:\Users\klebe\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\klebe\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\klebe\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\klebe\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "D:\Manus\sistema_final_completo\src\src\main.py", line 23, in decorated_function
+    return f(*args, **kwargs)
+  File "D:\Manus\sistema_final_completo\src\src\main.py", line 384, in admin_requisicoes
+    return render_template("admin_requisicoes.html", requisicoes=requisicoes, status_atual=status_filtro)
+  File "C:\Users\klebe\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "C:\Users\klebe\AppData\Local\Programs\Python\Python313\Lib\site-packages\jinja2\environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\klebe\AppData\Local\Programs\Python\Python313\Lib\site-packages\jinja2\environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\klebe\AppData\Local\Programs\Python\Python313\Lib\site-packages\jinja2\environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "C:\Users\klebe\AppData\Local\Programs\Python\Python313\Lib\site-packages\jinja2\loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\klebe\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\klebe\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: admin_requisicoes.html
+2025-08-30 07:40:57,513 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 07:40:57] "[35m[1mGET /admin/requisicoes HTTP/1.1[0m" 500 -
+2025-08-30 07:41:00,744 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 07:41:00] "GET /admin/atividades HTTP/1.1" 200 -
+2025-08-30 07:41:03,837 - main - ERROR - Exception on /admin/alunos [GET]
+Traceback (most recent call last):
+  File "C:\Users\klebe\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\klebe\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\klebe\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\klebe\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "D:\Manus\sistema_final_completo\src\src\main.py", line 23, in decorated_function
+    return f(*args, **kwargs)
+  File "D:\Manus\sistema_final_completo\src\src\main.py", line 522, in admin_alunos
+    return render_template("admin_alunos.html", alunos=alunos)
+  File "C:\Users\klebe\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "C:\Users\klebe\AppData\Local\Programs\Python\Python313\Lib\site-packages\jinja2\environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\klebe\AppData\Local\Programs\Python\Python313\Lib\site-packages\jinja2\environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\klebe\AppData\Local\Programs\Python\Python313\Lib\site-packages\jinja2\environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "C:\Users\klebe\AppData\Local\Programs\Python\Python313\Lib\site-packages\jinja2\loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\klebe\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\klebe\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: admin_alunos.html
+2025-08-30 07:41:03,839 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 07:41:03] "[35m[1mGET /admin/alunos HTTP/1.1[0m" 500 -
+2025-08-30 07:41:06,094 - main - ERROR - Exception on /admin/importar_requisicoes [GET]
+Traceback (most recent call last):
+  File "C:\Users\klebe\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\klebe\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\klebe\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\klebe\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "D:\Manus\sistema_final_completo\src\src\main.py", line 23, in decorated_function
+    return f(*args, **kwargs)
+  File "D:\Manus\sistema_final_completo\src\src\main.py", line 363, in admin_importar_requisicoes
+    return render_template("admin_importar_requisicoes.html")
+  File "C:\Users\klebe\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "C:\Users\klebe\AppData\Local\Programs\Python\Python313\Lib\site-packages\jinja2\environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\klebe\AppData\Local\Programs\Python\Python313\Lib\site-packages\jinja2\environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\klebe\AppData\Local\Programs\Python\Python313\Lib\site-packages\jinja2\environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "C:\Users\klebe\AppData\Local\Programs\Python\Python313\Lib\site-packages\jinja2\loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\klebe\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\klebe\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: admin_importar_requisicoes.html
+2025-08-30 07:41:06,096 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 07:41:06] "[35m[1mGET /admin/importar_requisicoes HTTP/1.1[0m" 500 -
+2025-08-30 07:41:08,025 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 07:41:08] "GET /admin/atividades/academicas HTTP/1.1" 200 -
+2025-08-30 07:41:12,712 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 07:41:12] "GET /admin/atividades/academicas HTTP/1.1" 200 -
+2025-08-30 07:41:14,282 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 07:41:14] "GET /admin/atividades/extensao HTTP/1.1" 200 -
+2025-08-30 07:41:15,465 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 07:41:15] "GET /admin/atividades HTTP/1.1" 200 -
+2025-08-30 07:41:16,681 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 07:41:16] "GET /admin/dashboard HTTP/1.1" 200 -
+2025-08-30 07:41:20,155 - main - ERROR - Exception on /admin/requisicoes [GET]
+Traceback (most recent call last):
+  File "C:\Users\klebe\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\klebe\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\klebe\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\klebe\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "D:\Manus\sistema_final_completo\src\src\main.py", line 23, in decorated_function
+    return f(*args, **kwargs)
+  File "D:\Manus\sistema_final_completo\src\src\main.py", line 384, in admin_requisicoes
+    return render_template("admin_requisicoes.html", requisicoes=requisicoes, status_atual=status_filtro)
+  File "C:\Users\klebe\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "C:\Users\klebe\AppData\Local\Programs\Python\Python313\Lib\site-packages\jinja2\environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\klebe\AppData\Local\Programs\Python\Python313\Lib\site-packages\jinja2\environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\klebe\AppData\Local\Programs\Python\Python313\Lib\site-packages\jinja2\environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "C:\Users\klebe\AppData\Local\Programs\Python\Python313\Lib\site-packages\jinja2\loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\klebe\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\klebe\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: admin_requisicoes.html
+2025-08-30 07:41:20,160 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 07:41:20] "[35m[1mGET /admin/requisicoes HTTP/1.1[0m" 500 -
+2025-08-30 07:41:21,929 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 07:41:21] "GET /admin/atividades HTTP/1.1" 200 -
+2025-08-30 07:41:23,404 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 07:41:23] "GET /admin/atividades?tipo=Acadêmica+Complementar HTTP/1.1" 200 -
+2025-08-30 07:41:23,655 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 07:41:23] "GET /admin/atividades?tipo=Extensão+Universitária HTTP/1.1" 200 -
+2025-08-30 07:41:31,868 - main - ERROR - Exception on /admin/requisicoes [GET]
+Traceback (most recent call last):
+  File "C:\Users\klebe\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\klebe\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\klebe\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\klebe\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "D:\Manus\sistema_final_completo\src\src\main.py", line 23, in decorated_function
+    return f(*args, **kwargs)
+  File "D:\Manus\sistema_final_completo\src\src\main.py", line 384, in admin_requisicoes
+    return render_template("admin_requisicoes.html", requisicoes=requisicoes, status_atual=status_filtro)
+  File "C:\Users\klebe\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "C:\Users\klebe\AppData\Local\Programs\Python\Python313\Lib\site-packages\jinja2\environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\klebe\AppData\Local\Programs\Python\Python313\Lib\site-packages\jinja2\environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\klebe\AppData\Local\Programs\Python\Python313\Lib\site-packages\jinja2\environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "C:\Users\klebe\AppData\Local\Programs\Python\Python313\Lib\site-packages\jinja2\loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\klebe\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\klebe\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: admin_requisicoes.html
+2025-08-30 07:41:31,870 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 07:41:31] "[35m[1mGET /admin/requisicoes HTTP/1.1[0m" 500 -
+2025-08-30 07:48:12,081 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.100.103:5000
+2025-08-30 07:48:12,081 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-08-30 07:48:21,585 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 07:48:21] "[32mGET / HTTP/1.1[0m" 302 -
+2025-08-30 07:48:21,859 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 07:48:21] "GET /login HTTP/1.1" 200 -
+2025-08-30 07:48:22,033 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 07:48:22] "GET /login HTTP/1.1" 200 -
+2025-08-30 07:48:31,176 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 07:48:31] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-08-30 07:48:31,439 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 07:48:31] "GET /admin/dashboard HTTP/1.1" 200 -
+2025-08-30 07:48:32,896 - main - ERROR - Exception on /admin/requisicoes [GET]
+Traceback (most recent call last):
+  File "C:\Users\klebe\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\klebe\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\klebe\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\klebe\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "D:\Manus\sistema_final_completo\src\src\main.py", line 23, in decorated_function
+    return f(*args, **kwargs)
+  File "D:\Manus\sistema_final_completo\src\src\main.py", line 384, in admin_requisicoes
+    return render_template("admin_requisicoes.html", requisicoes=requisicoes, status_atual=status_filtro)
+  File "C:\Users\klebe\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "C:\Users\klebe\AppData\Local\Programs\Python\Python313\Lib\site-packages\jinja2\environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\klebe\AppData\Local\Programs\Python\Python313\Lib\site-packages\jinja2\environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\klebe\AppData\Local\Programs\Python\Python313\Lib\site-packages\jinja2\environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "C:\Users\klebe\AppData\Local\Programs\Python\Python313\Lib\site-packages\jinja2\loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\klebe\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\klebe\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: admin_requisicoes.html
+2025-08-30 07:48:32,900 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 07:48:32] "[35m[1mGET /admin/requisicoes HTTP/1.1[0m" 500 -
+2025-08-30 07:48:37,847 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 07:48:37] "GET /admin/dashboard HTTP/1.1" 200 -
+2025-08-30 07:56:24,045 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 07:56:24] "GET /admin/requisicoes HTTP/1.1" 200 -
+2025-08-30 07:56:27,107 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 07:56:27] "GET /admin/requisicoes?status=Pendente HTTP/1.1" 200 -
+2025-08-30 07:56:27,604 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 07:56:27] "GET /admin/requisicoes?status=Pendente HTTP/1.1" 200 -
+2025-08-30 07:56:30,626 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 07:56:30] "GET /admin/atividades HTTP/1.1" 200 -
+2025-08-30 07:56:32,323 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 07:56:32] "GET /admin/atividades?tipo=Acadêmica+Complementar HTTP/1.1" 200 -
+2025-08-30 07:56:32,898 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 07:56:32] "GET /admin/atividades?tipo=Extensão+Universitária HTTP/1.1" 200 -
+2025-08-30 07:56:36,904 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 07:56:36] "GET /admin/atividades HTTP/1.1" 200 -
+2025-08-30 07:56:39,403 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 07:56:39] "GET /admin/atividades/extensao HTTP/1.1" 200 -
+2025-08-30 07:56:41,633 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 07:56:41] "GET /admin/alunos HTTP/1.1" 200 -
+2025-08-30 07:56:46,534 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 07:56:46] "[32mPOST /admin/alterar_status_alunos HTTP/1.1[0m" 302 -
+2025-08-30 07:56:46,845 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 07:56:46] "GET /admin/alunos HTTP/1.1" 200 -
+2025-08-30 07:56:48,562 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 07:56:48] "GET /admin/alunos HTTP/1.1" 200 -
+2025-08-30 07:56:50,826 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 07:56:50] "GET /admin/alunos HTTP/1.1" 200 -
+2025-08-30 07:56:52,835 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 07:56:52] "GET /admin/atividades/academicas HTTP/1.1" 200 -
+2025-08-30 07:56:59,440 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 07:56:59] "GET /admin/requisicoes HTTP/1.1" 200 -
+2025-08-30 07:57:00,607 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 07:57:00] "GET /admin/requisicoes?status=Pendente HTTP/1.1" 200 -
+2025-08-30 07:57:01,454 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 07:57:01] "GET /admin/requisicoes?status=Deferida HTTP/1.1" 200 -
+2025-08-30 07:57:02,093 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 07:57:02] "GET /admin/requisicoes?status=Pendente HTTP/1.1" 200 -
+2025-08-30 07:57:02,703 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 07:57:02] "GET /admin/requisicoes?status=Todas HTTP/1.1" 200 -
+2025-08-30 07:57:03,323 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 07:57:03] "GET /admin/importar_requisicoes HTTP/1.1" 200 -
+2025-08-30 07:57:05,126 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 07:57:05] "GET /admin/requisicoes HTTP/1.1" 200 -
+2025-08-30 07:57:07,523 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 07:57:07] "GET /admin/requisicoes HTTP/1.1" 200 -
+2025-08-30 07:58:01,088 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 07:58:01] "GET /admin/requisicoes HTTP/1.1" 200 -
+2025-08-30 07:58:05,579 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 07:58:05] "GET /admin/dashboard HTTP/1.1" 200 -
+2025-08-30 07:58:08,030 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 07:58:08] "GET /admin/alunos HTTP/1.1" 200 -
+2025-08-30 07:58:10,539 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 07:58:10] "GET /admin/adicionar_aluno HTTP/1.1" 200 -
+2025-08-30 07:58:43,107 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 07:58:43] "[32mPOST /admin/adicionar_aluno HTTP/1.1[0m" 302 -
+2025-08-30 07:58:43,353 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 07:58:43] "GET /admin/alunos HTTP/1.1" 200 -
+2025-08-30 07:59:03,140 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 07:59:03] "GET /admin/editar_aluno/2 HTTP/1.1" 200 -
+2025-08-30 07:59:06,581 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 07:59:06] "GET /admin/dashboard HTTP/1.1" 200 -
+2025-08-30 07:59:08,417 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 07:59:08] "GET /admin/alunos HTTP/1.1" 200 -
+2025-08-30 07:59:12,401 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 07:59:12] "GET /admin/importar_requisicoes HTTP/1.1" 200 -
+2025-08-30 07:59:42,381 - __main__ - INFO - Iniciando importação do arquivo: D:\Manus\sistema_final_completo\src\src\uploads\Acompanhamento_de_atividades_complementares.xlsx usando openpyxl
+2025-08-30 07:59:42,636 - __main__ - INFO - Planilha 'Requisições' lida. Total de linhas: 923
+2025-08-30 07:59:42,637 - __main__ - INFO - Cache de atividades criado: 0 atividades.
+2025-08-30 07:59:42,638 - __main__ - WARNING - Linha 3: Atividade 'Banca da ANAC' (normalizada: 'banca da anac') não encontrada no banco, pulando.
+2025-08-30 07:59:42,639 - __main__ - WARNING - Linha 4: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:42,640 - __main__ - WARNING - Linha 5: Atividade 'Horas de voo' (normalizada: 'horas de voo') não encontrada no banco, pulando.
+2025-08-30 07:59:42,641 - __main__ - WARNING - Linha 6: Atividade 'Estágio ' (normalizada: 'estagio') não encontrada no banco, pulando.
+2025-08-30 07:59:42,641 - __main__ - WARNING - Linha 7: Atividade 'Cursos online NUBE, IPED e FGV ' (normalizada: 'cursos online nube, iped e fgv') não encontrada no banco, pulando.
+2025-08-30 07:59:42,641 - __main__ - WARNING - Linha 8: Atividade 'Cursos online NUBE, IPED e FGV ' (normalizada: 'cursos online nube, iped e fgv') não encontrada no banco, pulando.
+2025-08-30 07:59:42,642 - __main__ - WARNING - Linha 9: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:42,643 - __main__ - WARNING - Linha 10: Atividade 'Horas de voo' (normalizada: 'horas de voo') não encontrada no banco, pulando.
+2025-08-30 07:59:42,644 - __main__ - WARNING - Linha 11: Atividade 'Horas de voo' (normalizada: 'horas de voo') não encontrada no banco, pulando.
+2025-08-30 07:59:42,646 - __main__ - WARNING - Linha 12: Atividade 'Palestras na Faculdade EJ' (normalizada: 'palestras na faculdade ej') não encontrada no banco, pulando.
+2025-08-30 07:59:42,646 - __main__ - WARNING - Linha 13: Atividade 'Palestras na Faculdade EJ' (normalizada: 'palestras na faculdade ej') não encontrada no banco, pulando.
+2025-08-30 07:59:42,647 - __main__ - WARNING - Linha 14: Atividade 'Palestras na Faculdade EJ' (normalizada: 'palestras na faculdade ej') não encontrada no banco, pulando.
+2025-08-30 07:59:42,647 - __main__ - WARNING - Linha 15: Atividade 'Palestras na Faculdade EJ' (normalizada: 'palestras na faculdade ej') não encontrada no banco, pulando.
+2025-08-30 07:59:42,648 - __main__ - WARNING - Linha 16: Atividade 'Palestras na Faculdade EJ' (normalizada: 'palestras na faculdade ej') não encontrada no banco, pulando.
+2025-08-30 07:59:42,649 - __main__ - WARNING - Linha 17: Atividade 'Palestras na Faculdade EJ' (normalizada: 'palestras na faculdade ej') não encontrada no banco, pulando.
+2025-08-30 07:59:42,649 - __main__ - WARNING - Linha 18: Atividade 'Palestras na Faculdade EJ' (normalizada: 'palestras na faculdade ej') não encontrada no banco, pulando.
+2025-08-30 07:59:42,650 - __main__ - WARNING - Linha 19: Atividade 'Palestras na Faculdade EJ' (normalizada: 'palestras na faculdade ej') não encontrada no banco, pulando.
+2025-08-30 07:59:42,650 - __main__ - WARNING - Linha 20: Atividade 'Palestras na Faculdade EJ' (normalizada: 'palestras na faculdade ej') não encontrada no banco, pulando.
+2025-08-30 07:59:42,651 - __main__ - WARNING - Linha 21: Atividade 'Palestras na Faculdade EJ' (normalizada: 'palestras na faculdade ej') não encontrada no banco, pulando.
+2025-08-30 07:59:42,651 - __main__ - WARNING - Linha 22: Atividade 'Palestras na Faculdade EJ' (normalizada: 'palestras na faculdade ej') não encontrada no banco, pulando.
+2025-08-30 07:59:42,651 - __main__ - WARNING - Linha 23: Atividade 'Palestras na Faculdade EJ' (normalizada: 'palestras na faculdade ej') não encontrada no banco, pulando.
+2025-08-30 07:59:42,652 - __main__ - WARNING - Linha 24: Atividade 'Palestras na Faculdade EJ' (normalizada: 'palestras na faculdade ej') não encontrada no banco, pulando.
+2025-08-30 07:59:42,652 - __main__ - WARNING - Linha 25: Atividade 'Palestras na Faculdade EJ' (normalizada: 'palestras na faculdade ej') não encontrada no banco, pulando.
+2025-08-30 07:59:42,653 - __main__ - WARNING - Linha 26: Atividade 'Palestras na Faculdade EJ' (normalizada: 'palestras na faculdade ej') não encontrada no banco, pulando.
+2025-08-30 07:59:42,653 - __main__ - WARNING - Linha 27: Atividade 'Palestras na Faculdade EJ' (normalizada: 'palestras na faculdade ej') não encontrada no banco, pulando.
+2025-08-30 07:59:42,653 - __main__ - WARNING - Linha 28: Atividade 'Palestras na Faculdade EJ' (normalizada: 'palestras na faculdade ej') não encontrada no banco, pulando.
+2025-08-30 07:59:42,654 - __main__ - WARNING - Linha 29: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:42,654 - __main__ - WARNING - Linha 30: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:42,654 - __main__ - WARNING - Linha 31: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:42,655 - __main__ - WARNING - Linha 32: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:42,655 - __main__ - WARNING - Linha 33: Atividade 'Cursos aprimoramento acadêmico, cultural ou pessoal' (normalizada: 'cursos aprimoramento academico, cultural ou pessoal') não encontrada no banco, pulando.
+2025-08-30 07:59:42,656 - __main__ - WARNING - Linha 34: Atividade 'Cursos aprimoramento acadêmico, cultural ou pessoal' (normalizada: 'cursos aprimoramento academico, cultural ou pessoal') não encontrada no banco, pulando.
+2025-08-30 07:59:42,656 - __main__ - WARNING - Linha 35: Atividade 'Cursos aprimoramento acadêmico, cultural ou pessoal' (normalizada: 'cursos aprimoramento academico, cultural ou pessoal') não encontrada no banco, pulando.
+2025-08-30 07:59:42,657 - __main__ - WARNING - Linha 36: Atividade 'Cursos online NUBE, IPED e FGV ' (normalizada: 'cursos online nube, iped e fgv') não encontrada no banco, pulando.
+2025-08-30 07:59:42,657 - __main__ - WARNING - Linha 37: Atividade 'Cursos online NUBE, IPED e FGV ' (normalizada: 'cursos online nube, iped e fgv') não encontrada no banco, pulando.
+2025-08-30 07:59:42,658 - __main__ - WARNING - Linha 38: Atividade 'Cursos online NUBE, IPED e FGV ' (normalizada: 'cursos online nube, iped e fgv') não encontrada no banco, pulando.
+2025-08-30 07:59:42,658 - __main__ - WARNING - Linha 39: Atividade 'Cursos online NUBE, IPED e FGV ' (normalizada: 'cursos online nube, iped e fgv') não encontrada no banco, pulando.
+2025-08-30 07:59:42,658 - __main__ - WARNING - Linha 40: Atividade 'Cursos online NUBE, IPED e FGV ' (normalizada: 'cursos online nube, iped e fgv') não encontrada no banco, pulando.
+2025-08-30 07:59:42,659 - __main__ - WARNING - Linha 41: Atividade 'Cursos online NUBE, IPED e FGV ' (normalizada: 'cursos online nube, iped e fgv') não encontrada no banco, pulando.
+2025-08-30 07:59:42,660 - __main__ - WARNING - Linha 42: Atividade 'Cursos online NUBE, IPED e FGV ' (normalizada: 'cursos online nube, iped e fgv') não encontrada no banco, pulando.
+2025-08-30 07:59:42,661 - __main__ - WARNING - Linha 43: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:42,662 - __main__ - WARNING - Linha 44: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:42,663 - __main__ - WARNING - Linha 45: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:42,663 - __main__ - WARNING - Linha 46: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:42,663 - __main__ - WARNING - Linha 47: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:42,664 - __main__ - WARNING - Linha 48: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:42,664 - __main__ - WARNING - Linha 49: Atividade 'Palestras na Faculdade EJ' (normalizada: 'palestras na faculdade ej') não encontrada no banco, pulando.
+2025-08-30 07:59:42,665 - __main__ - WARNING - Linha 50: Atividade 'Cursos online NUBE, IPED e FGV ' (normalizada: 'cursos online nube, iped e fgv') não encontrada no banco, pulando.
+2025-08-30 07:59:42,665 - __main__ - WARNING - Linha 51: Atividade 'Trabalho voluntário' (normalizada: 'trabalho voluntario') não encontrada no banco, pulando.
+2025-08-30 07:59:42,666 - __main__ - WARNING - Linha 52: Atividade 'Cursos de línguas' (normalizada: 'cursos de linguas') não encontrada no banco, pulando.
+2025-08-30 07:59:42,666 - __main__ - WARNING - Linha 53: Atividade 'Monitoria' (normalizada: 'monitoria') não encontrada no banco, pulando.
+2025-08-30 07:59:42,667 - __main__ - WARNING - Linha 54: Atividade 'Cursos aprimoramento acadêmico, cultural ou pessoal' (normalizada: 'cursos aprimoramento academico, cultural ou pessoal') não encontrada no banco, pulando.
+2025-08-30 07:59:42,667 - __main__ - WARNING - Linha 55: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:42,667 - __main__ - WARNING - Linha 56: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:42,668 - __main__ - WARNING - Linha 57: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:42,669 - __main__ - WARNING - Linha 58: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:42,669 - __main__ - WARNING - Linha 59: Atividade 'Horas de voo em simulador' (normalizada: 'horas de voo em simulador') não encontrada no banco, pulando.
+2025-08-30 07:59:42,670 - __main__ - WARNING - Linha 60: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:42,670 - __main__ - WARNING - Linha 61: Atividade 'Palestras na Faculdade EJ' (normalizada: 'palestras na faculdade ej') não encontrada no banco, pulando.
+2025-08-30 07:59:42,671 - __main__ - WARNING - Linha 62: Atividade 'Horas de voo' (normalizada: 'horas de voo') não encontrada no banco, pulando.
+2025-08-30 07:59:42,671 - __main__ - WARNING - Linha 63: Dados essenciais (Atividade, Data Evento, Horas) ausentes, pulando.
+2025-08-30 07:59:42,671 - __main__ - WARNING - Linha 64: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:42,672 - __main__ - WARNING - Linha 65: Atividade 'Horas de voo' (normalizada: 'horas de voo') não encontrada no banco, pulando.
+2025-08-30 07:59:42,672 - __main__ - WARNING - Linha 66: Atividade 'Horas de voo em simulador' (normalizada: 'horas de voo em simulador') não encontrada no banco, pulando.
+2025-08-30 07:59:42,673 - __main__ - WARNING - Linha 67: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:42,673 - __main__ - WARNING - Linha 68: Atividade 'Cursos de formação profissional' (normalizada: 'cursos de formacao profissional') não encontrada no banco, pulando.
+2025-08-30 07:59:42,674 - __main__ - WARNING - Linha 69: Atividade 'Cursos de línguas' (normalizada: 'cursos de linguas') não encontrada no banco, pulando.
+2025-08-30 07:59:42,674 - __main__ - WARNING - Linha 70: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:42,675 - __main__ - WARNING - Linha 71: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:42,676 - __main__ - WARNING - Linha 72: Atividade 'Palestras na Faculdade EJ' (normalizada: 'palestras na faculdade ej') não encontrada no banco, pulando.
+2025-08-30 07:59:42,677 - __main__ - WARNING - Linha 73: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:42,678 - __main__ - WARNING - Linha 74: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:42,679 - __main__ - WARNING - Linha 75: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:42,680 - __main__ - WARNING - Linha 76: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:42,680 - __main__ - WARNING - Linha 77: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:42,681 - __main__ - WARNING - Linha 78: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:42,681 - __main__ - WARNING - Linha 79: Atividade 'Banca da ANAC' (normalizada: 'banca da anac') não encontrada no banco, pulando.
+2025-08-30 07:59:42,682 - __main__ - WARNING - Linha 80: Atividade 'Ouvinte em defesa de TCCs e afins' (normalizada: 'ouvinte em defesa de tccs e afins') não encontrada no banco, pulando.
+2025-08-30 07:59:42,682 - __main__ - WARNING - Linha 81: Atividade 'Banca da ANAC' (normalizada: 'banca da anac') não encontrada no banco, pulando.
+2025-08-30 07:59:42,683 - __main__ - WARNING - Linha 82: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:42,683 - __main__ - WARNING - Linha 83: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:42,684 - __main__ - WARNING - Linha 84: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:42,684 - __main__ - WARNING - Linha 85: Atividade 'Banca da ANAC' (normalizada: 'banca da anac') não encontrada no banco, pulando.
+2025-08-30 07:59:42,685 - __main__ - WARNING - Linha 86: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:42,685 - __main__ - WARNING - Linha 87: Atividade 'Cursos de línguas' (normalizada: 'cursos de linguas') não encontrada no banco, pulando.
+2025-08-30 07:59:42,686 - __main__ - WARNING - Linha 88: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:42,686 - __main__ - WARNING - Linha 89: Atividade 'Congressos' (normalizada: 'congressos') não encontrada no banco, pulando.
+2025-08-30 07:59:42,687 - __main__ - WARNING - Linha 90: Atividade 'Estágio ' (normalizada: 'estagio') não encontrada no banco, pulando.
+2025-08-30 07:59:42,687 - __main__ - WARNING - Linha 91: Atividade 'Banca da ANAC' (normalizada: 'banca da anac') não encontrada no banco, pulando.
+2025-08-30 07:59:42,688 - __main__ - WARNING - Linha 92: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:42,688 - __main__ - WARNING - Linha 93: Atividade 'Palestras na Faculdade EJ' (normalizada: 'palestras na faculdade ej') não encontrada no banco, pulando.
+2025-08-30 07:59:42,689 - __main__ - WARNING - Linha 94: Atividade 'Palestras na Faculdade EJ' (normalizada: 'palestras na faculdade ej') não encontrada no banco, pulando.
+2025-08-30 07:59:42,689 - __main__ - WARNING - Linha 95: Atividade 'Palestras na Faculdade EJ' (normalizada: 'palestras na faculdade ej') não encontrada no banco, pulando.
+2025-08-30 07:59:42,689 - __main__ - WARNING - Linha 96: Atividade 'Palestras na Faculdade EJ' (normalizada: 'palestras na faculdade ej') não encontrada no banco, pulando.
+2025-08-30 07:59:42,690 - __main__ - WARNING - Linha 97: Atividade 'Palestras na Faculdade EJ' (normalizada: 'palestras na faculdade ej') não encontrada no banco, pulando.
+2025-08-30 07:59:42,690 - __main__ - WARNING - Linha 98: Atividade 'Horas de voo' (normalizada: 'horas de voo') não encontrada no banco, pulando.
+2025-08-30 07:59:42,691 - __main__ - WARNING - Linha 99: Atividade 'Horas de voo' (normalizada: 'horas de voo') não encontrada no banco, pulando.
+2025-08-30 07:59:42,692 - __main__ - WARNING - Linha 100: Atividade 'Palestras na Faculdade EJ' (normalizada: 'palestras na faculdade ej') não encontrada no banco, pulando.
+2025-08-30 07:59:42,692 - __main__ - WARNING - Linha 101: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:42,694 - __main__ - WARNING - Linha 102: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:42,695 - __main__ - WARNING - Linha 103: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:42,696 - __main__ - WARNING - Linha 104: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:42,697 - __main__ - WARNING - Linha 105: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:42,698 - __main__ - WARNING - Linha 106: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:42,698 - __main__ - WARNING - Linha 107: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:42,699 - __main__ - WARNING - Linha 108: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:42,699 - __main__ - WARNING - Linha 109: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:42,700 - __main__ - WARNING - Linha 110: Atividade 'Horas de voo' (normalizada: 'horas de voo') não encontrada no banco, pulando.
+2025-08-30 07:59:42,701 - __main__ - WARNING - Linha 111: Atividade 'Palestras na Faculdade EJ' (normalizada: 'palestras na faculdade ej') não encontrada no banco, pulando.
+2025-08-30 07:59:42,702 - __main__ - WARNING - Linha 112: Atividade 'Palestras na Faculdade EJ' (normalizada: 'palestras na faculdade ej') não encontrada no banco, pulando.
+2025-08-30 07:59:42,702 - __main__ - WARNING - Linha 113: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:42,703 - __main__ - WARNING - Linha 114: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:42,703 - __main__ - WARNING - Linha 115: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:42,704 - __main__ - WARNING - Linha 116: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:42,705 - __main__ - WARNING - Linha 117: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:42,705 - __main__ - WARNING - Linha 118: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:42,706 - __main__ - WARNING - Linha 119: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:42,707 - __main__ - WARNING - Linha 120: Atividade 'Horas de voo' (normalizada: 'horas de voo') não encontrada no banco, pulando.
+2025-08-30 07:59:42,707 - __main__ - WARNING - Linha 121: Atividade 'Palestras na Faculdade EJ' (normalizada: 'palestras na faculdade ej') não encontrada no banco, pulando.
+2025-08-30 07:59:42,708 - __main__ - WARNING - Linha 122: Atividade 'Palestras na Faculdade EJ' (normalizada: 'palestras na faculdade ej') não encontrada no banco, pulando.
+2025-08-30 07:59:42,709 - __main__ - WARNING - Linha 123: Atividade 'Palestras na Faculdade EJ' (normalizada: 'palestras na faculdade ej') não encontrada no banco, pulando.
+2025-08-30 07:59:42,709 - __main__ - WARNING - Linha 124: Atividade 'Palestras na Faculdade EJ' (normalizada: 'palestras na faculdade ej') não encontrada no banco, pulando.
+2025-08-30 07:59:42,711 - __main__ - WARNING - Linha 125: Atividade 'Palestras na Faculdade EJ' (normalizada: 'palestras na faculdade ej') não encontrada no banco, pulando.
+2025-08-30 07:59:42,712 - __main__ - WARNING - Linha 126: Atividade 'Palestras na Faculdade EJ' (normalizada: 'palestras na faculdade ej') não encontrada no banco, pulando.
+2025-08-30 07:59:42,714 - __main__ - WARNING - Linha 127: Atividade 'Palestras na Faculdade EJ' (normalizada: 'palestras na faculdade ej') não encontrada no banco, pulando.
+2025-08-30 07:59:42,714 - __main__ - WARNING - Linha 128: Atividade 'Palestras na Faculdade EJ' (normalizada: 'palestras na faculdade ej') não encontrada no banco, pulando.
+2025-08-30 07:59:42,715 - __main__ - WARNING - Linha 129: Atividade 'Palestras na Faculdade EJ' (normalizada: 'palestras na faculdade ej') não encontrada no banco, pulando.
+2025-08-30 07:59:42,715 - __main__ - WARNING - Linha 130: Atividade 'Palestras na Faculdade EJ' (normalizada: 'palestras na faculdade ej') não encontrada no banco, pulando.
+2025-08-30 07:59:42,716 - __main__ - WARNING - Linha 131: Atividade 'Palestras na Faculdade EJ' (normalizada: 'palestras na faculdade ej') não encontrada no banco, pulando.
+2025-08-30 07:59:42,717 - __main__ - WARNING - Linha 132: Atividade 'Palestras na Faculdade EJ' (normalizada: 'palestras na faculdade ej') não encontrada no banco, pulando.
+2025-08-30 07:59:42,717 - __main__ - WARNING - Linha 133: Atividade 'Palestras na Faculdade EJ' (normalizada: 'palestras na faculdade ej') não encontrada no banco, pulando.
+2025-08-30 07:59:42,718 - __main__ - WARNING - Linha 134: Atividade 'Palestras na Faculdade EJ' (normalizada: 'palestras na faculdade ej') não encontrada no banco, pulando.
+2025-08-30 07:59:42,719 - __main__ - WARNING - Linha 135: Atividade 'Palestras na Faculdade EJ' (normalizada: 'palestras na faculdade ej') não encontrada no banco, pulando.
+2025-08-30 07:59:42,719 - __main__ - WARNING - Linha 136: Atividade 'Palestras na Faculdade EJ' (normalizada: 'palestras na faculdade ej') não encontrada no banco, pulando.
+2025-08-30 07:59:42,720 - __main__ - WARNING - Linha 137: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:42,720 - __main__ - WARNING - Linha 138: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:42,721 - __main__ - WARNING - Linha 139: Atividade 'Horas de voo' (normalizada: 'horas de voo') não encontrada no banco, pulando.
+2025-08-30 07:59:42,722 - __main__ - WARNING - Linha 140: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:42,722 - __main__ - WARNING - Linha 141: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:42,723 - __main__ - WARNING - Linha 142: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:42,723 - __main__ - WARNING - Linha 143: Atividade 'Cursos online NUBE, IPED e FGV' (normalizada: 'cursos online nube, iped e fgv') não encontrada no banco, pulando.
+2025-08-30 07:59:42,724 - __main__ - WARNING - Linha 144: Atividade 'Banca da ANAC' (normalizada: 'banca da anac') não encontrada no banco, pulando.
+2025-08-30 07:59:42,725 - __main__ - WARNING - Linha 145: Atividade 'Cursos aprimoramento acadêmico, cultural ou pessoal' (normalizada: 'cursos aprimoramento academico, cultural ou pessoal') não encontrada no banco, pulando.
+2025-08-30 07:59:42,725 - __main__ - WARNING - Linha 146: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:42,726 - __main__ - WARNING - Linha 147: Atividade 'Horas de voo' (normalizada: 'horas de voo') não encontrada no banco, pulando.
+2025-08-30 07:59:42,728 - __main__ - WARNING - Linha 148: Atividade 'Palestras na Faculdade EJ' (normalizada: 'palestras na faculdade ej') não encontrada no banco, pulando.
+2025-08-30 07:59:42,730 - __main__ - WARNING - Linha 149: Atividade 'Palestras na Faculdade EJ' (normalizada: 'palestras na faculdade ej') não encontrada no banco, pulando.
+2025-08-30 07:59:42,731 - __main__ - WARNING - Linha 150: Atividade 'Leitura de livros' (normalizada: 'leitura de livros') não encontrada no banco, pulando.
+2025-08-30 07:59:42,731 - __main__ - WARNING - Linha 151: Atividade 'Cursos online NUBE, IPED e FGV' (normalizada: 'cursos online nube, iped e fgv') não encontrada no banco, pulando.
+2025-08-30 07:59:42,732 - __main__ - WARNING - Linha 152: Atividade 'Cursos online NUBE, IPED e FGV' (normalizada: 'cursos online nube, iped e fgv') não encontrada no banco, pulando.
+2025-08-30 07:59:42,732 - __main__ - WARNING - Linha 153: Atividade 'Cursos online NUBE, IPED e FGV' (normalizada: 'cursos online nube, iped e fgv') não encontrada no banco, pulando.
+2025-08-30 07:59:42,733 - __main__ - WARNING - Linha 154: Atividade 'Estágio ' (normalizada: 'estagio') não encontrada no banco, pulando.
+2025-08-30 07:59:42,733 - __main__ - WARNING - Linha 155: Atividade 'Palestras na Faculdade EJ' (normalizada: 'palestras na faculdade ej') não encontrada no banco, pulando.
+2025-08-30 07:59:42,734 - __main__ - WARNING - Linha 156: Atividade 'Palestras na Faculdade EJ' (normalizada: 'palestras na faculdade ej') não encontrada no banco, pulando.
+2025-08-30 07:59:42,734 - __main__ - WARNING - Linha 157: Atividade 'Palestras na Faculdade EJ' (normalizada: 'palestras na faculdade ej') não encontrada no banco, pulando.
+2025-08-30 07:59:42,734 - __main__ - WARNING - Linha 158: Atividade 'Palestras na Faculdade EJ' (normalizada: 'palestras na faculdade ej') não encontrada no banco, pulando.
+2025-08-30 07:59:42,735 - __main__ - WARNING - Linha 159: Atividade 'Cursos ou visitas técnicas' (normalizada: 'cursos ou visitas tecnicas') não encontrada no banco, pulando.
+2025-08-30 07:59:42,735 - __main__ - WARNING - Linha 160: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:42,736 - __main__ - WARNING - Linha 161: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:42,736 - __main__ - WARNING - Linha 162: Atividade 'Cursos aprimoramento acadêmico, cultural ou pessoal' (normalizada: 'cursos aprimoramento academico, cultural ou pessoal') não encontrada no banco, pulando.
+2025-08-30 07:59:42,737 - __main__ - WARNING - Linha 163: Atividade 'Cursos aprimoramento acadêmico, cultural ou pessoal' (normalizada: 'cursos aprimoramento academico, cultural ou pessoal') não encontrada no banco, pulando.
+2025-08-30 07:59:42,737 - __main__ - WARNING - Linha 164: Atividade 'Cursos aprimoramento acadêmico, cultural ou pessoal' (normalizada: 'cursos aprimoramento academico, cultural ou pessoal') não encontrada no banco, pulando.
+2025-08-30 07:59:42,738 - __main__ - WARNING - Linha 165: Atividade 'Visitas técnicas ou culturais' (normalizada: 'visitas tecnicas ou culturais') não encontrada no banco, pulando.
+2025-08-30 07:59:42,738 - __main__ - WARNING - Linha 166: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:42,738 - __main__ - WARNING - Linha 167: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:42,739 - __main__ - WARNING - Linha 168: Atividade 'Visitas técnicas ou culturais' (normalizada: 'visitas tecnicas ou culturais') não encontrada no banco, pulando.
+2025-08-30 07:59:42,739 - __main__ - WARNING - Linha 169: Atividade 'Cursos de línguas' (normalizada: 'cursos de linguas') não encontrada no banco, pulando.
+2025-08-30 07:59:42,740 - __main__ - WARNING - Linha 170: Atividade 'Cursos de línguas' (normalizada: 'cursos de linguas') não encontrada no banco, pulando.
+2025-08-30 07:59:42,740 - __main__ - WARNING - Linha 171: Atividade 'Visitas técnicas ou culturais' (normalizada: 'visitas tecnicas ou culturais') não encontrada no banco, pulando.
+2025-08-30 07:59:42,740 - __main__ - WARNING - Linha 172: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:42,741 - __main__ - WARNING - Linha 173: Atividade 'Ouvinte em defesa de TCCs e afins' (normalizada: 'ouvinte em defesa de tccs e afins') não encontrada no banco, pulando.
+2025-08-30 07:59:42,741 - __main__ - WARNING - Linha 174: Atividade 'Horas de voo' (normalizada: 'horas de voo') não encontrada no banco, pulando.
+2025-08-30 07:59:42,742 - __main__ - WARNING - Linha 175: Atividade 'Cursos de línguas' (normalizada: 'cursos de linguas') não encontrada no banco, pulando.
+2025-08-30 07:59:42,743 - __main__ - WARNING - Linha 176: Atividade 'Cursos online NUBE, IPED e FGV' (normalizada: 'cursos online nube, iped e fgv') não encontrada no banco, pulando.
+2025-08-30 07:59:42,744 - __main__ - WARNING - Linha 177: Atividade 'Trabalho voluntário (extensão acadêmica)' (normalizada: 'trabalho voluntario (extensao academica)') não encontrada no banco, pulando.
+2025-08-30 07:59:42,746 - __main__ - WARNING - Linha 178: Atividade 'Horas de voo' (normalizada: 'horas de voo') não encontrada no banco, pulando.
+2025-08-30 07:59:42,747 - __main__ - WARNING - Linha 179: Atividade 'Horas de voo em simulador' (normalizada: 'horas de voo em simulador') não encontrada no banco, pulando.
+2025-08-30 07:59:42,747 - __main__ - WARNING - Linha 180: Atividade 'Horas de voo em simulador' (normalizada: 'horas de voo em simulador') não encontrada no banco, pulando.
+2025-08-30 07:59:42,747 - __main__ - WARNING - Linha 181: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:42,748 - __main__ - WARNING - Linha 182: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:42,748 - __main__ - WARNING - Linha 183: Atividade 'Palestras' (normalizada: 'palestras') não encontrada no banco, pulando.
+2025-08-30 07:59:42,749 - __main__ - WARNING - Linha 184: Atividade 'Palestras' (normalizada: 'palestras') não encontrada no banco, pulando.
+2025-08-30 07:59:42,749 - __main__ - WARNING - Linha 185: Atividade 'Visitas técnicas ou culturais' (normalizada: 'visitas tecnicas ou culturais') não encontrada no banco, pulando.
+2025-08-30 07:59:42,750 - __main__ - WARNING - Linha 186: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:42,750 - __main__ - WARNING - Linha 187: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:42,751 - __main__ - WARNING - Linha 188: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:42,751 - __main__ - WARNING - Linha 189: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:42,751 - __main__ - WARNING - Linha 190: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:42,752 - __main__ - WARNING - Linha 191: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:42,752 - __main__ - WARNING - Linha 192: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:42,753 - __main__ - WARNING - Linha 193: Atividade 'Banca da ANAC' (normalizada: 'banca da anac') não encontrada no banco, pulando.
+2025-08-30 07:59:42,753 - __main__ - WARNING - Linha 194: Atividade 'Visitas técnicas ou culturais' (normalizada: 'visitas tecnicas ou culturais') não encontrada no banco, pulando.
+2025-08-30 07:59:42,754 - __main__ - WARNING - Linha 195: Atividade 'Horas de voo' (normalizada: 'horas de voo') não encontrada no banco, pulando.
+2025-08-30 07:59:42,754 - __main__ - WARNING - Linha 196: Atividade 'Horas de voo' (normalizada: 'horas de voo') não encontrada no banco, pulando.
+2025-08-30 07:59:42,754 - __main__ - WARNING - Linha 197: Atividade 'Palestras na Faculdade EJ' (normalizada: 'palestras na faculdade ej') não encontrada no banco, pulando.
+2025-08-30 07:59:42,755 - __main__ - WARNING - Linha 198: Atividade 'Palestras na Faculdade EJ' (normalizada: 'palestras na faculdade ej') não encontrada no banco, pulando.
+2025-08-30 07:59:42,755 - __main__ - WARNING - Linha 199: Atividade 'Palestras na Faculdade EJ' (normalizada: 'palestras na faculdade ej') não encontrada no banco, pulando.
+2025-08-30 07:59:42,756 - __main__ - WARNING - Linha 200: Atividade 'Horas de voo' (normalizada: 'horas de voo') não encontrada no banco, pulando.
+2025-08-30 07:59:42,756 - __main__ - WARNING - Linha 201: Atividade 'Horas de voo' (normalizada: 'horas de voo') não encontrada no banco, pulando.
+2025-08-30 07:59:42,757 - __main__ - WARNING - Linha 202: Atividade 'Horas de voo' (normalizada: 'horas de voo') não encontrada no banco, pulando.
+2025-08-30 07:59:42,757 - __main__ - WARNING - Linha 203: Atividade 'Horas de voo' (normalizada: 'horas de voo') não encontrada no banco, pulando.
+2025-08-30 07:59:42,758 - __main__ - WARNING - Linha 204: Atividade 'Horas de voo' (normalizada: 'horas de voo') não encontrada no banco, pulando.
+2025-08-30 07:59:42,758 - __main__ - WARNING - Linha 205: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:42,759 - __main__ - WARNING - Linha 206: Atividade 'Visitas técnicas ou culturais' (normalizada: 'visitas tecnicas ou culturais') não encontrada no banco, pulando.
+2025-08-30 07:59:42,760 - __main__ - WARNING - Linha 207: Atividade 'Palestras na Faculdade EJ' (normalizada: 'palestras na faculdade ej') não encontrada no banco, pulando.
+2025-08-30 07:59:42,762 - __main__ - WARNING - Linha 208: Atividade 'Palestras na Faculdade EJ' (normalizada: 'palestras na faculdade ej') não encontrada no banco, pulando.
+2025-08-30 07:59:42,763 - __main__ - WARNING - Linha 209: Atividade 'Banca da ANAC' (normalizada: 'banca da anac') não encontrada no banco, pulando.
+2025-08-30 07:59:42,763 - __main__ - WARNING - Linha 210: Atividade 'Banca da ANAC' (normalizada: 'banca da anac') não encontrada no banco, pulando.
+2025-08-30 07:59:42,764 - __main__ - WARNING - Linha 211: Atividade 'Horas de voo' (normalizada: 'horas de voo') não encontrada no banco, pulando.
+2025-08-30 07:59:42,765 - __main__ - WARNING - Linha 212: Atividade 'Aprovação ICAO' (normalizada: 'aprovacao icao') não encontrada no banco, pulando.
+2025-08-30 07:59:42,765 - __main__ - WARNING - Linha 213: Atividade 'Cursos de línguas' (normalizada: 'cursos de linguas') não encontrada no banco, pulando.
+2025-08-30 07:59:42,765 - __main__ - WARNING - Linha 214: Atividade 'Horas de voo' (normalizada: 'horas de voo') não encontrada no banco, pulando.
+2025-08-30 07:59:42,766 - __main__ - WARNING - Linha 215: Atividade 'Horas de voo' (normalizada: 'horas de voo') não encontrada no banco, pulando.
+2025-08-30 07:59:42,766 - __main__ - WARNING - Linha 216: Atividade 'Cursos de formação profissional' (normalizada: 'cursos de formacao profissional') não encontrada no banco, pulando.
+2025-08-30 07:59:42,767 - __main__ - WARNING - Linha 217: Atividade 'Palestras na Faculdade EJ' (normalizada: 'palestras na faculdade ej') não encontrada no banco, pulando.
+2025-08-30 07:59:42,767 - __main__ - WARNING - Linha 218: Atividade 'Palestras na Faculdade EJ' (normalizada: 'palestras na faculdade ej') não encontrada no banco, pulando.
+2025-08-30 07:59:42,768 - __main__ - WARNING - Linha 219: Atividade 'Cursos aprimoramento acadêmico, cultural ou pessoal' (normalizada: 'cursos aprimoramento academico, cultural ou pessoal') não encontrada no banco, pulando.
+2025-08-30 07:59:42,768 - __main__ - WARNING - Linha 220: Atividade 'Cursos de línguas' (normalizada: 'cursos de linguas') não encontrada no banco, pulando.
+2025-08-30 07:59:42,768 - __main__ - WARNING - Linha 221: Atividade 'Estágio ' (normalizada: 'estagio') não encontrada no banco, pulando.
+2025-08-30 07:59:42,769 - __main__ - WARNING - Linha 222: Atividade 'Palestras na Faculdade EJ' (normalizada: 'palestras na faculdade ej') não encontrada no banco, pulando.
+2025-08-30 07:59:42,770 - __main__ - WARNING - Linha 223: Atividade 'Palestras na Faculdade EJ' (normalizada: 'palestras na faculdade ej') não encontrada no banco, pulando.
+2025-08-30 07:59:42,770 - __main__ - WARNING - Linha 224: Atividade 'Palestras na Faculdade EJ' (normalizada: 'palestras na faculdade ej') não encontrada no banco, pulando.
+2025-08-30 07:59:42,770 - __main__ - WARNING - Linha 225: Atividade 'Palestras na Faculdade EJ' (normalizada: 'palestras na faculdade ej') não encontrada no banco, pulando.
+2025-08-30 07:59:42,771 - __main__ - WARNING - Linha 226: Atividade 'Visitas técnicas ou culturais' (normalizada: 'visitas tecnicas ou culturais') não encontrada no banco, pulando.
+2025-08-30 07:59:42,771 - __main__ - WARNING - Linha 227: Atividade 'Cursos de línguas' (normalizada: 'cursos de linguas') não encontrada no banco, pulando.
+2025-08-30 07:59:42,772 - __main__ - WARNING - Linha 228: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:42,772 - __main__ - WARNING - Linha 229: Atividade 'Horas de voo' (normalizada: 'horas de voo') não encontrada no banco, pulando.
+2025-08-30 07:59:42,773 - __main__ - WARNING - Linha 230: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:42,773 - __main__ - WARNING - Linha 231: Atividade 'Horas de voo' (normalizada: 'horas de voo') não encontrada no banco, pulando.
+2025-08-30 07:59:42,774 - __main__ - WARNING - Linha 232: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:42,774 - __main__ - WARNING - Linha 233: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:42,774 - __main__ - WARNING - Linha 234: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:42,775 - __main__ - WARNING - Linha 235: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:42,776 - __main__ - WARNING - Linha 236: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:42,776 - __main__ - WARNING - Linha 237: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:42,777 - __main__ - WARNING - Linha 238: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:42,778 - __main__ - WARNING - Linha 239: Atividade 'Cursos de línguas' (normalizada: 'cursos de linguas') não encontrada no banco, pulando.
+2025-08-30 07:59:42,779 - __main__ - WARNING - Linha 240: Atividade 'Cursos de formação profissional' (normalizada: 'cursos de formacao profissional') não encontrada no banco, pulando.
+2025-08-30 07:59:42,779 - __main__ - WARNING - Linha 241: Atividade 'Palestras na Faculdade EJ' (normalizada: 'palestras na faculdade ej') não encontrada no banco, pulando.
+2025-08-30 07:59:42,780 - __main__ - WARNING - Linha 242: Atividade 'Palestras na Faculdade EJ' (normalizada: 'palestras na faculdade ej') não encontrada no banco, pulando.
+2025-08-30 07:59:42,780 - __main__ - WARNING - Linha 243: Atividade 'Palestras na Faculdade EJ' (normalizada: 'palestras na faculdade ej') não encontrada no banco, pulando.
+2025-08-30 07:59:42,781 - __main__ - WARNING - Linha 244: Atividade 'Palestras na Faculdade EJ' (normalizada: 'palestras na faculdade ej') não encontrada no banco, pulando.
+2025-08-30 07:59:42,781 - __main__ - WARNING - Linha 245: Atividade 'Palestras na Faculdade EJ' (normalizada: 'palestras na faculdade ej') não encontrada no banco, pulando.
+2025-08-30 07:59:42,782 - __main__ - WARNING - Linha 246: Atividade 'Palestras na Faculdade EJ' (normalizada: 'palestras na faculdade ej') não encontrada no banco, pulando.
+2025-08-30 07:59:42,782 - __main__ - WARNING - Linha 247: Atividade 'Palestras na Faculdade EJ' (normalizada: 'palestras na faculdade ej') não encontrada no banco, pulando.
+2025-08-30 07:59:42,783 - __main__ - WARNING - Linha 248: Atividade 'Palestras na Faculdade EJ' (normalizada: 'palestras na faculdade ej') não encontrada no banco, pulando.
+2025-08-30 07:59:42,783 - __main__ - WARNING - Linha 249: Atividade 'Cursos online NUBE, IPED e FGV' (normalizada: 'cursos online nube, iped e fgv') não encontrada no banco, pulando.
+2025-08-30 07:59:42,783 - __main__ - WARNING - Linha 250: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:42,784 - __main__ - WARNING - Linha 251: Atividade 'Banca da ANAC' (normalizada: 'banca da anac') não encontrada no banco, pulando.
+2025-08-30 07:59:42,784 - __main__ - WARNING - Linha 252: Atividade 'Estágio ' (normalizada: 'estagio') não encontrada no banco, pulando.
+2025-08-30 07:59:42,785 - __main__ - WARNING - Linha 253: Atividade 'Horas de voo' (normalizada: 'horas de voo') não encontrada no banco, pulando.
+2025-08-30 07:59:42,785 - __main__ - WARNING - Linha 254: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:42,786 - __main__ - WARNING - Linha 255: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:42,786 - __main__ - WARNING - Linha 256: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:42,786 - __main__ - WARNING - Linha 257: Atividade 'Horas de voo' (normalizada: 'horas de voo') não encontrada no banco, pulando.
+2025-08-30 07:59:42,787 - __main__ - WARNING - Linha 258: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:42,787 - __main__ - WARNING - Linha 259: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:42,788 - __main__ - WARNING - Linha 260: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:42,788 - __main__ - WARNING - Linha 261: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:42,789 - __main__ - WARNING - Linha 262: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:42,790 - __main__ - WARNING - Linha 263: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:42,790 - __main__ - WARNING - Linha 264: Atividade 'Estágio ' (normalizada: 'estagio') não encontrada no banco, pulando.
+2025-08-30 07:59:42,790 - __main__ - WARNING - Linha 265: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:42,792 - __main__ - WARNING - Linha 266: Atividade 'Cursos online NUBE, IPED e FGV' (normalizada: 'cursos online nube, iped e fgv') não encontrada no banco, pulando.
+2025-08-30 07:59:42,792 - __main__ - WARNING - Linha 267: Atividade 'Cursos aprimoramento acadêmico, cultural ou pessoal' (normalizada: 'cursos aprimoramento academico, cultural ou pessoal') não encontrada no banco, pulando.
+2025-08-30 07:59:42,793 - __main__ - WARNING - Linha 268: Atividade 'Banca da ANAC' (normalizada: 'banca da anac') não encontrada no banco, pulando.
+2025-08-30 07:59:42,793 - __main__ - WARNING - Linha 269: Atividade 'Banca da ANAC' (normalizada: 'banca da anac') não encontrada no banco, pulando.
+2025-08-30 07:59:42,794 - __main__ - WARNING - Linha 270: Atividade 'Banca da ANAC' (normalizada: 'banca da anac') não encontrada no banco, pulando.
+2025-08-30 07:59:42,794 - __main__ - WARNING - Linha 271: Atividade 'Banca da ANAC' (normalizada: 'banca da anac') não encontrada no banco, pulando.
+2025-08-30 07:59:42,794 - __main__ - WARNING - Linha 272: Atividade 'Cursos online NUBE, IPED e FGV' (normalizada: 'cursos online nube, iped e fgv') não encontrada no banco, pulando.
+2025-08-30 07:59:42,795 - __main__ - WARNING - Linha 273: Atividade 'Horas de voo' (normalizada: 'horas de voo') não encontrada no banco, pulando.
+2025-08-30 07:59:42,795 - __main__ - WARNING - Linha 274: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:42,796 - __main__ - WARNING - Linha 275: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:42,796 - __main__ - WARNING - Linha 276: Atividade 'Horas de voo' (normalizada: 'horas de voo') não encontrada no banco, pulando.
+2025-08-30 07:59:42,796 - __main__ - WARNING - Linha 277: Atividade 'Horas de voo em simulador' (normalizada: 'horas de voo em simulador') não encontrada no banco, pulando.
+2025-08-30 07:59:42,797 - __main__ - WARNING - Linha 278: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:42,797 - __main__ - WARNING - Linha 279: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:42,797 - __main__ - WARNING - Linha 280: Atividade 'Cursos aprimoramento acadêmico, cultural ou pessoal' (normalizada: 'cursos aprimoramento academico, cultural ou pessoal') não encontrada no banco, pulando.
+2025-08-30 07:59:42,798 - __main__ - WARNING - Linha 281: Atividade 'Horas de voo' (normalizada: 'horas de voo') não encontrada no banco, pulando.
+2025-08-30 07:59:42,798 - __main__ - WARNING - Linha 282: Atividade 'Cursos aprimoramento acadêmico, cultural ou pessoal' (normalizada: 'cursos aprimoramento academico, cultural ou pessoal') não encontrada no banco, pulando.
+2025-08-30 07:59:42,799 - __main__ - WARNING - Linha 283: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:42,799 - __main__ - WARNING - Linha 284: Atividade 'Monitoria' (normalizada: 'monitoria') não encontrada no banco, pulando.
+2025-08-30 07:59:42,799 - __main__ - WARNING - Linha 285: Atividade 'Horas de voo' (normalizada: 'horas de voo') não encontrada no banco, pulando.
+2025-08-30 07:59:42,800 - __main__ - WARNING - Linha 286: Atividade 'Horas de voo' (normalizada: 'horas de voo') não encontrada no banco, pulando.
+2025-08-30 07:59:42,800 - __main__ - WARNING - Linha 287: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:42,801 - __main__ - WARNING - Linha 288: Atividade 'Horas de voo' (normalizada: 'horas de voo') não encontrada no banco, pulando.
+2025-08-30 07:59:42,801 - __main__ - WARNING - Linha 289: Atividade 'Horas de voo' (normalizada: 'horas de voo') não encontrada no banco, pulando.
+2025-08-30 07:59:42,801 - __main__ - WARNING - Linha 290: Atividade 'Cursos de formação profissional' (normalizada: 'cursos de formacao profissional') não encontrada no banco, pulando.
+2025-08-30 07:59:42,802 - __main__ - WARNING - Linha 291: Atividade 'Horas de voo em simulador' (normalizada: 'horas de voo em simulador') não encontrada no banco, pulando.
+2025-08-30 07:59:42,802 - __main__ - WARNING - Linha 292: Atividade 'Aprovação ICAO' (normalizada: 'aprovacao icao') não encontrada no banco, pulando.
+2025-08-30 07:59:42,803 - __main__ - WARNING - Linha 293: Atividade 'Horas de voo' (normalizada: 'horas de voo') não encontrada no banco, pulando.
+2025-08-30 07:59:42,803 - __main__ - WARNING - Linha 294: Atividade 'Horas de voo' (normalizada: 'horas de voo') não encontrada no banco, pulando.
+2025-08-30 07:59:42,804 - __main__ - WARNING - Linha 295: Atividade 'Horas de voo em simulador' (normalizada: 'horas de voo em simulador') não encontrada no banco, pulando.
+2025-08-30 07:59:42,804 - __main__ - WARNING - Linha 296: Atividade 'Atividades virtuais de aviação' (normalizada: 'atividades virtuais de aviacao') não encontrada no banco, pulando.
+2025-08-30 07:59:42,805 - __main__ - WARNING - Linha 297: Atividade 'Horas de voo' (normalizada: 'horas de voo') não encontrada no banco, pulando.
+2025-08-30 07:59:42,806 - __main__ - WARNING - Linha 298: Atividade 'Horas de voo' (normalizada: 'horas de voo') não encontrada no banco, pulando.
+2025-08-30 07:59:42,806 - __main__ - WARNING - Linha 299: Atividade 'Horas de voo' (normalizada: 'horas de voo') não encontrada no banco, pulando.
+2025-08-30 07:59:42,807 - __main__ - WARNING - Linha 300: Atividade 'Horas de voo' (normalizada: 'horas de voo') não encontrada no banco, pulando.
+2025-08-30 07:59:42,808 - __main__ - WARNING - Linha 301: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:42,809 - __main__ - WARNING - Linha 302: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:42,810 - __main__ - WARNING - Linha 303: Atividade 'Horas de voo' (normalizada: 'horas de voo') não encontrada no banco, pulando.
+2025-08-30 07:59:42,811 - __main__ - WARNING - Linha 304: Atividade 'Horas de voo' (normalizada: 'horas de voo') não encontrada no banco, pulando.
+2025-08-30 07:59:42,811 - __main__ - WARNING - Linha 305: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:42,812 - __main__ - WARNING - Linha 306: Atividade 'Horas de voo' (normalizada: 'horas de voo') não encontrada no banco, pulando.
+2025-08-30 07:59:42,812 - __main__ - WARNING - Linha 307: Atividade 'Horas de voo em simulador' (normalizada: 'horas de voo em simulador') não encontrada no banco, pulando.
+2025-08-30 07:59:42,812 - __main__ - WARNING - Linha 308: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:42,813 - __main__ - WARNING - Linha 309: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:42,813 - __main__ - WARNING - Linha 310: Atividade 'Palestras na Faculdade EJ' (normalizada: 'palestras na faculdade ej') não encontrada no banco, pulando.
+2025-08-30 07:59:42,814 - __main__ - WARNING - Linha 311: Atividade 'Cursos de formação profissional' (normalizada: 'cursos de formacao profissional') não encontrada no banco, pulando.
+2025-08-30 07:59:42,814 - __main__ - WARNING - Linha 312: Atividade 'Leitura de livros' (normalizada: 'leitura de livros') não encontrada no banco, pulando.
+2025-08-30 07:59:42,814 - __main__ - WARNING - Linha 313: Atividade 'Horas de voo' (normalizada: 'horas de voo') não encontrada no banco, pulando.
+2025-08-30 07:59:42,815 - __main__ - WARNING - Linha 314: Atividade 'Horas de voo' (normalizada: 'horas de voo') não encontrada no banco, pulando.
+2025-08-30 07:59:42,815 - __main__ - WARNING - Linha 315: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:42,816 - __main__ - WARNING - Linha 316: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:42,816 - __main__ - WARNING - Linha 317: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:42,816 - __main__ - WARNING - Linha 318: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:42,817 - __main__ - WARNING - Linha 319: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:42,817 - __main__ - WARNING - Linha 320: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:42,817 - __main__ - WARNING - Linha 321: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:42,818 - __main__ - WARNING - Linha 322: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:42,818 - __main__ - WARNING - Linha 323: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:42,819 - __main__ - WARNING - Linha 324: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:42,819 - __main__ - WARNING - Linha 325: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:42,819 - __main__ - WARNING - Linha 326: Atividade 'Palestras na Faculdade EJ' (normalizada: 'palestras na faculdade ej') não encontrada no banco, pulando.
+2025-08-30 07:59:42,820 - __main__ - WARNING - Linha 327: Atividade 'Palestras na Faculdade EJ' (normalizada: 'palestras na faculdade ej') não encontrada no banco, pulando.
+2025-08-30 07:59:42,820 - __main__ - WARNING - Linha 328: Atividade 'Palestras na Faculdade EJ' (normalizada: 'palestras na faculdade ej') não encontrada no banco, pulando.
+2025-08-30 07:59:42,821 - __main__ - WARNING - Linha 329: Atividade 'Palestras na Faculdade EJ' (normalizada: 'palestras na faculdade ej') não encontrada no banco, pulando.
+2025-08-30 07:59:42,821 - __main__ - WARNING - Linha 330: Atividade 'Palestras na Faculdade EJ' (normalizada: 'palestras na faculdade ej') não encontrada no banco, pulando.
+2025-08-30 07:59:42,821 - __main__ - WARNING - Linha 331: Atividade 'Palestras na Faculdade EJ' (normalizada: 'palestras na faculdade ej') não encontrada no banco, pulando.
+2025-08-30 07:59:42,822 - __main__ - WARNING - Linha 332: Atividade 'Palestras na Faculdade EJ' (normalizada: 'palestras na faculdade ej') não encontrada no banco, pulando.
+2025-08-30 07:59:42,823 - __main__ - WARNING - Linha 333: Atividade 'Palestras na Faculdade EJ' (normalizada: 'palestras na faculdade ej') não encontrada no banco, pulando.
+2025-08-30 07:59:42,823 - __main__ - WARNING - Linha 334: Atividade 'Palestras na Faculdade EJ' (normalizada: 'palestras na faculdade ej') não encontrada no banco, pulando.
+2025-08-30 07:59:42,823 - __main__ - WARNING - Linha 335: Atividade 'Horas de voo' (normalizada: 'horas de voo') não encontrada no banco, pulando.
+2025-08-30 07:59:42,824 - __main__ - WARNING - Linha 336: Atividade 'Horas de voo' (normalizada: 'horas de voo') não encontrada no banco, pulando.
+2025-08-30 07:59:42,824 - __main__ - WARNING - Linha 337: Atividade 'Estágio ' (normalizada: 'estagio') não encontrada no banco, pulando.
+2025-08-30 07:59:42,824 - __main__ - WARNING - Linha 338: Atividade 'Cursos de formação profissional' (normalizada: 'cursos de formacao profissional') não encontrada no banco, pulando.
+2025-08-30 07:59:42,825 - __main__ - WARNING - Linha 339: Atividade 'Horas de voo' (normalizada: 'horas de voo') não encontrada no banco, pulando.
+2025-08-30 07:59:42,825 - __main__ - WARNING - Linha 340: Atividade 'Horas de voo' (normalizada: 'horas de voo') não encontrada no banco, pulando.
+2025-08-30 07:59:42,826 - __main__ - WARNING - Linha 341: Atividade 'Estágio ' (normalizada: 'estagio') não encontrada no banco, pulando.
+2025-08-30 07:59:42,826 - __main__ - WARNING - Linha 342: Atividade 'Leitura de livros' (normalizada: 'leitura de livros') não encontrada no banco, pulando.
+2025-08-30 07:59:42,827 - __main__ - WARNING - Linha 343: Atividade 'Horas de voo' (normalizada: 'horas de voo') não encontrada no banco, pulando.
+2025-08-30 07:59:42,827 - __main__ - WARNING - Linha 344: Atividade 'Palestras na Faculdade EJ' (normalizada: 'palestras na faculdade ej') não encontrada no banco, pulando.
+2025-08-30 07:59:42,828 - __main__ - WARNING - Linha 345: Atividade 'Cursos ou visitas técnicas' (normalizada: 'cursos ou visitas tecnicas') não encontrada no banco, pulando.
+2025-08-30 07:59:42,828 - __main__ - WARNING - Linha 346: Atividade 'Palestras na Faculdade EJ' (normalizada: 'palestras na faculdade ej') não encontrada no banco, pulando.
+2025-08-30 07:59:42,828 - __main__ - WARNING - Linha 347: Atividade 'Palestras na Faculdade EJ' (normalizada: 'palestras na faculdade ej') não encontrada no banco, pulando.
+2025-08-30 07:59:42,829 - __main__ - WARNING - Linha 348: Atividade 'Leitura de livros' (normalizada: 'leitura de livros') não encontrada no banco, pulando.
+2025-08-30 07:59:42,829 - __main__ - WARNING - Linha 349: Atividade 'Monitoria' (normalizada: 'monitoria') não encontrada no banco, pulando.
+2025-08-30 07:59:42,830 - __main__ - WARNING - Linha 350: Atividade 'Monitoria' (normalizada: 'monitoria') não encontrada no banco, pulando.
+2025-08-30 07:59:42,830 - __main__ - WARNING - Linha 351: Atividade 'Horas de voo' (normalizada: 'horas de voo') não encontrada no banco, pulando.
+2025-08-30 07:59:42,831 - __main__ - WARNING - Linha 352: Atividade 'Banca da ANAC' (normalizada: 'banca da anac') não encontrada no banco, pulando.
+2025-08-30 07:59:42,831 - __main__ - WARNING - Linha 353: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:42,831 - __main__ - WARNING - Linha 354: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:42,832 - __main__ - WARNING - Linha 355: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:42,832 - __main__ - WARNING - Linha 356: Atividade 'Cursos aprimoramento acadêmico, cultural ou pessoal' (normalizada: 'cursos aprimoramento academico, cultural ou pessoal') não encontrada no banco, pulando.
+2025-08-30 07:59:42,833 - __main__ - WARNING - Linha 357: Atividade 'Cursos aprimoramento acadêmico, cultural ou pessoal' (normalizada: 'cursos aprimoramento academico, cultural ou pessoal') não encontrada no banco, pulando.
+2025-08-30 07:59:42,834 - __main__ - WARNING - Linha 358: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:42,834 - __main__ - WARNING - Linha 359: Atividade 'Horas de voo' (normalizada: 'horas de voo') não encontrada no banco, pulando.
+2025-08-30 07:59:42,834 - __main__ - WARNING - Linha 360: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:42,835 - __main__ - WARNING - Linha 361: Atividade 'Estágio ' (normalizada: 'estagio') não encontrada no banco, pulando.
+2025-08-30 07:59:42,835 - __main__ - WARNING - Linha 362: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:42,836 - __main__ - WARNING - Linha 363: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:42,836 - __main__ - WARNING - Linha 364: Atividade 'Horas de voo' (normalizada: 'horas de voo') não encontrada no banco, pulando.
+2025-08-30 07:59:42,836 - __main__ - WARNING - Linha 365: Atividade 'Horas de voo' (normalizada: 'horas de voo') não encontrada no banco, pulando.
+2025-08-30 07:59:42,837 - __main__ - WARNING - Linha 366: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:42,837 - __main__ - WARNING - Linha 367: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:42,838 - __main__ - WARNING - Linha 368: Atividade 'Horas de voo' (normalizada: 'horas de voo') não encontrada no banco, pulando.
+2025-08-30 07:59:42,838 - __main__ - WARNING - Linha 369: Atividade 'Banca da ANAC' (normalizada: 'banca da anac') não encontrada no banco, pulando.
+2025-08-30 07:59:42,839 - __main__ - WARNING - Linha 370: Atividade 'Cursos de formação profissional' (normalizada: 'cursos de formacao profissional') não encontrada no banco, pulando.
+2025-08-30 07:59:42,839 - __main__ - WARNING - Linha 371: Atividade 'Cursos aprimoramento acadêmico, cultural ou pessoal' (normalizada: 'cursos aprimoramento academico, cultural ou pessoal') não encontrada no banco, pulando.
+2025-08-30 07:59:42,840 - __main__ - WARNING - Linha 372: Atividade 'Cursos aprimoramento acadêmico, cultural ou pessoal' (normalizada: 'cursos aprimoramento academico, cultural ou pessoal') não encontrada no banco, pulando.
+2025-08-30 07:59:42,840 - __main__ - WARNING - Linha 373: Atividade 'Monitoria' (normalizada: 'monitoria') não encontrada no banco, pulando.
+2025-08-30 07:59:42,840 - __main__ - WARNING - Linha 374: Atividade 'Monitoria' (normalizada: 'monitoria') não encontrada no banco, pulando.
+2025-08-30 07:59:42,841 - __main__ - WARNING - Linha 375: Atividade 'Horas de voo' (normalizada: 'horas de voo') não encontrada no banco, pulando.
+2025-08-30 07:59:42,841 - __main__ - WARNING - Linha 376: Atividade 'Horas de voo' (normalizada: 'horas de voo') não encontrada no banco, pulando.
+2025-08-30 07:59:42,842 - __main__ - WARNING - Linha 377: Atividade 'Horas de voo em simulador' (normalizada: 'horas de voo em simulador') não encontrada no banco, pulando.
+2025-08-30 07:59:42,842 - __main__ - WARNING - Linha 378: Atividade 'Cursos de formação profissional' (normalizada: 'cursos de formacao profissional') não encontrada no banco, pulando.
+2025-08-30 07:59:42,843 - __main__ - WARNING - Linha 379: Atividade 'Horas de voo' (normalizada: 'horas de voo') não encontrada no banco, pulando.
+2025-08-30 07:59:42,843 - __main__ - WARNING - Linha 380: Atividade 'Cursos de formação profissional' (normalizada: 'cursos de formacao profissional') não encontrada no banco, pulando.
+2025-08-30 07:59:42,844 - __main__ - WARNING - Linha 381: Atividade 'Estágio ' (normalizada: 'estagio') não encontrada no banco, pulando.
+2025-08-30 07:59:42,845 - __main__ - WARNING - Linha 382: Atividade 'Horas de voo' (normalizada: 'horas de voo') não encontrada no banco, pulando.
+2025-08-30 07:59:42,846 - __main__ - WARNING - Linha 383: Atividade 'Banca da ANAC' (normalizada: 'banca da anac') não encontrada no banco, pulando.
+2025-08-30 07:59:42,846 - __main__ - WARNING - Linha 384: Atividade 'Cursos de línguas' (normalizada: 'cursos de linguas') não encontrada no banco, pulando.
+2025-08-30 07:59:42,847 - __main__ - WARNING - Linha 385: Atividade 'Visitas a shows, exposições etc.' (normalizada: 'visitas a shows, exposicoes etc.') não encontrada no banco, pulando.
+2025-08-30 07:59:42,847 - __main__ - WARNING - Linha 386: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:42,848 - __main__ - WARNING - Linha 387: Atividade 'Banca da ANAC' (normalizada: 'banca da anac') não encontrada no banco, pulando.
+2025-08-30 07:59:42,848 - __main__ - WARNING - Linha 388: Atividade 'Cursos aprimoramento acadêmico, cultural ou pessoal' (normalizada: 'cursos aprimoramento academico, cultural ou pessoal') não encontrada no banco, pulando.
+2025-08-30 07:59:42,849 - __main__ - WARNING - Linha 389: Atividade 'Horas de voo' (normalizada: 'horas de voo') não encontrada no banco, pulando.
+2025-08-30 07:59:42,849 - __main__ - WARNING - Linha 390: Atividade 'Horas de voo' (normalizada: 'horas de voo') não encontrada no banco, pulando.
+2025-08-30 07:59:42,850 - __main__ - WARNING - Linha 391: Atividade 'Horas de voo' (normalizada: 'horas de voo') não encontrada no banco, pulando.
+2025-08-30 07:59:42,850 - __main__ - WARNING - Linha 392: Atividade 'Cursos de línguas' (normalizada: 'cursos de linguas') não encontrada no banco, pulando.
+2025-08-30 07:59:42,850 - __main__ - WARNING - Linha 393: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:42,852 - __main__ - WARNING - Linha 394: Atividade 'Horas de voo' (normalizada: 'horas de voo') não encontrada no banco, pulando.
+2025-08-30 07:59:42,852 - __main__ - WARNING - Linha 395: Atividade 'Banca da ANAC' (normalizada: 'banca da anac') não encontrada no banco, pulando.
+2025-08-30 07:59:42,853 - __main__ - WARNING - Linha 396: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:42,854 - __main__ - WARNING - Linha 397: Atividade 'Banca da ANAC' (normalizada: 'banca da anac') não encontrada no banco, pulando.
+2025-08-30 07:59:42,854 - __main__ - WARNING - Linha 398: Atividade 'Visitas a shows, exposições etc.' (normalizada: 'visitas a shows, exposicoes etc.') não encontrada no banco, pulando.
+2025-08-30 07:59:42,855 - __main__ - WARNING - Linha 399: Atividade 'Horas de voo' (normalizada: 'horas de voo') não encontrada no banco, pulando.
+2025-08-30 07:59:42,855 - __main__ - WARNING - Linha 400: Atividade 'Horas de voo' (normalizada: 'horas de voo') não encontrada no banco, pulando.
+2025-08-30 07:59:42,856 - __main__ - WARNING - Linha 401: Atividade 'Horas de voo' (normalizada: 'horas de voo') não encontrada no banco, pulando.
+2025-08-30 07:59:42,856 - __main__ - WARNING - Linha 402: Atividade 'Horas de voo em simulador' (normalizada: 'horas de voo em simulador') não encontrada no banco, pulando.
+2025-08-30 07:59:42,857 - __main__ - WARNING - Linha 403: Atividade 'Horas de voo em simulador' (normalizada: 'horas de voo em simulador') não encontrada no banco, pulando.
+2025-08-30 07:59:42,857 - __main__ - WARNING - Linha 404: Atividade 'Cursos de formação profissional' (normalizada: 'cursos de formacao profissional') não encontrada no banco, pulando.
+2025-08-30 07:59:42,859 - __main__ - WARNING - Linha 405: Atividade 'Cursos de formação profissional' (normalizada: 'cursos de formacao profissional') não encontrada no banco, pulando.
+2025-08-30 07:59:42,860 - __main__ - WARNING - Linha 406: Atividade 'Atividades integrativas' (normalizada: 'atividades integrativas') não encontrada no banco, pulando.
+2025-08-30 07:59:42,860 - __main__ - WARNING - Linha 407: Atividade 'Palestras na Faculdade EJ' (normalizada: 'palestras na faculdade ej') não encontrada no banco, pulando.
+2025-08-30 07:59:42,861 - __main__ - WARNING - Linha 408: Atividade 'Atividades integrativas' (normalizada: 'atividades integrativas') não encontrada no banco, pulando.
+2025-08-30 07:59:42,862 - __main__ - WARNING - Linha 409: Atividade 'Cursos de formação profissional' (normalizada: 'cursos de formacao profissional') não encontrada no banco, pulando.
+2025-08-30 07:59:42,862 - __main__ - WARNING - Linha 410: Atividade 'Cursos de formação profissional' (normalizada: 'cursos de formacao profissional') não encontrada no banco, pulando.
+2025-08-30 07:59:42,863 - __main__ - WARNING - Linha 411: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:42,863 - __main__ - WARNING - Linha 412: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:42,864 - __main__ - WARNING - Linha 413: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:42,864 - __main__ - WARNING - Linha 414: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:42,864 - __main__ - WARNING - Linha 415: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:42,865 - __main__ - WARNING - Linha 416: Atividade 'Palestras na Faculdade EJ' (normalizada: 'palestras na faculdade ej') não encontrada no banco, pulando.
+2025-08-30 07:59:42,865 - __main__ - WARNING - Linha 417: Atividade 'Palestras na Faculdade EJ' (normalizada: 'palestras na faculdade ej') não encontrada no banco, pulando.
+2025-08-30 07:59:42,866 - __main__ - WARNING - Linha 418: Atividade 'Palestras na Faculdade EJ' (normalizada: 'palestras na faculdade ej') não encontrada no banco, pulando.
+2025-08-30 07:59:42,867 - __main__ - WARNING - Linha 419: Atividade 'Palestras na Faculdade EJ' (normalizada: 'palestras na faculdade ej') não encontrada no banco, pulando.
+2025-08-30 07:59:42,867 - __main__ - WARNING - Linha 420: Atividade 'Palestras na Faculdade EJ' (normalizada: 'palestras na faculdade ej') não encontrada no banco, pulando.
+2025-08-30 07:59:42,868 - __main__ - WARNING - Linha 421: Atividade 'Horas de voo' (normalizada: 'horas de voo') não encontrada no banco, pulando.
+2025-08-30 07:59:42,869 - __main__ - WARNING - Linha 422: Atividade 'Horas de voo' (normalizada: 'horas de voo') não encontrada no banco, pulando.
+2025-08-30 07:59:42,869 - __main__ - WARNING - Linha 423: Atividade 'Horas de voo em simulador' (normalizada: 'horas de voo em simulador') não encontrada no banco, pulando.
+2025-08-30 07:59:42,870 - __main__ - WARNING - Linha 424: Atividade 'Horas de voo em simulador' (normalizada: 'horas de voo em simulador') não encontrada no banco, pulando.
+2025-08-30 07:59:42,871 - __main__ - WARNING - Linha 425: Atividade 'Horas de voo' (normalizada: 'horas de voo') não encontrada no banco, pulando.
+2025-08-30 07:59:42,872 - __main__ - WARNING - Linha 426: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:42,873 - __main__ - WARNING - Linha 427: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:42,873 - __main__ - WARNING - Linha 428: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:42,874 - __main__ - WARNING - Linha 429: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:42,874 - __main__ - WARNING - Linha 430: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:42,875 - __main__ - WARNING - Linha 431: Atividade 'Horas de voo' (normalizada: 'horas de voo') não encontrada no banco, pulando.
+2025-08-30 07:59:42,875 - __main__ - WARNING - Linha 432: Atividade 'Visitas a shows, exposições etc.' (normalizada: 'visitas a shows, exposicoes etc.') não encontrada no banco, pulando.
+2025-08-30 07:59:42,876 - __main__ - WARNING - Linha 433: Atividade 'Horas de voo' (normalizada: 'horas de voo') não encontrada no banco, pulando.
+2025-08-30 07:59:42,877 - __main__ - WARNING - Linha 434: Atividade 'Horas de voo' (normalizada: 'horas de voo') não encontrada no banco, pulando.
+2025-08-30 07:59:42,879 - __main__ - WARNING - Linha 435: Atividade 'Visitas a shows, exposições etc.' (normalizada: 'visitas a shows, exposicoes etc.') não encontrada no banco, pulando.
+2025-08-30 07:59:42,880 - __main__ - WARNING - Linha 436: Atividade 'Horas de voo' (normalizada: 'horas de voo') não encontrada no banco, pulando.
+2025-08-30 07:59:42,880 - __main__ - WARNING - Linha 437: Atividade 'Cursos online NUBE, IPED e FGV' (normalizada: 'cursos online nube, iped e fgv') não encontrada no banco, pulando.
+2025-08-30 07:59:42,881 - __main__ - WARNING - Linha 438: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:42,881 - __main__ - WARNING - Linha 439: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:42,882 - __main__ - WARNING - Linha 440: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:42,882 - __main__ - WARNING - Linha 441: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:42,883 - __main__ - WARNING - Linha 442: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:42,883 - __main__ - WARNING - Linha 443: Atividade 'Horas de voo' (normalizada: 'horas de voo') não encontrada no banco, pulando.
+2025-08-30 07:59:42,884 - __main__ - WARNING - Linha 444: Atividade 'Horas de voo' (normalizada: 'horas de voo') não encontrada no banco, pulando.
+2025-08-30 07:59:42,886 - __main__ - WARNING - Linha 445: Atividade 'Horas de voo' (normalizada: 'horas de voo') não encontrada no banco, pulando.
+2025-08-30 07:59:42,889 - __main__ - WARNING - Linha 446: Atividade 'Visitas a shows, exposições etc.' (normalizada: 'visitas a shows, exposicoes etc.') não encontrada no banco, pulando.
+2025-08-30 07:59:42,893 - __main__ - WARNING - Linha 447: Atividade 'Visitas a shows, exposições etc.' (normalizada: 'visitas a shows, exposicoes etc.') não encontrada no banco, pulando.
+2025-08-30 07:59:42,898 - __main__ - WARNING - Linha 448: Atividade 'Visitas a shows, exposições etc.' (normalizada: 'visitas a shows, exposicoes etc.') não encontrada no banco, pulando.
+2025-08-30 07:59:42,900 - __main__ - WARNING - Linha 449: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:42,902 - __main__ - WARNING - Linha 450: Atividade 'Horas de voo' (normalizada: 'horas de voo') não encontrada no banco, pulando.
+2025-08-30 07:59:42,905 - __main__ - WARNING - Linha 451: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:42,911 - __main__ - WARNING - Linha 452: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:42,914 - __main__ - WARNING - Linha 453: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:42,916 - __main__ - WARNING - Linha 454: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:42,919 - __main__ - WARNING - Linha 455: Atividade 'Horas de voo' (normalizada: 'horas de voo') não encontrada no banco, pulando.
+2025-08-30 07:59:42,923 - __main__ - WARNING - Linha 456: Atividade 'Horas de voo' (normalizada: 'horas de voo') não encontrada no banco, pulando.
+2025-08-30 07:59:42,925 - __main__ - WARNING - Linha 457: Atividade 'Horas de voo' (normalizada: 'horas de voo') não encontrada no banco, pulando.
+2025-08-30 07:59:42,929 - __main__ - WARNING - Linha 458: Atividade 'Horas de voo' (normalizada: 'horas de voo') não encontrada no banco, pulando.
+2025-08-30 07:59:42,931 - __main__ - WARNING - Linha 459: Atividade 'Horas de voo' (normalizada: 'horas de voo') não encontrada no banco, pulando.
+2025-08-30 07:59:42,933 - __main__ - WARNING - Linha 460: Atividade 'Horas de voo' (normalizada: 'horas de voo') não encontrada no banco, pulando.
+2025-08-30 07:59:42,935 - __main__ - WARNING - Linha 461: Atividade 'Horas de voo' (normalizada: 'horas de voo') não encontrada no banco, pulando.
+2025-08-30 07:59:42,938 - __main__ - WARNING - Linha 462: Atividade 'Horas de voo' (normalizada: 'horas de voo') não encontrada no banco, pulando.
+2025-08-30 07:59:42,941 - __main__ - WARNING - Linha 463: Atividade 'Cursos online NUBE, IPED e FGV' (normalizada: 'cursos online nube, iped e fgv') não encontrada no banco, pulando.
+2025-08-30 07:59:42,943 - __main__ - WARNING - Linha 464: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:42,945 - __main__ - WARNING - Linha 465: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:42,947 - __main__ - WARNING - Linha 466: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:42,949 - __main__ - WARNING - Linha 467: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:42,951 - __main__ - WARNING - Linha 468: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:42,953 - __main__ - WARNING - Linha 469: Atividade 'Banca da ANAC' (normalizada: 'banca da anac') não encontrada no banco, pulando.
+2025-08-30 07:59:42,955 - __main__ - WARNING - Linha 470: Atividade 'Cursos de línguas' (normalizada: 'cursos de linguas') não encontrada no banco, pulando.
+2025-08-30 07:59:42,956 - __main__ - WARNING - Linha 471: Atividade 'Cursos de línguas' (normalizada: 'cursos de linguas') não encontrada no banco, pulando.
+2025-08-30 07:59:42,958 - __main__ - WARNING - Linha 472: Atividade 'Cursos de línguas' (normalizada: 'cursos de linguas') não encontrada no banco, pulando.
+2025-08-30 07:59:42,959 - __main__ - WARNING - Linha 473: Atividade 'Cursos de línguas' (normalizada: 'cursos de linguas') não encontrada no banco, pulando.
+2025-08-30 07:59:42,961 - __main__ - WARNING - Linha 474: Atividade 'Cursos de línguas' (normalizada: 'cursos de linguas') não encontrada no banco, pulando.
+2025-08-30 07:59:42,963 - __main__ - WARNING - Linha 475: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:42,964 - __main__ - WARNING - Linha 476: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:42,965 - __main__ - WARNING - Linha 477: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:42,967 - __main__ - WARNING - Linha 478: Atividade 'Atividades integrativas' (normalizada: 'atividades integrativas') não encontrada no banco, pulando.
+2025-08-30 07:59:42,968 - __main__ - WARNING - Linha 479: Atividade 'Horas de voo' (normalizada: 'horas de voo') não encontrada no banco, pulando.
+2025-08-30 07:59:42,970 - __main__ - WARNING - Linha 480: Atividade 'Horas de voo' (normalizada: 'horas de voo') não encontrada no banco, pulando.
+2025-08-30 07:59:42,971 - __main__ - WARNING - Linha 481: Atividade 'Horas de voo' (normalizada: 'horas de voo') não encontrada no banco, pulando.
+2025-08-30 07:59:42,972 - __main__ - WARNING - Linha 482: Atividade 'Horas de voo' (normalizada: 'horas de voo') não encontrada no banco, pulando.
+2025-08-30 07:59:42,975 - __main__ - WARNING - Linha 483: Atividade 'Horas de voo' (normalizada: 'horas de voo') não encontrada no banco, pulando.
+2025-08-30 07:59:42,979 - __main__ - WARNING - Linha 484: Atividade 'Horas de voo em simulador' (normalizada: 'horas de voo em simulador') não encontrada no banco, pulando.
+2025-08-30 07:59:42,981 - __main__ - WARNING - Linha 485: Atividade 'Horas de voo em simulador' (normalizada: 'horas de voo em simulador') não encontrada no banco, pulando.
+2025-08-30 07:59:42,983 - __main__ - WARNING - Linha 486: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:42,984 - __main__ - WARNING - Linha 487: Atividade 'Ouvinte em defesa de TCCs e afins' (normalizada: 'ouvinte em defesa de tccs e afins') não encontrada no banco, pulando.
+2025-08-30 07:59:42,985 - __main__ - WARNING - Linha 488: Atividade 'Ouvinte em defesa de TCCs e afins' (normalizada: 'ouvinte em defesa de tccs e afins') não encontrada no banco, pulando.
+2025-08-30 07:59:42,986 - __main__ - WARNING - Linha 489: Atividade 'Ouvinte em defesa de TCCs e afins' (normalizada: 'ouvinte em defesa de tccs e afins') não encontrada no banco, pulando.
+2025-08-30 07:59:42,989 - __main__ - WARNING - Linha 490: Atividade 'Ouvinte em defesa de TCCs e afins' (normalizada: 'ouvinte em defesa de tccs e afins') não encontrada no banco, pulando.
+2025-08-30 07:59:42,992 - __main__ - WARNING - Linha 491: Atividade 'Ouvinte em defesa de TCCs e afins' (normalizada: 'ouvinte em defesa de tccs e afins') não encontrada no banco, pulando.
+2025-08-30 07:59:42,993 - __main__ - WARNING - Linha 492: Atividade 'Ouvinte em defesa de TCCs e afins' (normalizada: 'ouvinte em defesa de tccs e afins') não encontrada no banco, pulando.
+2025-08-30 07:59:42,994 - __main__ - WARNING - Linha 493: Atividade 'Horas de voo' (normalizada: 'horas de voo') não encontrada no banco, pulando.
+2025-08-30 07:59:42,995 - __main__ - WARNING - Linha 494: Atividade 'Horas de voo' (normalizada: 'horas de voo') não encontrada no banco, pulando.
+2025-08-30 07:59:42,995 - __main__ - WARNING - Linha 495: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:42,996 - __main__ - WARNING - Linha 496: Atividade 'Atividades integrativas' (normalizada: 'atividades integrativas') não encontrada no banco, pulando.
+2025-08-30 07:59:42,997 - __main__ - WARNING - Linha 497: Atividade 'Banca da ANAC' (normalizada: 'banca da anac') não encontrada no banco, pulando.
+2025-08-30 07:59:42,998 - __main__ - WARNING - Linha 498: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:42,998 - __main__ - WARNING - Linha 499: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:42,999 - __main__ - WARNING - Linha 500: Atividade 'Cursos de línguas' (normalizada: 'cursos de linguas') não encontrada no banco, pulando.
+2025-08-30 07:59:42,999 - __main__ - WARNING - Linha 501: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:43,000 - __main__ - WARNING - Linha 502: Atividade 'Palestras' (normalizada: 'palestras') não encontrada no banco, pulando.
+2025-08-30 07:59:43,000 - __main__ - WARNING - Linha 503: Atividade 'Banca da ANAC' (normalizada: 'banca da anac') não encontrada no banco, pulando.
+2025-08-30 07:59:43,001 - __main__ - WARNING - Linha 504: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:43,002 - __main__ - WARNING - Linha 505: Atividade 'Cursos online NUBE, IPED e FGV' (normalizada: 'cursos online nube, iped e fgv') não encontrada no banco, pulando.
+2025-08-30 07:59:43,002 - __main__ - WARNING - Linha 506: Atividade 'Monitoria' (normalizada: 'monitoria') não encontrada no banco, pulando.
+2025-08-30 07:59:43,003 - __main__ - WARNING - Linha 507: Atividade 'Cursos de línguas' (normalizada: 'cursos de linguas') não encontrada no banco, pulando.
+2025-08-30 07:59:43,003 - __main__ - WARNING - Linha 508: Atividade 'Visitas a shows, exposições etc.' (normalizada: 'visitas a shows, exposicoes etc.') não encontrada no banco, pulando.
+2025-08-30 07:59:43,004 - __main__ - WARNING - Linha 509: Atividade 'Horas de voo' (normalizada: 'horas de voo') não encontrada no banco, pulando.
+2025-08-30 07:59:43,005 - __main__ - WARNING - Linha 510: Atividade 'Cursos online NUBE, IPED e FGV' (normalizada: 'cursos online nube, iped e fgv') não encontrada no banco, pulando.
+2025-08-30 07:59:43,006 - __main__ - WARNING - Linha 511: Atividade 'Monitoria' (normalizada: 'monitoria') não encontrada no banco, pulando.
+2025-08-30 07:59:43,007 - __main__ - WARNING - Linha 512: Atividade 'Palestras' (normalizada: 'palestras') não encontrada no banco, pulando.
+2025-08-30 07:59:43,008 - __main__ - WARNING - Linha 513: Atividade 'Horas de voo' (normalizada: 'horas de voo') não encontrada no banco, pulando.
+2025-08-30 07:59:43,010 - __main__ - WARNING - Linha 514: Atividade 'Estágio ' (normalizada: 'estagio') não encontrada no banco, pulando.
+2025-08-30 07:59:43,012 - __main__ - WARNING - Linha 515: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:43,013 - __main__ - WARNING - Linha 516: Atividade 'Horas de voo' (normalizada: 'horas de voo') não encontrada no banco, pulando.
+2025-08-30 07:59:43,015 - __main__ - WARNING - Linha 517: Atividade 'Visitas a shows, exposições etc.' (normalizada: 'visitas a shows, exposicoes etc.') não encontrada no banco, pulando.
+2025-08-30 07:59:43,016 - __main__ - WARNING - Linha 518: Atividade 'Banca da ANAC' (normalizada: 'banca da anac') não encontrada no banco, pulando.
+2025-08-30 07:59:43,018 - __main__ - WARNING - Linha 519: Atividade 'Banca da ANAC' (normalizada: 'banca da anac') não encontrada no banco, pulando.
+2025-08-30 07:59:43,019 - __main__ - WARNING - Linha 520: Atividade 'Monitoria' (normalizada: 'monitoria') não encontrada no banco, pulando.
+2025-08-30 07:59:43,020 - __main__ - WARNING - Linha 521: Atividade 'Atividades integrativas' (normalizada: 'atividades integrativas') não encontrada no banco, pulando.
+2025-08-30 07:59:43,021 - __main__ - WARNING - Linha 522: Atividade 'Cursos de línguas' (normalizada: 'cursos de linguas') não encontrada no banco, pulando.
+2025-08-30 07:59:43,022 - __main__ - WARNING - Linha 523: Atividade 'Horas de voo' (normalizada: 'horas de voo') não encontrada no banco, pulando.
+2025-08-30 07:59:43,023 - __main__ - WARNING - Linha 524: Atividade 'Horas de voo' (normalizada: 'horas de voo') não encontrada no banco, pulando.
+2025-08-30 07:59:43,025 - __main__ - WARNING - Linha 525: Atividade 'Horas de voo' (normalizada: 'horas de voo') não encontrada no banco, pulando.
+2025-08-30 07:59:43,026 - __main__ - WARNING - Linha 526: Atividade 'Cursos aprimoramento acadêmico, cultural ou pessoal' (normalizada: 'cursos aprimoramento academico, cultural ou pessoal') não encontrada no banco, pulando.
+2025-08-30 07:59:43,028 - __main__ - WARNING - Linha 527: Atividade 'Cursos de línguas' (normalizada: 'cursos de linguas') não encontrada no banco, pulando.
+2025-08-30 07:59:43,029 - __main__ - WARNING - Linha 528: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:43,031 - __main__ - WARNING - Linha 529: Atividade 'Horas de voo' (normalizada: 'horas de voo') não encontrada no banco, pulando.
+2025-08-30 07:59:43,032 - __main__ - WARNING - Linha 530: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:43,033 - __main__ - WARNING - Linha 531: Atividade 'Horas de voo' (normalizada: 'horas de voo') não encontrada no banco, pulando.
+2025-08-30 07:59:43,034 - __main__ - WARNING - Linha 532: Atividade 'Monitoria' (normalizada: 'monitoria') não encontrada no banco, pulando.
+2025-08-30 07:59:43,036 - __main__ - WARNING - Linha 533: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:43,037 - __main__ - WARNING - Linha 534: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:43,038 - __main__ - WARNING - Linha 535: Atividade 'Trabalho voluntário' (normalizada: 'trabalho voluntario') não encontrada no banco, pulando.
+2025-08-30 07:59:43,040 - __main__ - WARNING - Linha 536: Atividade 'Cursos de línguas' (normalizada: 'cursos de linguas') não encontrada no banco, pulando.
+2025-08-30 07:59:43,041 - __main__ - WARNING - Linha 537: Atividade 'Atividades virtuais de aviação' (normalizada: 'atividades virtuais de aviacao') não encontrada no banco, pulando.
+2025-08-30 07:59:43,042 - __main__ - WARNING - Linha 538: Atividade 'Cursos de línguas' (normalizada: 'cursos de linguas') não encontrada no banco, pulando.
+2025-08-30 07:59:43,043 - __main__ - WARNING - Linha 539: Atividade 'Cursos aprimoramento acadêmico, cultural ou pessoal' (normalizada: 'cursos aprimoramento academico, cultural ou pessoal') não encontrada no banco, pulando.
+2025-08-30 07:59:43,045 - __main__ - WARNING - Linha 540: Atividade 'Palestras na Faculdade EJ' (normalizada: 'palestras na faculdade ej') não encontrada no banco, pulando.
+2025-08-30 07:59:43,046 - __main__ - WARNING - Linha 541: Atividade 'Banca da ANAC' (normalizada: 'banca da anac') não encontrada no banco, pulando.
+2025-08-30 07:59:43,047 - __main__ - WARNING - Linha 542: Atividade 'Palestras na Faculdade EJ' (normalizada: 'palestras na faculdade ej') não encontrada no banco, pulando.
+2025-08-30 07:59:43,047 - __main__ - WARNING - Linha 543: Atividade 'Visitas a shows, exposições etc.' (normalizada: 'visitas a shows, exposicoes etc.') não encontrada no banco, pulando.
+2025-08-30 07:59:43,048 - __main__ - WARNING - Linha 544: Atividade 'Horas de voo' (normalizada: 'horas de voo') não encontrada no banco, pulando.
+2025-08-30 07:59:43,048 - __main__ - WARNING - Linha 545: Atividade 'Horas de voo' (normalizada: 'horas de voo') não encontrada no banco, pulando.
+2025-08-30 07:59:43,049 - __main__ - WARNING - Linha 546: Atividade 'Horas de voo em simulador' (normalizada: 'horas de voo em simulador') não encontrada no banco, pulando.
+2025-08-30 07:59:43,049 - __main__ - WARNING - Linha 547: Dados essenciais (Atividade, Data Evento, Horas) ausentes, pulando.
+2025-08-30 07:59:43,049 - __main__ - WARNING - Linha 548: Atividade 'Visitas técnicas ou culturais' (normalizada: 'visitas tecnicas ou culturais') não encontrada no banco, pulando.
+2025-08-30 07:59:43,050 - __main__ - WARNING - Linha 549: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:43,051 - __main__ - WARNING - Linha 550: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:43,052 - __main__ - WARNING - Linha 551: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:43,052 - __main__ - WARNING - Linha 552: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:43,053 - __main__ - WARNING - Linha 553: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:43,053 - __main__ - WARNING - Linha 554: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:43,054 - __main__ - WARNING - Linha 555: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:43,055 - __main__ - WARNING - Linha 556: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:43,056 - __main__ - WARNING - Linha 557: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:43,056 - __main__ - WARNING - Linha 558: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:43,057 - __main__ - WARNING - Linha 559: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:43,057 - __main__ - WARNING - Linha 560: Atividade 'Cursos de línguas' (normalizada: 'cursos de linguas') não encontrada no banco, pulando.
+2025-08-30 07:59:43,058 - __main__ - WARNING - Linha 561: Atividade 'Horas de voo' (normalizada: 'horas de voo') não encontrada no banco, pulando.
+2025-08-30 07:59:43,058 - __main__ - WARNING - Linha 562: Atividade 'Horas de voo em simulador' (normalizada: 'horas de voo em simulador') não encontrada no banco, pulando.
+2025-08-30 07:59:43,059 - __main__ - WARNING - Linha 563: Atividade 'Horas de voo' (normalizada: 'horas de voo') não encontrada no banco, pulando.
+2025-08-30 07:59:43,060 - __main__ - WARNING - Linha 564: Atividade 'Horas de voo em simulador' (normalizada: 'horas de voo em simulador') não encontrada no banco, pulando.
+2025-08-30 07:59:43,061 - __main__ - WARNING - Linha 565: Atividade 'Cursos de formação profissional' (normalizada: 'cursos de formacao profissional') não encontrada no banco, pulando.
+2025-08-30 07:59:43,061 - __main__ - WARNING - Linha 566: Atividade 'Horas de voo' (normalizada: 'horas de voo') não encontrada no banco, pulando.
+2025-08-30 07:59:43,062 - __main__ - WARNING - Linha 567: Atividade 'Horas de voo em simulador' (normalizada: 'horas de voo em simulador') não encontrada no banco, pulando.
+2025-08-30 07:59:43,062 - __main__ - WARNING - Linha 568: Atividade 'Banca da ANAC' (normalizada: 'banca da anac') não encontrada no banco, pulando.
+2025-08-30 07:59:43,063 - __main__ - WARNING - Linha 569: Atividade 'Horas de voo' (normalizada: 'horas de voo') não encontrada no banco, pulando.
+2025-08-30 07:59:43,063 - __main__ - WARNING - Linha 570: Atividade 'Cursos aprimoramento acadêmico, cultural ou pessoal' (normalizada: 'cursos aprimoramento academico, cultural ou pessoal') não encontrada no banco, pulando.
+2025-08-30 07:59:43,063 - __main__ - WARNING - Linha 571: Atividade 'Visitas a shows, exposições etc.' (normalizada: 'visitas a shows, exposicoes etc.') não encontrada no banco, pulando.
+2025-08-30 07:59:43,064 - __main__ - WARNING - Linha 572: Atividade 'Horas de voo' (normalizada: 'horas de voo') não encontrada no banco, pulando.
+2025-08-30 07:59:43,064 - __main__ - WARNING - Linha 573: Atividade 'Cursos de formação profissional' (normalizada: 'cursos de formacao profissional') não encontrada no banco, pulando.
+2025-08-30 07:59:43,065 - __main__ - WARNING - Linha 574: Atividade 'Aprovação ICAO' (normalizada: 'aprovacao icao') não encontrada no banco, pulando.
+2025-08-30 07:59:43,065 - __main__ - WARNING - Linha 575: Atividade 'Horas de voo' (normalizada: 'horas de voo') não encontrada no banco, pulando.
+2025-08-30 07:59:43,066 - __main__ - WARNING - Linha 576: Atividade 'Horas de voo' (normalizada: 'horas de voo') não encontrada no banco, pulando.
+2025-08-30 07:59:43,066 - __main__ - WARNING - Linha 577: Atividade 'Horas de voo em simulador' (normalizada: 'horas de voo em simulador') não encontrada no banco, pulando.
+2025-08-30 07:59:43,066 - __main__ - WARNING - Linha 578: Atividade 'Congressos' (normalizada: 'congressos') não encontrada no banco, pulando.
+2025-08-30 07:59:43,067 - __main__ - WARNING - Linha 579: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:43,067 - __main__ - WARNING - Linha 580: Atividade 'Horas de voo' (normalizada: 'horas de voo') não encontrada no banco, pulando.
+2025-08-30 07:59:43,068 - __main__ - WARNING - Linha 581: Atividade 'Visitas a shows, exposições etc.' (normalizada: 'visitas a shows, exposicoes etc.') não encontrada no banco, pulando.
+2025-08-30 07:59:43,068 - __main__ - WARNING - Linha 582: Atividade 'Atividades integrativas' (normalizada: 'atividades integrativas') não encontrada no banco, pulando.
+2025-08-30 07:59:43,069 - __main__ - WARNING - Linha 583: Atividade 'Cursos de formação profissional' (normalizada: 'cursos de formacao profissional') não encontrada no banco, pulando.
+2025-08-30 07:59:43,069 - __main__ - WARNING - Linha 584: Atividade 'Atividades integrativas' (normalizada: 'atividades integrativas') não encontrada no banco, pulando.
+2025-08-30 07:59:43,070 - __main__ - WARNING - Linha 585: Atividade 'Atividades integrativas' (normalizada: 'atividades integrativas') não encontrada no banco, pulando.
+2025-08-30 07:59:43,070 - __main__ - WARNING - Linha 586: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:43,070 - __main__ - WARNING - Linha 587: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:43,071 - __main__ - WARNING - Linha 588: Atividade 'Cursos ou visitas técnicas' (normalizada: 'cursos ou visitas tecnicas') não encontrada no banco, pulando.
+2025-08-30 07:59:43,071 - __main__ - WARNING - Linha 589: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:43,072 - __main__ - WARNING - Linha 590: Atividade 'Atividades integrativas' (normalizada: 'atividades integrativas') não encontrada no banco, pulando.
+2025-08-30 07:59:43,072 - __main__ - WARNING - Linha 591: Atividade 'Atividades integrativas' (normalizada: 'atividades integrativas') não encontrada no banco, pulando.
+2025-08-30 07:59:43,073 - __main__ - WARNING - Linha 592: Atividade 'Banca da ANAC' (normalizada: 'banca da anac') não encontrada no banco, pulando.
+2025-08-30 07:59:43,073 - __main__ - WARNING - Linha 593: Atividade 'Atividades integrativas' (normalizada: 'atividades integrativas') não encontrada no banco, pulando.
+2025-08-30 07:59:43,074 - __main__ - WARNING - Linha 594: Atividade 'Horas de voo' (normalizada: 'horas de voo') não encontrada no banco, pulando.
+2025-08-30 07:59:43,075 - __main__ - WARNING - Linha 595: Atividade 'Horas de voo em simulador' (normalizada: 'horas de voo em simulador') não encontrada no banco, pulando.
+2025-08-30 07:59:43,075 - __main__ - WARNING - Linha 596: Atividade 'Cursos de línguas' (normalizada: 'cursos de linguas') não encontrada no banco, pulando.
+2025-08-30 07:59:43,076 - __main__ - WARNING - Linha 597: Atividade 'Cursos aprimoramento acadêmico, cultural ou pessoal' (normalizada: 'cursos aprimoramento academico, cultural ou pessoal') não encontrada no banco, pulando.
+2025-08-30 07:59:43,076 - __main__ - WARNING - Linha 598: Atividade 'Cursos online NUBE, IPED e FGV' (normalizada: 'cursos online nube, iped e fgv') não encontrada no banco, pulando.
+2025-08-30 07:59:43,077 - __main__ - WARNING - Linha 599: Atividade 'Cursos online NUBE, IPED e FGV' (normalizada: 'cursos online nube, iped e fgv') não encontrada no banco, pulando.
+2025-08-30 07:59:43,078 - __main__ - WARNING - Linha 600: Atividade 'Banca da ANAC' (normalizada: 'banca da anac') não encontrada no banco, pulando.
+2025-08-30 07:59:43,078 - __main__ - WARNING - Linha 601: Atividade 'Visitas técnicas ou culturais' (normalizada: 'visitas tecnicas ou culturais') não encontrada no banco, pulando.
+2025-08-30 07:59:43,079 - __main__ - WARNING - Linha 602: Atividade 'Visitas técnicas ou culturais' (normalizada: 'visitas tecnicas ou culturais') não encontrada no banco, pulando.
+2025-08-30 07:59:43,079 - __main__ - WARNING - Linha 603: Atividade 'Horas de voo' (normalizada: 'horas de voo') não encontrada no banco, pulando.
+2025-08-30 07:59:43,080 - __main__ - WARNING - Linha 604: Atividade 'Horas de voo em simulador' (normalizada: 'horas de voo em simulador') não encontrada no banco, pulando.
+2025-08-30 07:59:43,080 - __main__ - WARNING - Linha 605: Atividade 'Cursos de línguas' (normalizada: 'cursos de linguas') não encontrada no banco, pulando.
+2025-08-30 07:59:43,081 - __main__ - WARNING - Linha 606: Atividade 'Horas de voo' (normalizada: 'horas de voo') não encontrada no banco, pulando.
+2025-08-30 07:59:43,082 - __main__ - WARNING - Linha 607: Atividade 'Horas de voo em simulador' (normalizada: 'horas de voo em simulador') não encontrada no banco, pulando.
+2025-08-30 07:59:43,082 - __main__ - WARNING - Linha 608: Atividade 'Horas de voo em simulador' (normalizada: 'horas de voo em simulador') não encontrada no banco, pulando.
+2025-08-30 07:59:43,083 - __main__ - WARNING - Linha 609: Atividade 'Horas de voo' (normalizada: 'horas de voo') não encontrada no banco, pulando.
+2025-08-30 07:59:43,084 - __main__ - WARNING - Linha 610: Atividade 'Cursos online NUBE, IPED e FGV' (normalizada: 'cursos online nube, iped e fgv') não encontrada no banco, pulando.
+2025-08-30 07:59:43,084 - __main__ - WARNING - Linha 611: Atividade 'Horas de voo' (normalizada: 'horas de voo') não encontrada no banco, pulando.
+2025-08-30 07:59:43,085 - __main__ - WARNING - Linha 612: Atividade 'Horas de voo em simulador' (normalizada: 'horas de voo em simulador') não encontrada no banco, pulando.
+2025-08-30 07:59:43,085 - __main__ - WARNING - Linha 613: Atividade 'Horas de voo' (normalizada: 'horas de voo') não encontrada no banco, pulando.
+2025-08-30 07:59:43,085 - __main__ - WARNING - Linha 614: Atividade 'Horas de voo em simulador' (normalizada: 'horas de voo em simulador') não encontrada no banco, pulando.
+2025-08-30 07:59:43,086 - __main__ - WARNING - Linha 615: Atividade 'Cursos de formação profissional' (normalizada: 'cursos de formacao profissional') não encontrada no banco, pulando.
+2025-08-30 07:59:43,087 - __main__ - WARNING - Linha 616: Atividade 'Cursos de formação profissional' (normalizada: 'cursos de formacao profissional') não encontrada no banco, pulando.
+2025-08-30 07:59:43,087 - __main__ - WARNING - Linha 617: Atividade 'Cursos online NUBE, IPED e FGV' (normalizada: 'cursos online nube, iped e fgv') não encontrada no banco, pulando.
+2025-08-30 07:59:43,087 - __main__ - WARNING - Linha 618: Atividade 'Cursos online NUBE, IPED e FGV' (normalizada: 'cursos online nube, iped e fgv') não encontrada no banco, pulando.
+2025-08-30 07:59:43,088 - __main__ - WARNING - Linha 619: Atividade 'Horas de voo' (normalizada: 'horas de voo') não encontrada no banco, pulando.
+2025-08-30 07:59:43,089 - __main__ - WARNING - Linha 620: Atividade 'Banca da ANAC' (normalizada: 'banca da anac') não encontrada no banco, pulando.
+2025-08-30 07:59:43,089 - __main__ - WARNING - Linha 621: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:43,090 - __main__ - WARNING - Linha 622: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:43,090 - __main__ - WARNING - Linha 623: Atividade 'Horas de voo' (normalizada: 'horas de voo') não encontrada no banco, pulando.
+2025-08-30 07:59:43,091 - __main__ - WARNING - Linha 624: Atividade 'Horas de voo em simulador' (normalizada: 'horas de voo em simulador') não encontrada no banco, pulando.
+2025-08-30 07:59:43,091 - __main__ - WARNING - Linha 625: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:43,092 - __main__ - WARNING - Linha 626: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:43,092 - __main__ - WARNING - Linha 627: Atividade 'Trabalho voluntário' (normalizada: 'trabalho voluntario') não encontrada no banco, pulando.
+2025-08-30 07:59:43,093 - __main__ - WARNING - Linha 628: Atividade 'Trabalho voluntário' (normalizada: 'trabalho voluntario') não encontrada no banco, pulando.
+2025-08-30 07:59:43,094 - __main__ - WARNING - Linha 629: Atividade 'Cursos aprimoramento acadêmico, cultural ou pessoal' (normalizada: 'cursos aprimoramento academico, cultural ou pessoal') não encontrada no banco, pulando.
+2025-08-30 07:59:43,094 - __main__ - WARNING - Linha 630: Atividade 'Cursos aprimoramento acadêmico, cultural ou pessoal' (normalizada: 'cursos aprimoramento academico, cultural ou pessoal') não encontrada no banco, pulando.
+2025-08-30 07:59:43,095 - __main__ - WARNING - Linha 631: Atividade 'Visitas a shows, exposições etc.' (normalizada: 'visitas a shows, exposicoes etc.') não encontrada no banco, pulando.
+2025-08-30 07:59:43,095 - __main__ - WARNING - Linha 632: Atividade 'Cursos aprimoramento acadêmico, cultural ou pessoal' (normalizada: 'cursos aprimoramento academico, cultural ou pessoal') não encontrada no banco, pulando.
+2025-08-30 07:59:43,096 - __main__ - WARNING - Linha 633: Atividade 'Cursos de formação profissional' (normalizada: 'cursos de formacao profissional') não encontrada no banco, pulando.
+2025-08-30 07:59:43,096 - __main__ - WARNING - Linha 634: Atividade 'Cursos de formação profissional' (normalizada: 'cursos de formacao profissional') não encontrada no banco, pulando.
+2025-08-30 07:59:43,097 - __main__ - WARNING - Linha 635: Atividade 'Cursos aprimoramento acadêmico, cultural ou pessoal' (normalizada: 'cursos aprimoramento academico, cultural ou pessoal') não encontrada no banco, pulando.
+2025-08-30 07:59:43,097 - __main__ - WARNING - Linha 636: Atividade 'Cursos de formação profissional' (normalizada: 'cursos de formacao profissional') não encontrada no banco, pulando.
+2025-08-30 07:59:43,098 - __main__ - WARNING - Linha 637: Atividade 'Cursos de formação profissional' (normalizada: 'cursos de formacao profissional') não encontrada no banco, pulando.
+2025-08-30 07:59:43,099 - __main__ - WARNING - Linha 638: Atividade 'Horas de voo' (normalizada: 'horas de voo') não encontrada no banco, pulando.
+2025-08-30 07:59:43,099 - __main__ - WARNING - Linha 639: Atividade 'Horas de voo em simulador' (normalizada: 'horas de voo em simulador') não encontrada no banco, pulando.
+2025-08-30 07:59:43,099 - __main__ - WARNING - Linha 640: Atividade 'Visitas a shows, exposições etc.' (normalizada: 'visitas a shows, exposicoes etc.') não encontrada no banco, pulando.
+2025-08-30 07:59:43,100 - __main__ - WARNING - Linha 641: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:43,101 - __main__ - WARNING - Linha 642: Atividade 'Visitas a shows, exposições etc.' (normalizada: 'visitas a shows, exposicoes etc.') não encontrada no banco, pulando.
+2025-08-30 07:59:43,102 - __main__ - WARNING - Linha 643: Atividade 'Visitas a shows, exposições etc.' (normalizada: 'visitas a shows, exposicoes etc.') não encontrada no banco, pulando.
+2025-08-30 07:59:43,102 - __main__ - WARNING - Linha 644: Atividade 'Atividades integrativas' (normalizada: 'atividades integrativas') não encontrada no banco, pulando.
+2025-08-30 07:59:43,103 - __main__ - WARNING - Linha 645: Atividade 'Atividades integrativas' (normalizada: 'atividades integrativas') não encontrada no banco, pulando.
+2025-08-30 07:59:43,104 - __main__ - WARNING - Linha 646: Atividade 'Visitas a shows, exposições etc.' (normalizada: 'visitas a shows, exposicoes etc.') não encontrada no banco, pulando.
+2025-08-30 07:59:43,104 - __main__ - WARNING - Linha 647: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:43,105 - __main__ - WARNING - Linha 648: Atividade 'Trabalho voluntário (extensão acadêmica)' (normalizada: 'trabalho voluntario (extensao academica)') não encontrada no banco, pulando.
+2025-08-30 07:59:43,105 - __main__ - WARNING - Linha 649: Atividade 'Trabalho voluntário (extensão acadêmica)' (normalizada: 'trabalho voluntario (extensao academica)') não encontrada no banco, pulando.
+2025-08-30 07:59:43,106 - __main__ - WARNING - Linha 650: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:43,106 - __main__ - WARNING - Linha 651: Atividade 'Cursos aprimoramento acadêmico, cultural ou pessoal' (normalizada: 'cursos aprimoramento academico, cultural ou pessoal') não encontrada no banco, pulando.
+2025-08-30 07:59:43,107 - __main__ - WARNING - Linha 652: Atividade 'Cursos aprimoramento acadêmico, cultural ou pessoal' (normalizada: 'cursos aprimoramento academico, cultural ou pessoal') não encontrada no banco, pulando.
+2025-08-30 07:59:43,107 - __main__ - WARNING - Linha 653: Atividade 'Cursos aprimoramento acadêmico, cultural ou pessoal' (normalizada: 'cursos aprimoramento academico, cultural ou pessoal') não encontrada no banco, pulando.
+2025-08-30 07:59:43,108 - __main__ - WARNING - Linha 654: Atividade 'Cursos aprimoramento acadêmico, cultural ou pessoal' (normalizada: 'cursos aprimoramento academico, cultural ou pessoal') não encontrada no banco, pulando.
+2025-08-30 07:59:43,108 - __main__ - WARNING - Linha 655: Atividade 'Visitas a shows, exposições etc.' (normalizada: 'visitas a shows, exposicoes etc.') não encontrada no banco, pulando.
+2025-08-30 07:59:43,109 - __main__ - WARNING - Linha 656: Atividade 'Trabalho voluntário' (normalizada: 'trabalho voluntario') não encontrada no banco, pulando.
+2025-08-30 07:59:43,110 - __main__ - WARNING - Linha 657: Atividade 'Cursos aprimoramento acadêmico, cultural ou pessoal' (normalizada: 'cursos aprimoramento academico, cultural ou pessoal') não encontrada no banco, pulando.
+2025-08-30 07:59:43,111 - __main__ - WARNING - Linha 658: Atividade 'Cursos aprimoramento acadêmico, cultural ou pessoal' (normalizada: 'cursos aprimoramento academico, cultural ou pessoal') não encontrada no banco, pulando.
+2025-08-30 07:59:43,112 - __main__ - WARNING - Linha 659: Atividade 'Cursos aprimoramento acadêmico, cultural ou pessoal' (normalizada: 'cursos aprimoramento academico, cultural ou pessoal') não encontrada no banco, pulando.
+2025-08-30 07:59:43,112 - __main__ - WARNING - Linha 660: Atividade 'Cursos aprimoramento acadêmico, cultural ou pessoal' (normalizada: 'cursos aprimoramento academico, cultural ou pessoal') não encontrada no banco, pulando.
+2025-08-30 07:59:43,113 - __main__ - WARNING - Linha 661: Atividade 'Visitas técnicas ou culturais' (normalizada: 'visitas tecnicas ou culturais') não encontrada no banco, pulando.
+2025-08-30 07:59:43,113 - __main__ - WARNING - Linha 662: Atividade 'Atividades integrativas' (normalizada: 'atividades integrativas') não encontrada no banco, pulando.
+2025-08-30 07:59:43,114 - __main__ - WARNING - Linha 663: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:43,114 - __main__ - WARNING - Linha 664: Atividade 'Trabalho voluntário' (normalizada: 'trabalho voluntario') não encontrada no banco, pulando.
+2025-08-30 07:59:43,115 - __main__ - WARNING - Linha 665: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:43,115 - __main__ - WARNING - Linha 666: Atividade 'Cursos aprimoramento acadêmico, cultural ou pessoal' (normalizada: 'cursos aprimoramento academico, cultural ou pessoal') não encontrada no banco, pulando.
+2025-08-30 07:59:43,116 - __main__ - WARNING - Linha 667: Atividade 'Palestras na Faculdade EJ' (normalizada: 'palestras na faculdade ej') não encontrada no banco, pulando.
+2025-08-30 07:59:43,116 - __main__ - WARNING - Linha 668: Atividade 'Cursos aprimoramento acadêmico, cultural ou pessoal' (normalizada: 'cursos aprimoramento academico, cultural ou pessoal') não encontrada no banco, pulando.
+2025-08-30 07:59:43,117 - __main__ - WARNING - Linha 669: Atividade 'Cursos aprimoramento acadêmico, cultural ou pessoal' (normalizada: 'cursos aprimoramento academico, cultural ou pessoal') não encontrada no banco, pulando.
+2025-08-30 07:59:43,117 - __main__ - WARNING - Linha 670: Atividade 'Cursos aprimoramento acadêmico, cultural ou pessoal' (normalizada: 'cursos aprimoramento academico, cultural ou pessoal') não encontrada no banco, pulando.
+2025-08-30 07:59:43,118 - __main__ - WARNING - Linha 671: Atividade 'Cursos online NUBE, IPED e FGV' (normalizada: 'cursos online nube, iped e fgv') não encontrada no banco, pulando.
+2025-08-30 07:59:43,118 - __main__ - WARNING - Linha 672: Atividade 'Palestras na Faculdade EJ' (normalizada: 'palestras na faculdade ej') não encontrada no banco, pulando.
+2025-08-30 07:59:43,119 - __main__ - WARNING - Linha 673: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:43,119 - __main__ - WARNING - Linha 674: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:43,120 - __main__ - WARNING - Linha 675: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:43,120 - __main__ - WARNING - Linha 676: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:43,121 - __main__ - WARNING - Linha 677: Atividade 'Palestras na Faculdade EJ' (normalizada: 'palestras na faculdade ej') não encontrada no banco, pulando.
+2025-08-30 07:59:43,122 - __main__ - WARNING - Linha 678: Atividade 'Visitas a shows, exposições etc.' (normalizada: 'visitas a shows, exposicoes etc.') não encontrada no banco, pulando.
+2025-08-30 07:59:43,123 - __main__ - WARNING - Linha 679: Atividade 'Horas de voo' (normalizada: 'horas de voo') não encontrada no banco, pulando.
+2025-08-30 07:59:43,124 - __main__ - WARNING - Linha 680: Atividade 'Horas de voo' (normalizada: 'horas de voo') não encontrada no banco, pulando.
+2025-08-30 07:59:43,124 - __main__ - WARNING - Linha 681: Atividade 'Horas de voo' (normalizada: 'horas de voo') não encontrada no banco, pulando.
+2025-08-30 07:59:43,125 - __main__ - WARNING - Linha 682: Atividade 'Cursos online NUBE, IPED e FGV' (normalizada: 'cursos online nube, iped e fgv') não encontrada no banco, pulando.
+2025-08-30 07:59:43,125 - __main__ - WARNING - Linha 683: Atividade 'Cursos online NUBE, IPED e FGV' (normalizada: 'cursos online nube, iped e fgv') não encontrada no banco, pulando.
+2025-08-30 07:59:43,126 - __main__ - WARNING - Linha 684: Atividade 'Cursos de línguas' (normalizada: 'cursos de linguas') não encontrada no banco, pulando.
+2025-08-30 07:59:43,128 - __main__ - WARNING - Linha 685: Atividade 'Cursos ou visitas técnicas' (normalizada: 'cursos ou visitas tecnicas') não encontrada no banco, pulando.
+2025-08-30 07:59:43,129 - __main__ - WARNING - Linha 686: Atividade 'Cursos aprimoramento acadêmico, cultural ou pessoal' (normalizada: 'cursos aprimoramento academico, cultural ou pessoal') não encontrada no banco, pulando.
+2025-08-30 07:59:43,129 - __main__ - WARNING - Linha 687: Atividade 'Cursos de línguas' (normalizada: 'cursos de linguas') não encontrada no banco, pulando.
+2025-08-30 07:59:43,130 - __main__ - WARNING - Linha 688: Atividade 'Horas de voo' (normalizada: 'horas de voo') não encontrada no banco, pulando.
+2025-08-30 07:59:43,131 - __main__ - WARNING - Linha 689: Atividade 'Cursos de línguas' (normalizada: 'cursos de linguas') não encontrada no banco, pulando.
+2025-08-30 07:59:43,131 - __main__ - WARNING - Linha 690: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:43,132 - __main__ - WARNING - Linha 691: Atividade 'Trabalho voluntário (extensão acadêmica)' (normalizada: 'trabalho voluntario (extensao academica)') não encontrada no banco, pulando.
+2025-08-30 07:59:43,132 - __main__ - WARNING - Linha 692: Atividade 'Visitas a shows, exposições etc.' (normalizada: 'visitas a shows, exposicoes etc.') não encontrada no banco, pulando.
+2025-08-30 07:59:43,133 - __main__ - WARNING - Linha 693: Atividade 'Cursos de línguas' (normalizada: 'cursos de linguas') não encontrada no banco, pulando.
+2025-08-30 07:59:43,133 - __main__ - WARNING - Linha 694: Atividade 'Atividades integrativas' (normalizada: 'atividades integrativas') não encontrada no banco, pulando.
+2025-08-30 07:59:43,134 - __main__ - WARNING - Linha 695: Atividade 'Atividades integrativas' (normalizada: 'atividades integrativas') não encontrada no banco, pulando.
+2025-08-30 07:59:43,134 - __main__ - WARNING - Linha 696: Atividade 'Horas de voo' (normalizada: 'horas de voo') não encontrada no banco, pulando.
+2025-08-30 07:59:43,135 - __main__ - WARNING - Linha 697: Atividade 'Cursos online NUBE, IPED e FGV' (normalizada: 'cursos online nube, iped e fgv') não encontrada no banco, pulando.
+2025-08-30 07:59:43,135 - __main__ - WARNING - Linha 698: Atividade 'Cursos de línguas' (normalizada: 'cursos de linguas') não encontrada no banco, pulando.
+2025-08-30 07:59:43,136 - __main__ - WARNING - Linha 699: Atividade 'Horas de voo' (normalizada: 'horas de voo') não encontrada no banco, pulando.
+2025-08-30 07:59:43,136 - __main__ - WARNING - Linha 700: Atividade 'Horas de voo em simulador' (normalizada: 'horas de voo em simulador') não encontrada no banco, pulando.
+2025-08-30 07:59:43,137 - __main__ - WARNING - Linha 701: Atividade 'Estágio ' (normalizada: 'estagio') não encontrada no banco, pulando.
+2025-08-30 07:59:43,137 - __main__ - WARNING - Linha 702: Atividade 'Estágio ' (normalizada: 'estagio') não encontrada no banco, pulando.
+2025-08-30 07:59:43,138 - __main__ - WARNING - Linha 703: Atividade 'Horas de voo' (normalizada: 'horas de voo') não encontrada no banco, pulando.
+2025-08-30 07:59:43,138 - __main__ - WARNING - Linha 704: Atividade 'Cursos de línguas' (normalizada: 'cursos de linguas') não encontrada no banco, pulando.
+2025-08-30 07:59:43,139 - __main__ - WARNING - Linha 705: Atividade 'Atividades integrativas' (normalizada: 'atividades integrativas') não encontrada no banco, pulando.
+2025-08-30 07:59:43,139 - __main__ - WARNING - Linha 706: Atividade 'Horas de voo' (normalizada: 'horas de voo') não encontrada no banco, pulando.
+2025-08-30 07:59:43,140 - __main__ - WARNING - Linha 707: Atividade 'Horas de voo em simulador' (normalizada: 'horas de voo em simulador') não encontrada no banco, pulando.
+2025-08-30 07:59:43,140 - __main__ - WARNING - Linha 708: Atividade 'Cursos online NUBE, IPED e FGV' (normalizada: 'cursos online nube, iped e fgv') não encontrada no banco, pulando.
+2025-08-30 07:59:43,141 - __main__ - WARNING - Linha 709: Atividade 'Cursos online NUBE, IPED e FGV' (normalizada: 'cursos online nube, iped e fgv') não encontrada no banco, pulando.
+2025-08-30 07:59:43,141 - __main__ - WARNING - Linha 710: Atividade 'Cursos online NUBE, IPED e FGV' (normalizada: 'cursos online nube, iped e fgv') não encontrada no banco, pulando.
+2025-08-30 07:59:43,142 - __main__ - WARNING - Linha 711: Atividade 'Cursos aprimoramento acadêmico, cultural ou pessoal' (normalizada: 'cursos aprimoramento academico, cultural ou pessoal') não encontrada no banco, pulando.
+2025-08-30 07:59:43,142 - __main__ - WARNING - Linha 712: Atividade 'Horas de voo' (normalizada: 'horas de voo') não encontrada no banco, pulando.
+2025-08-30 07:59:43,143 - __main__ - WARNING - Linha 713: Atividade 'Horas de voo' (normalizada: 'horas de voo') não encontrada no banco, pulando.
+2025-08-30 07:59:43,144 - __main__ - WARNING - Linha 714: Atividade 'Horas de voo em simulador' (normalizada: 'horas de voo em simulador') não encontrada no banco, pulando.
+2025-08-30 07:59:43,145 - __main__ - WARNING - Linha 715: Atividade 'Horas de voo' (normalizada: 'horas de voo') não encontrada no banco, pulando.
+2025-08-30 07:59:43,146 - __main__ - WARNING - Linha 716: Atividade 'Horas de voo em simulador' (normalizada: 'horas de voo em simulador') não encontrada no banco, pulando.
+2025-08-30 07:59:43,146 - __main__ - WARNING - Linha 717: Atividade 'Curso de línguas' (normalizada: 'curso de linguas') não encontrada no banco, pulando.
+2025-08-30 07:59:43,147 - __main__ - WARNING - Linha 718: Atividade 'Horas de voo' (normalizada: 'horas de voo') não encontrada no banco, pulando.
+2025-08-30 07:59:43,147 - __main__ - WARNING - Linha 719: Atividade 'Horas de voo' (normalizada: 'horas de voo') não encontrada no banco, pulando.
+2025-08-30 07:59:43,148 - __main__ - WARNING - Linha 720: Atividade 'Horas de voo' (normalizada: 'horas de voo') não encontrada no banco, pulando.
+2025-08-30 07:59:43,148 - __main__ - WARNING - Linha 721: Atividade 'Horas de voo em simulador' (normalizada: 'horas de voo em simulador') não encontrada no banco, pulando.
+2025-08-30 07:59:43,149 - __main__ - WARNING - Linha 722: Atividade 'Horas de voo' (normalizada: 'horas de voo') não encontrada no banco, pulando.
+2025-08-30 07:59:43,151 - __main__ - WARNING - Linha 723: Atividade 'Horas de voo em simulador' (normalizada: 'horas de voo em simulador') não encontrada no banco, pulando.
+2025-08-30 07:59:43,153 - __main__ - WARNING - Linha 724: Atividade 'Palestras na Faculdade EJ' (normalizada: 'palestras na faculdade ej') não encontrada no banco, pulando.
+2025-08-30 07:59:43,154 - __main__ - WARNING - Linha 725: Atividade 'Palestras na Faculdade EJ' (normalizada: 'palestras na faculdade ej') não encontrada no banco, pulando.
+2025-08-30 07:59:43,155 - __main__ - WARNING - Linha 726: Atividade 'Estágio ' (normalizada: 'estagio') não encontrada no banco, pulando.
+2025-08-30 07:59:43,157 - __main__ - WARNING - Linha 727: Atividade 'Horas de voo' (normalizada: 'horas de voo') não encontrada no banco, pulando.
+2025-08-30 07:59:43,159 - __main__ - WARNING - Linha 728: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:43,161 - __main__ - WARNING - Linha 729: Atividade 'Cursos aprimoramento acadêmico, cultural ou pessoal' (normalizada: 'cursos aprimoramento academico, cultural ou pessoal') não encontrada no banco, pulando.
+2025-08-30 07:59:43,162 - __main__ - WARNING - Linha 730: Atividade 'Cursos aprimoramento acadêmico, cultural ou pessoal' (normalizada: 'cursos aprimoramento academico, cultural ou pessoal') não encontrada no banco, pulando.
+2025-08-30 07:59:43,163 - __main__ - WARNING - Linha 731: Atividade 'Cursos aprimoramento acadêmico, cultural ou pessoal' (normalizada: 'cursos aprimoramento academico, cultural ou pessoal') não encontrada no banco, pulando.
+2025-08-30 07:59:43,164 - __main__ - WARNING - Linha 732: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:43,165 - __main__ - WARNING - Linha 733: Atividade 'Cursos online NUBE, IPED e FGV' (normalizada: 'cursos online nube, iped e fgv') não encontrada no banco, pulando.
+2025-08-30 07:59:43,167 - __main__ - WARNING - Linha 734: Atividade 'Horas de voo' (normalizada: 'horas de voo') não encontrada no banco, pulando.
+2025-08-30 07:59:43,168 - __main__ - WARNING - Linha 735: Atividade 'Horas de voo em simulador' (normalizada: 'horas de voo em simulador') não encontrada no banco, pulando.
+2025-08-30 07:59:43,169 - __main__ - WARNING - Linha 736: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:43,169 - __main__ - WARNING - Linha 737: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:43,170 - __main__ - WARNING - Linha 738: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:43,170 - __main__ - WARNING - Linha 739: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:43,171 - __main__ - WARNING - Linha 740: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:43,171 - __main__ - WARNING - Linha 741: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:43,172 - __main__ - WARNING - Linha 742: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:43,173 - __main__ - WARNING - Linha 743: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:43,173 - __main__ - WARNING - Linha 744: Atividade 'Cursos de extensão' (normalizada: 'cursos de extensao') não encontrada no banco, pulando.
+2025-08-30 07:59:43,174 - __main__ - WARNING - Linha 745: Atividade 'Horas de voo' (normalizada: 'horas de voo') não encontrada no banco, pulando.
+2025-08-30 07:59:43,174 - __main__ - WARNING - Linha 746: Atividade 'Cursos online NUBE, IPED e FGV' (normalizada: 'cursos online nube, iped e fgv') não encontrada no banco, pulando.
+2025-08-30 07:59:43,175 - __main__ - WARNING - Linha 747: Atividade 'Atividades integrativas' (normalizada: 'atividades integrativas') não encontrada no banco, pulando.
+2025-08-30 07:59:43,175 - __main__ - WARNING - Linha 748: Atividade 'Trabalho voluntário (extensão acadêmica)' (normalizada: 'trabalho voluntario (extensao academica)') não encontrada no banco, pulando.
+2025-08-30 07:59:43,177 - __main__ - WARNING - Linha 749: Atividade 'Atividades integrativas' (normalizada: 'atividades integrativas') não encontrada no banco, pulando.
+2025-08-30 07:59:43,178 - __main__ - WARNING - Linha 750: Atividade 'Atividades integrativas' (normalizada: 'atividades integrativas') não encontrada no banco, pulando.
+2025-08-30 07:59:43,179 - __main__ - WARNING - Linha 751: Atividade 'Visitas a shows, exposições etc.' (normalizada: 'visitas a shows, exposicoes etc.') não encontrada no banco, pulando.
+2025-08-30 07:59:43,180 - __main__ - WARNING - Linha 752: Atividade 'Trabalho voluntário (extensão acadêmica)' (normalizada: 'trabalho voluntario (extensao academica)') não encontrada no banco, pulando.
+2025-08-30 07:59:43,180 - __main__ - WARNING - Linha 753: Atividade 'Palestras na Faculdade EJ' (normalizada: 'palestras na faculdade ej') não encontrada no banco, pulando.
+2025-08-30 07:59:43,181 - __main__ - WARNING - Linha 754: Atividade 'Banca da ANAC' (normalizada: 'banca da anac') não encontrada no banco, pulando.
+2025-08-30 07:59:43,181 - __main__ - WARNING - Linha 755: Atividade 'Cursos de formação profissional' (normalizada: 'cursos de formacao profissional') não encontrada no banco, pulando.
+2025-08-30 07:59:43,182 - __main__ - WARNING - Linha 756: Atividade 'Atividades integrativas' (normalizada: 'atividades integrativas') não encontrada no banco, pulando.
+2025-08-30 07:59:43,182 - __main__ - WARNING - Linha 757: Atividade 'Horas de voo' (normalizada: 'horas de voo') não encontrada no banco, pulando.
+2025-08-30 07:59:43,183 - __main__ - WARNING - Linha 758: Atividade 'Estágio ' (normalizada: 'estagio') não encontrada no banco, pulando.
+2025-08-30 07:59:43,183 - __main__ - WARNING - Linha 759: Dados essenciais (Atividade, Data Evento, Horas) ausentes, pulando.
+2025-08-30 07:59:43,183 - __main__ - WARNING - Linha 760: Dados essenciais (Atividade, Data Evento, Horas) ausentes, pulando.
+2025-08-30 07:59:43,183 - __main__ - WARNING - Linha 761: Dados essenciais (Atividade, Data Evento, Horas) ausentes, pulando.
+2025-08-30 07:59:43,183 - __main__ - WARNING - Linha 762: Dados essenciais (Atividade, Data Evento, Horas) ausentes, pulando.
+2025-08-30 07:59:43,183 - __main__ - WARNING - Linha 763: Dados essenciais (Atividade, Data Evento, Horas) ausentes, pulando.
+2025-08-30 07:59:43,183 - __main__ - WARNING - Linha 764: Dados essenciais (Atividade, Data Evento, Horas) ausentes, pulando.
+2025-08-30 07:59:43,183 - __main__ - WARNING - Linha 765: Dados essenciais (Atividade, Data Evento, Horas) ausentes, pulando.
+2025-08-30 07:59:43,183 - __main__ - WARNING - Linha 766: Dados essenciais (Atividade, Data Evento, Horas) ausentes, pulando.
+2025-08-30 07:59:43,183 - __main__ - WARNING - Linha 767: Dados essenciais (Atividade, Data Evento, Horas) ausentes, pulando.
+2025-08-30 07:59:43,183 - __main__ - WARNING - Linha 768: Dados essenciais (Atividade, Data Evento, Horas) ausentes, pulando.
+2025-08-30 07:59:43,183 - __main__ - WARNING - Linha 769: Dados essenciais (Atividade, Data Evento, Horas) ausentes, pulando.
+2025-08-30 07:59:43,183 - __main__ - WARNING - Linha 770: Dados essenciais (Atividade, Data Evento, Horas) ausentes, pulando.
+2025-08-30 07:59:43,183 - __main__ - WARNING - Linha 771: Dados essenciais (Atividade, Data Evento, Horas) ausentes, pulando.
+2025-08-30 07:59:43,183 - __main__ - WARNING - Linha 772: Dados essenciais (Atividade, Data Evento, Horas) ausentes, pulando.
+2025-08-30 07:59:43,183 - __main__ - WARNING - Linha 773: Dados essenciais (Atividade, Data Evento, Horas) ausentes, pulando.
+2025-08-30 07:59:43,183 - __main__ - WARNING - Linha 774: Dados essenciais (Atividade, Data Evento, Horas) ausentes, pulando.
+2025-08-30 07:59:43,183 - __main__ - WARNING - Linha 775: Dados essenciais (Atividade, Data Evento, Horas) ausentes, pulando.
+2025-08-30 07:59:43,183 - __main__ - WARNING - Linha 776: Dados essenciais (Atividade, Data Evento, Horas) ausentes, pulando.
+2025-08-30 07:59:43,183 - __main__ - WARNING - Linha 777: Dados essenciais (Atividade, Data Evento, Horas) ausentes, pulando.
+2025-08-30 07:59:43,184 - __main__ - WARNING - Linha 778: Dados essenciais (Atividade, Data Evento, Horas) ausentes, pulando.
+2025-08-30 07:59:43,184 - __main__ - WARNING - Linha 779: Dados essenciais (Atividade, Data Evento, Horas) ausentes, pulando.
+2025-08-30 07:59:43,184 - __main__ - WARNING - Linha 780: Dados essenciais (Atividade, Data Evento, Horas) ausentes, pulando.
+2025-08-30 07:59:43,184 - __main__ - WARNING - Linha 781: Dados essenciais (Atividade, Data Evento, Horas) ausentes, pulando.
+2025-08-30 07:59:43,184 - __main__ - WARNING - Linha 782: Dados essenciais (Atividade, Data Evento, Horas) ausentes, pulando.
+2025-08-30 07:59:43,184 - __main__ - WARNING - Linha 783: Dados essenciais (Atividade, Data Evento, Horas) ausentes, pulando.
+2025-08-30 07:59:43,184 - __main__ - WARNING - Linha 784: Dados essenciais (Atividade, Data Evento, Horas) ausentes, pulando.
+2025-08-30 07:59:43,184 - __main__ - WARNING - Linha 785: Dados essenciais (Atividade, Data Evento, Horas) ausentes, pulando.
+2025-08-30 07:59:43,184 - __main__ - WARNING - Linha 786: Dados essenciais (Atividade, Data Evento, Horas) ausentes, pulando.
+2025-08-30 07:59:43,184 - __main__ - WARNING - Linha 787: Dados essenciais (Atividade, Data Evento, Horas) ausentes, pulando.
+2025-08-30 07:59:43,184 - __main__ - WARNING - Linha 788: Dados essenciais (Atividade, Data Evento, Horas) ausentes, pulando.
+2025-08-30 07:59:43,184 - __main__ - WARNING - Linha 789: Dados essenciais (Atividade, Data Evento, Horas) ausentes, pulando.
+2025-08-30 07:59:43,184 - __main__ - WARNING - Linha 790: Dados essenciais (Atividade, Data Evento, Horas) ausentes, pulando.
+2025-08-30 07:59:43,184 - __main__ - WARNING - Linha 791: Dados essenciais (Atividade, Data Evento, Horas) ausentes, pulando.
+2025-08-30 07:59:43,184 - __main__ - WARNING - Linha 792: Dados essenciais (Atividade, Data Evento, Horas) ausentes, pulando.
+2025-08-30 07:59:43,184 - __main__ - WARNING - Linha 793: Dados essenciais (Atividade, Data Evento, Horas) ausentes, pulando.
+2025-08-30 07:59:43,184 - __main__ - WARNING - Linha 794: Dados essenciais (Atividade, Data Evento, Horas) ausentes, pulando.
+2025-08-30 07:59:43,184 - __main__ - WARNING - Linha 795: Dados essenciais (Atividade, Data Evento, Horas) ausentes, pulando.
+2025-08-30 07:59:43,184 - __main__ - WARNING - Linha 796: Dados essenciais (Atividade, Data Evento, Horas) ausentes, pulando.
+2025-08-30 07:59:43,184 - __main__ - WARNING - Linha 797: Dados essenciais (Atividade, Data Evento, Horas) ausentes, pulando.
+2025-08-30 07:59:43,184 - __main__ - WARNING - Linha 798: Dados essenciais (Atividade, Data Evento, Horas) ausentes, pulando.
+2025-08-30 07:59:43,184 - __main__ - WARNING - Linha 799: Dados essenciais (Atividade, Data Evento, Horas) ausentes, pulando.
+2025-08-30 07:59:43,184 - __main__ - WARNING - Linha 800: Dados essenciais (Atividade, Data Evento, Horas) ausentes, pulando.
+2025-08-30 07:59:43,184 - __main__ - WARNING - Linha 801: Dados essenciais (Atividade, Data Evento, Horas) ausentes, pulando.
+2025-08-30 07:59:43,184 - __main__ - WARNING - Linha 802: Dados essenciais (Atividade, Data Evento, Horas) ausentes, pulando.
+2025-08-30 07:59:43,184 - __main__ - WARNING - Linha 803: Dados essenciais (Atividade, Data Evento, Horas) ausentes, pulando.
+2025-08-30 07:59:43,184 - __main__ - WARNING - Linha 804: Dados essenciais (Atividade, Data Evento, Horas) ausentes, pulando.
+2025-08-30 07:59:43,184 - __main__ - WARNING - Linha 805: Dados essenciais (Atividade, Data Evento, Horas) ausentes, pulando.
+2025-08-30 07:59:43,184 - __main__ - WARNING - Linha 806: Dados essenciais (Atividade, Data Evento, Horas) ausentes, pulando.
+2025-08-30 07:59:43,184 - __main__ - WARNING - Linha 807: Dados essenciais (Atividade, Data Evento, Horas) ausentes, pulando.
+2025-08-30 07:59:43,184 - __main__ - WARNING - Linha 808: Dados essenciais (Atividade, Data Evento, Horas) ausentes, pulando.
+2025-08-30 07:59:43,184 - __main__ - WARNING - Linha 809: Dados essenciais (Atividade, Data Evento, Horas) ausentes, pulando.
+2025-08-30 07:59:43,184 - __main__ - WARNING - Linha 810: Dados essenciais (Atividade, Data Evento, Horas) ausentes, pulando.
+2025-08-30 07:59:43,184 - __main__ - WARNING - Linha 811: Dados essenciais (Atividade, Data Evento, Horas) ausentes, pulando.
+2025-08-30 07:59:43,184 - __main__ - WARNING - Linha 812: Dados essenciais (Atividade, Data Evento, Horas) ausentes, pulando.
+2025-08-30 07:59:43,184 - __main__ - WARNING - Linha 813: Dados essenciais (Atividade, Data Evento, Horas) ausentes, pulando.
+2025-08-30 07:59:43,185 - __main__ - WARNING - Linha 814: Dados essenciais (Atividade, Data Evento, Horas) ausentes, pulando.
+2025-08-30 07:59:43,185 - __main__ - WARNING - Linha 815: Dados essenciais (Atividade, Data Evento, Horas) ausentes, pulando.
+2025-08-30 07:59:43,185 - __main__ - WARNING - Linha 816: Dados essenciais (Atividade, Data Evento, Horas) ausentes, pulando.
+2025-08-30 07:59:43,185 - __main__ - WARNING - Linha 817: Dados essenciais (Atividade, Data Evento, Horas) ausentes, pulando.
+2025-08-30 07:59:43,185 - __main__ - WARNING - Linha 818: Dados essenciais (Atividade, Data Evento, Horas) ausentes, pulando.
+2025-08-30 07:59:43,185 - __main__ - WARNING - Linha 819: Dados essenciais (Atividade, Data Evento, Horas) ausentes, pulando.
+2025-08-30 07:59:43,185 - __main__ - WARNING - Linha 820: Dados essenciais (Atividade, Data Evento, Horas) ausentes, pulando.
+2025-08-30 07:59:43,185 - __main__ - WARNING - Linha 821: Dados essenciais (Atividade, Data Evento, Horas) ausentes, pulando.
+2025-08-30 07:59:43,185 - __main__ - WARNING - Linha 822: Dados essenciais (Atividade, Data Evento, Horas) ausentes, pulando.
+2025-08-30 07:59:43,185 - __main__ - WARNING - Linha 823: Dados essenciais (Atividade, Data Evento, Horas) ausentes, pulando.
+2025-08-30 07:59:43,185 - __main__ - WARNING - Linha 824: Dados essenciais (Atividade, Data Evento, Horas) ausentes, pulando.
+2025-08-30 07:59:43,185 - __main__ - WARNING - Linha 825: Dados essenciais (Atividade, Data Evento, Horas) ausentes, pulando.
+2025-08-30 07:59:43,185 - __main__ - WARNING - Linha 826: Dados essenciais (Atividade, Data Evento, Horas) ausentes, pulando.
+2025-08-30 07:59:43,185 - __main__ - WARNING - Linha 827: Dados essenciais (Atividade, Data Evento, Horas) ausentes, pulando.
+2025-08-30 07:59:43,185 - __main__ - WARNING - Linha 828: Dados essenciais (Atividade, Data Evento, Horas) ausentes, pulando.
+2025-08-30 07:59:43,185 - __main__ - WARNING - Linha 829: Dados essenciais (Atividade, Data Evento, Horas) ausentes, pulando.
+2025-08-30 07:59:43,185 - __main__ - WARNING - Linha 830: Dados essenciais (Atividade, Data Evento, Horas) ausentes, pulando.
+2025-08-30 07:59:43,185 - __main__ - WARNING - Linha 831: Dados essenciais (Atividade, Data Evento, Horas) ausentes, pulando.
+2025-08-30 07:59:43,185 - __main__ - WARNING - Linha 832: Dados essenciais (Atividade, Data Evento, Horas) ausentes, pulando.
+2025-08-30 07:59:43,185 - __main__ - WARNING - Linha 833: Dados essenciais (Atividade, Data Evento, Horas) ausentes, pulando.
+2025-08-30 07:59:43,185 - __main__ - WARNING - Linha 834: Dados essenciais (Atividade, Data Evento, Horas) ausentes, pulando.
+2025-08-30 07:59:43,185 - __main__ - WARNING - Linha 835: Dados essenciais (Atividade, Data Evento, Horas) ausentes, pulando.
+2025-08-30 07:59:43,185 - __main__ - WARNING - Linha 836: Dados essenciais (Atividade, Data Evento, Horas) ausentes, pulando.
+2025-08-30 07:59:43,185 - __main__ - WARNING - Linha 837: Dados essenciais (Atividade, Data Evento, Horas) ausentes, pulando.
+2025-08-30 07:59:43,185 - __main__ - WARNING - Linha 838: Dados essenciais (Atividade, Data Evento, Horas) ausentes, pulando.
+2025-08-30 07:59:43,185 - __main__ - WARNING - Linha 839: Dados essenciais (Atividade, Data Evento, Horas) ausentes, pulando.
+2025-08-30 07:59:43,185 - __main__ - WARNING - Linha 840: Dados essenciais (Atividade, Data Evento, Horas) ausentes, pulando.
+2025-08-30 07:59:43,185 - __main__ - WARNING - Linha 841: Dados essenciais (Atividade, Data Evento, Horas) ausentes, pulando.
+2025-08-30 07:59:43,185 - __main__ - WARNING - Linha 842: Dados essenciais (Atividade, Data Evento, Horas) ausentes, pulando.
+2025-08-30 07:59:43,185 - __main__ - WARNING - Linha 843: Dados essenciais (Atividade, Data Evento, Horas) ausentes, pulando.
+2025-08-30 07:59:43,185 - __main__ - WARNING - Linha 844: Dados essenciais (Atividade, Data Evento, Horas) ausentes, pulando.
+2025-08-30 07:59:43,185 - __main__ - WARNING - Linha 845: Dados essenciais (Atividade, Data Evento, Horas) ausentes, pulando.
+2025-08-30 07:59:43,185 - __main__ - WARNING - Linha 846: Dados essenciais (Atividade, Data Evento, Horas) ausentes, pulando.
+2025-08-30 07:59:43,185 - __main__ - WARNING - Linha 847: Dados essenciais (Atividade, Data Evento, Horas) ausentes, pulando.
+2025-08-30 07:59:43,185 - __main__ - WARNING - Linha 848: Dados essenciais (Atividade, Data Evento, Horas) ausentes, pulando.
+2025-08-30 07:59:43,185 - __main__ - WARNING - Linha 849: Dados essenciais (Atividade, Data Evento, Horas) ausentes, pulando.
+2025-08-30 07:59:43,185 - __main__ - WARNING - Linha 850: Dados essenciais (Atividade, Data Evento, Horas) ausentes, pulando.
+2025-08-30 07:59:43,186 - __main__ - WARNING - Linha 851: Dados essenciais (Atividade, Data Evento, Horas) ausentes, pulando.
+2025-08-30 07:59:43,186 - __main__ - WARNING - Linha 852: Dados essenciais (Atividade, Data Evento, Horas) ausentes, pulando.
+2025-08-30 07:59:43,186 - __main__ - WARNING - Linha 853: Dados essenciais (Atividade, Data Evento, Horas) ausentes, pulando.
+2025-08-30 07:59:43,186 - __main__ - WARNING - Linha 854: Dados essenciais (Atividade, Data Evento, Horas) ausentes, pulando.
+2025-08-30 07:59:43,186 - __main__ - WARNING - Linha 855: Dados essenciais (Atividade, Data Evento, Horas) ausentes, pulando.
+2025-08-30 07:59:43,186 - __main__ - WARNING - Linha 856: Dados essenciais (Atividade, Data Evento, Horas) ausentes, pulando.
+2025-08-30 07:59:43,186 - __main__ - WARNING - Linha 857: Dados essenciais (Atividade, Data Evento, Horas) ausentes, pulando.
+2025-08-30 07:59:43,186 - __main__ - WARNING - Linha 858: Dados essenciais (Atividade, Data Evento, Horas) ausentes, pulando.
+2025-08-30 07:59:43,186 - __main__ - WARNING - Linha 859: Dados essenciais (Atividade, Data Evento, Horas) ausentes, pulando.
+2025-08-30 07:59:43,186 - __main__ - WARNING - Linha 860: Dados essenciais (Atividade, Data Evento, Horas) ausentes, pulando.
+2025-08-30 07:59:43,186 - __main__ - WARNING - Linha 861: Dados essenciais (Atividade, Data Evento, Horas) ausentes, pulando.
+2025-08-30 07:59:43,186 - __main__ - WARNING - Linha 862: Dados essenciais (Atividade, Data Evento, Horas) ausentes, pulando.
+2025-08-30 07:59:43,186 - __main__ - WARNING - Linha 863: Dados essenciais (Atividade, Data Evento, Horas) ausentes, pulando.
+2025-08-30 07:59:43,186 - __main__ - WARNING - Linha 864: Dados essenciais (Atividade, Data Evento, Horas) ausentes, pulando.
+2025-08-30 07:59:43,186 - __main__ - WARNING - Linha 865: Dados essenciais (Atividade, Data Evento, Horas) ausentes, pulando.
+2025-08-30 07:59:43,186 - __main__ - WARNING - Linha 866: Dados essenciais (Atividade, Data Evento, Horas) ausentes, pulando.
+2025-08-30 07:59:43,186 - __main__ - WARNING - Linha 867: Dados essenciais (Atividade, Data Evento, Horas) ausentes, pulando.
+2025-08-30 07:59:43,186 - __main__ - WARNING - Linha 868: Dados essenciais (Atividade, Data Evento, Horas) ausentes, pulando.
+2025-08-30 07:59:43,186 - __main__ - WARNING - Linha 869: Dados essenciais (Atividade, Data Evento, Horas) ausentes, pulando.
+2025-08-30 07:59:43,186 - __main__ - WARNING - Linha 870: Dados essenciais (Atividade, Data Evento, Horas) ausentes, pulando.
+2025-08-30 07:59:43,186 - __main__ - WARNING - Linha 871: Dados essenciais (Atividade, Data Evento, Horas) ausentes, pulando.
+2025-08-30 07:59:43,186 - __main__ - WARNING - Linha 872: Dados essenciais (Atividade, Data Evento, Horas) ausentes, pulando.
+2025-08-30 07:59:43,186 - __main__ - WARNING - Linha 873: Dados essenciais (Atividade, Data Evento, Horas) ausentes, pulando.
+2025-08-30 07:59:43,186 - __main__ - WARNING - Linha 874: Dados essenciais (Atividade, Data Evento, Horas) ausentes, pulando.
+2025-08-30 07:59:43,186 - __main__ - WARNING - Linha 875: Dados essenciais (Atividade, Data Evento, Horas) ausentes, pulando.
+2025-08-30 07:59:43,186 - __main__ - WARNING - Linha 876: Dados essenciais (Atividade, Data Evento, Horas) ausentes, pulando.
+2025-08-30 07:59:43,187 - __main__ - WARNING - Linha 877: Dados essenciais (Atividade, Data Evento, Horas) ausentes, pulando.
+2025-08-30 07:59:43,187 - __main__ - WARNING - Linha 878: Dados essenciais (Atividade, Data Evento, Horas) ausentes, pulando.
+2025-08-30 07:59:43,187 - __main__ - WARNING - Linha 879: Dados essenciais (Atividade, Data Evento, Horas) ausentes, pulando.
+2025-08-30 07:59:43,190 - __main__ - WARNING - Linha 880: Dados essenciais (Atividade, Data Evento, Horas) ausentes, pulando.
+2025-08-30 07:59:43,190 - __main__ - WARNING - Linha 881: Dados essenciais (Atividade, Data Evento, Horas) ausentes, pulando.
+2025-08-30 07:59:43,190 - __main__ - WARNING - Linha 882: Dados essenciais (Atividade, Data Evento, Horas) ausentes, pulando.
+2025-08-30 07:59:43,190 - __main__ - WARNING - Linha 883: Dados essenciais (Atividade, Data Evento, Horas) ausentes, pulando.
+2025-08-30 07:59:43,190 - __main__ - WARNING - Linha 884: Dados essenciais (Atividade, Data Evento, Horas) ausentes, pulando.
+2025-08-30 07:59:43,190 - __main__ - WARNING - Linha 885: Dados essenciais (Atividade, Data Evento, Horas) ausentes, pulando.
+2025-08-30 07:59:43,190 - __main__ - WARNING - Linha 886: Dados essenciais (Atividade, Data Evento, Horas) ausentes, pulando.
+2025-08-30 07:59:43,190 - __main__ - WARNING - Linha 887: Dados essenciais (Atividade, Data Evento, Horas) ausentes, pulando.
+2025-08-30 07:59:43,190 - __main__ - WARNING - Linha 888: Dados essenciais (Atividade, Data Evento, Horas) ausentes, pulando.
+2025-08-30 07:59:43,190 - __main__ - WARNING - Linha 889: Dados essenciais (Atividade, Data Evento, Horas) ausentes, pulando.
+2025-08-30 07:59:43,190 - __main__ - WARNING - Linha 890: Dados essenciais (Atividade, Data Evento, Horas) ausentes, pulando.
+2025-08-30 07:59:43,191 - __main__ - WARNING - Linha 891: Dados essenciais (Atividade, Data Evento, Horas) ausentes, pulando.
+2025-08-30 07:59:43,191 - __main__ - WARNING - Linha 892: Dados essenciais (Atividade, Data Evento, Horas) ausentes, pulando.
+2025-08-30 07:59:43,191 - __main__ - WARNING - Linha 893: Dados essenciais (Atividade, Data Evento, Horas) ausentes, pulando.
+2025-08-30 07:59:43,191 - __main__ - WARNING - Linha 894: Dados essenciais (Atividade, Data Evento, Horas) ausentes, pulando.
+2025-08-30 07:59:43,191 - __main__ - WARNING - Linha 895: Dados essenciais (Atividade, Data Evento, Horas) ausentes, pulando.
+2025-08-30 07:59:43,191 - __main__ - WARNING - Linha 896: Dados essenciais (Atividade, Data Evento, Horas) ausentes, pulando.
+2025-08-30 07:59:43,191 - __main__ - WARNING - Linha 897: Dados essenciais (Atividade, Data Evento, Horas) ausentes, pulando.
+2025-08-30 07:59:43,191 - __main__ - WARNING - Linha 898: Dados essenciais (Atividade, Data Evento, Horas) ausentes, pulando.
+2025-08-30 07:59:43,191 - __main__ - WARNING - Linha 899: Dados essenciais (Atividade, Data Evento, Horas) ausentes, pulando.
+2025-08-30 07:59:43,191 - __main__ - WARNING - Linha 900: Dados essenciais (Atividade, Data Evento, Horas) ausentes, pulando.
+2025-08-30 07:59:43,191 - __main__ - WARNING - Linha 901: Dados essenciais (Atividade, Data Evento, Horas) ausentes, pulando.
+2025-08-30 07:59:43,191 - __main__ - WARNING - Linha 902: Dados essenciais (Atividade, Data Evento, Horas) ausentes, pulando.
+2025-08-30 07:59:43,191 - __main__ - WARNING - Linha 903: Dados essenciais (Atividade, Data Evento, Horas) ausentes, pulando.
+2025-08-30 07:59:43,191 - __main__ - WARNING - Linha 904: Dados essenciais (Atividade, Data Evento, Horas) ausentes, pulando.
+2025-08-30 07:59:43,191 - __main__ - WARNING - Linha 905: Dados essenciais (Atividade, Data Evento, Horas) ausentes, pulando.
+2025-08-30 07:59:43,191 - __main__ - WARNING - Linha 906: Dados essenciais (Atividade, Data Evento, Horas) ausentes, pulando.
+2025-08-30 07:59:43,191 - __main__ - WARNING - Linha 907: Dados essenciais (Atividade, Data Evento, Horas) ausentes, pulando.
+2025-08-30 07:59:43,191 - __main__ - WARNING - Linha 908: Dados essenciais (Atividade, Data Evento, Horas) ausentes, pulando.
+2025-08-30 07:59:43,191 - __main__ - WARNING - Linha 909: Dados essenciais (Atividade, Data Evento, Horas) ausentes, pulando.
+2025-08-30 07:59:43,191 - __main__ - WARNING - Linha 910: Dados essenciais (Atividade, Data Evento, Horas) ausentes, pulando.
+2025-08-30 07:59:43,191 - __main__ - WARNING - Linha 911: Dados essenciais (Atividade, Data Evento, Horas) ausentes, pulando.
+2025-08-30 07:59:43,191 - __main__ - WARNING - Linha 912: Dados essenciais (Atividade, Data Evento, Horas) ausentes, pulando.
+2025-08-30 07:59:43,191 - __main__ - WARNING - Linha 913: Dados essenciais (Atividade, Data Evento, Horas) ausentes, pulando.
+2025-08-30 07:59:43,191 - __main__ - WARNING - Linha 914: Dados essenciais (Atividade, Data Evento, Horas) ausentes, pulando.
+2025-08-30 07:59:43,191 - __main__ - WARNING - Linha 915: Dados essenciais (Atividade, Data Evento, Horas) ausentes, pulando.
+2025-08-30 07:59:43,191 - __main__ - WARNING - Linha 916: Dados essenciais (Atividade, Data Evento, Horas) ausentes, pulando.
+2025-08-30 07:59:43,191 - __main__ - WARNING - Linha 917: Dados essenciais (Atividade, Data Evento, Horas) ausentes, pulando.
+2025-08-30 07:59:43,191 - __main__ - WARNING - Linha 918: Dados essenciais (Atividade, Data Evento, Horas) ausentes, pulando.
+2025-08-30 07:59:43,191 - __main__ - WARNING - Linha 919: Dados essenciais (Atividade, Data Evento, Horas) ausentes, pulando.
+2025-08-30 07:59:43,191 - __main__ - WARNING - Linha 920: Dados essenciais (Atividade, Data Evento, Horas) ausentes, pulando.
+2025-08-30 07:59:43,191 - __main__ - WARNING - Linha 921: Dados essenciais (Atividade, Data Evento, Horas) ausentes, pulando.
+2025-08-30 07:59:43,191 - __main__ - WARNING - Linha 922: Dados essenciais (Atividade, Data Evento, Horas) ausentes, pulando.
+2025-08-30 07:59:43,191 - __main__ - WARNING - Linha 923: Dados essenciais (Atividade, Data Evento, Horas) ausentes, pulando.
+2025-08-30 07:59:43,191 - __main__ - INFO - Importação concluída com openpyxl. Sucesso: 0, Erros/Pulados: 754
+2025-08-30 07:59:43,192 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 07:59:43] "[32mPOST /admin/importar_requisicoes HTTP/1.1[0m" 302 -
+2025-08-30 07:59:43,513 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 07:59:43] "GET /admin/requisicoes HTTP/1.1" 200 -
+2025-08-30 07:59:48,714 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 07:59:48] "GET /admin/requisicoes?status=Pendente HTTP/1.1" 200 -
+2025-08-30 07:59:50,481 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 07:59:50] "GET /admin/dashboard HTTP/1.1" 200 -
+2025-08-30 07:59:53,969 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 07:59:53] "GET /admin/alunos HTTP/1.1" 200 -
+2025-08-30 07:59:58,145 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 07:59:58] "GET /admin/atividades/extensao HTTP/1.1" 200 -
+2025-08-30 07:59:59,934 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 07:59:59] "GET /admin/atividades/academicas HTTP/1.1" 200 -
+2025-08-30 08:00:01,228 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 08:00:01] "GET /admin/atividades HTTP/1.1" 200 -
+2025-08-30 08:00:02,329 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 08:00:02] "GET /admin/adicionar_atividade HTTP/1.1" 200 -
+2025-08-30 08:00:16,867 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 08:00:16] "[32mPOST /admin/adicionar_atividade HTTP/1.1[0m" 302 -
+2025-08-30 08:00:17,116 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 08:00:17] "GET /admin/atividades HTTP/1.1" 200 -
+2025-08-30 08:00:21,525 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 08:00:21] "GET /admin/dashboard HTTP/1.1" 200 -
+2025-08-30 08:00:23,924 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 08:00:23] "GET /admin/atividades/academicas HTTP/1.1" 200 -
+2025-08-30 08:03:16,151 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 08:03:16] "GET /admin/requisicoes HTTP/1.1" 200 -
+2025-08-30 08:05:00,949 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 08:05:00] "GET /admin/atividades/academicas HTTP/1.1" 200 -
+2025-08-30 08:05:08,317 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 08:05:08] "GET /admin/alunos HTTP/1.1" 200 -
+2025-08-30 08:05:11,060 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 08:05:11] "GET /admin/atividades/extensao HTTP/1.1" 200 -
+2025-08-30 08:14:34,641 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 08:14:34] "GET /admin/dashboard HTTP/1.1" 200 -
+2025-08-30 12:23:27,062 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.100.103:5000
+2025-08-30 12:23:27,062 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-08-30 12:24:26,480 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 12:24:26] "[32mGET / HTTP/1.1[0m" 302 -
+2025-08-30 12:24:26,538 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 12:24:26] "GET /login HTTP/1.1" 200 -
+2025-08-30 12:24:26,810 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 12:24:26] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-08-30 12:24:38,172 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 12:24:38] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-08-30 12:24:38,202 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 12:24:38] "GET /admin/dashboard HTTP/1.1" 200 -
+2025-08-30 12:24:43,934 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 12:24:43] "GET /admin/dashboard HTTP/1.1" 200 -
+2025-08-30 12:24:44,299 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 12:24:44] "GET /admin/atividades/academicas HTTP/1.1" 200 -
+2025-08-30 12:30:30,924 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.100.103:5000
+2025-08-30 12:30:30,924 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-08-30 12:30:37,626 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 12:30:37] "[32mGET / HTTP/1.1[0m" 302 -
+2025-08-30 12:30:37,640 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 12:30:37] "GET /login HTTP/1.1" 200 -
+2025-08-30 12:30:37,832 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 12:30:37] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-08-30 12:30:53,159 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 12:30:53] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-08-30 12:30:53,173 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 12:30:53] "GET /admin/dashboard HTTP/1.1" 200 -
+2025-08-30 12:32:21,432 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 12:32:21] "[32mGET / HTTP/1.1[0m" 302 -
+2025-08-30 12:32:21,439 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 12:32:21] "GET /login HTTP/1.1" 200 -
+2025-08-30 12:32:28,310 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 12:32:28] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-08-30 12:32:28,322 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 12:32:28] "GET /admin/dashboard HTTP/1.1" 200 -
+2025-08-30 12:32:29,837 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 12:32:29] "GET /admin/atividades HTTP/1.1" 200 -
+2025-08-30 12:32:31,827 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 12:32:31] "GET /admin/dashboard HTTP/1.1" 200 -
+2025-08-30 12:32:32,684 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 12:32:32] "GET /admin/requisicoes HTTP/1.1" 200 -
+2025-08-30 12:34:23,588 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.100.103:5000
+2025-08-30 12:34:23,588 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-08-30 12:35:21,543 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 12:35:21] "[32mGET / HTTP/1.1[0m" 302 -
+2025-08-30 12:35:21,560 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 12:35:21] "GET /login HTTP/1.1" 200 -
+2025-08-30 12:35:22,118 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 12:35:22] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-08-30 12:35:28,141 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 12:35:28] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-08-30 12:35:28,158 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 12:35:28] "GET /admin/dashboard HTTP/1.1" 200 -
+2025-08-30 12:36:27,080 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 12:36:27] "[32mGET / HTTP/1.1[0m" 302 -
+2025-08-30 12:36:27,088 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 12:36:27] "GET /login HTTP/1.1" 200 -
+2025-08-30 12:36:27,318 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 12:36:27] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-08-30 12:37:01,620 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.100.103:5000
+2025-08-30 12:37:01,620 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-08-30 12:37:05,663 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 12:37:05] "GET /login HTTP/1.1" 200 -
+2025-08-30 12:37:05,744 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 12:37:05] "[33mGET /static/images/ej_logo_blue.png HTTP/1.1[0m" 404 -
+2025-08-30 12:37:13,909 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 12:37:13] "POST /login HTTP/1.1" 200 -
+2025-08-30 12:37:13,956 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 12:37:13] "[33mGET /static/images/ej_logo_blue.png HTTP/1.1[0m" 404 -
+2025-08-30 12:37:21,249 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 12:37:21] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-08-30 12:37:21,289 - main - ERROR - Exception on /admin/dashboard [GET]
+Traceback (most recent call last):
+  File "C:\Users\klebe\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\klebe\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\klebe\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\klebe\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "D:\Manus\sistema_final_completo\src\src\main.py", line 23, in decorated_function
+    return f(*args, **kwargs)
+  File "D:\Manus\sistema_final_completo\src\src\main.py", line 194, in admin_dashboard
+    return render_template("admin_dashboard.html",
+                           total_alunos=total_alunos,
+    ...<5 lines>...
+                           requisicoes_academicas=requisicoes_academicas,
+                           requisicoes_extensao=requisicoes_extensao)
+  File "C:\Users\klebe\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "C:\Users\klebe\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\templating.py", line 131, in _render
+    rv = template.render(context)
+  File "C:\Users\klebe\AppData\Local\Programs\Python\Python313\Lib\site-packages\jinja2\environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\klebe\AppData\Local\Programs\Python\Python313\Lib\site-packages\jinja2\environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "D:\Manus\sistema_final_completo\src\src\templates\admin_dashboard.html", line 2, in top-level template code
+    {% set active_page = 'dashboard' %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Manus\sistema_final_completo\src\src\templates\base.html", line 99, in top-level template code
+    {% block content %}{% endblock %}
+    ^^^^^^^^^^^^^^^^^^^
+  File "D:\Manus\sistema_final_completo\src\src\templates\admin_dashboard.html", line 30, in block 'content'
+    <div class="item"><span class="value">{{ resumo.Pendente or 0 }}</span><span class="label">Pendente</span></div>
+    ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\klebe\AppData\Local\Programs\Python\Python313\Lib\site-packages\jinja2\environment.py", line 490, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'resumo' is undefined
+2025-08-30 12:37:21,327 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 12:37:21] "[35m[1mGET /admin/dashboard HTTP/1.1[0m" 500 -
+2025-08-30 18:02:03,999 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.100.103:5000
+2025-08-30 18:02:04,000 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-08-30 18:02:17,648 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 18:02:17] "GET /login HTTP/1.1" 200 -
+2025-08-30 18:02:30,677 - werkzeug - INFO - 127.0.0.1 - - [30/Aug/2025 18:02:30] "GET /login HTTP/1.1" 200 -

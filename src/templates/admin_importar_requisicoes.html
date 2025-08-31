@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block title %}Importar Requisições{% endblock %}
+{% block content %}
+<h1 class="main-title">Importar Requisições</h1>
+
+<form method="post" enctype="multipart/form-data" class="form-grid" style="max-width:700px;">
+  <label style="display:flex; align-items:center; gap:8px;">
+    <input type="checkbox" name="usar_arquivo_padrao" />
+    <span>Usar arquivo padrão na pasta de uploads</span>
+  </label>
+
+  <label>
+    <div class="help">Ou selecione um arquivo Excel (.xlsx) com a aba "Requisições"</div>
+    <input class="input" type="file" name="arquivo_excel" accept=".xlsx" />
+  </label>
+
+  <div style="display:flex; gap:8px;">
+    <button class="btn primary" type="submit"><i class="lucide" data-lucide="upload-cloud"></i>Importar</button>
+    <a class="btn" href="{{ url_for('admin_requisicoes') }}">Voltar</a>
+  </div>
+</form>
+{% endblock %}

@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block title %}Meu Painel{% endblock %}
+{% block content %}
+<h1 class="main-title">Meu Painel</h1>
+
+<div class="stat-grid">
+  <div class="stat-item">
+    <span class="value">{{ total_horas_academicas or 0 }}</span>
+    <span class="label"><i class="lucide" data-lucide="book-open"></i>Horas Acadêmicas</span>
+  </div>
+  <div class="stat-item">
+    <span class="value">{{ total_horas_extensao or 0 }}</span>
+    <span class="label"><i class="lucide" data-lucide="graduation-cap"></i>Horas de Extensão</span>
+  </div>
+  <div class="stat-item">
+    <span class="value">{{ requisicoes|length if requisicoes else 0 }}</span>
+    <span class="label"><i class="lucide" data-lucide="file-check-2"></i>Minhas Requisições</span>
+  </div>
+</div>
+
+<div class="content-block">
+  <div class="content-block-header">Requisições Recentes</div>
+  <table class="table">
+    <thead>
+      <tr><th>#</th><th>Atividade</th><th>Tipo</th><th>Data</th><th>Horas</th><th>Status</th></tr>
+    </thead>
+    <tbody>
+      {% for r in requisicoes %}
+        <tr>
+          <td>{{ r.id }}</td>
+          <td>{{ r.AtividadeNome }}</td>
+          <td>{{ r.tipo_atividade }}</td>
+          <td>{{ r.data_evento }}</td>
+          <td>{{ r.horas_deferidas if r.horas_deferidas is not none else r.horas_solicitadas }}</td>
+          <td>{{ r.status }}</td>
+        </tr>
+      {% else %}
+        <tr><td colspan="6">Você ainda não possui requisições.</td></tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endblock %}

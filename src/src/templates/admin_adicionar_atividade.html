@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% set active_page = 'atividades' %}
+{% block title %}Adicionar Atividade{% endblock %}
+{% block content %}
+<h1 class="main-title">Adicionar Atividade</h1>
+
+<form method="POST" class="grid-2">
+  <div class="content-block">
+    <div class="grid-1">
+      <div class="field">
+        <label>Tipo</label>
+        <select name="tipo_atividade" required>
+          <option value="Acadêmica Complementar">Acadêmica Complementar</option>
+          <option value="Extensão Universitária">Extensão Universitária</option>
+        </select>
+      </div>
+      <div class="field">
+        <label>Grupo</label>
+        <input type="text" name="grupo" required>
+      </div>
+      <div class="field">
+        <label>Nome</label>
+        <input type="text" name="nome" required>
+      </div>
+      <div class="field">
+        <label>Limite de Horas (opcional)</label>
+        <input type="number" step="0.5" min="0" name="limite_horas">
+      </div>
+      <div style="display:flex;gap:8px">
+        <button class="btn primary"><i class="lucide" data-lucide="save"></i>Salvar</button>
+        <a class="btn" href="{{ url_for('admin_atividades') }}">Cancelar</a>
+      </div>
+    </div>
+  </div>
+</form>
+{% endblock %}

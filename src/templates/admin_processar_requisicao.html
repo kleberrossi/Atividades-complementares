@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% block title %}Processar Requisição{% endblock %}
+{% block content %}
+<h1 class="main-title">Processar Requisição #{{ requisicao.id }}</h1>
+
+<div class="content-block" style="max-width:720px;">
+  <div class="help" style="margin-bottom:8px;">
+    Atividade: <strong>{{ requisicao.atividade_nome }}</strong> • Aluno: <strong>{{ requisicao.aluno_nome or '-' }}</strong>
+  </div>
+
+  {% if requisicao.tem_limitacao %}
+    <div class="flash" style="border-left-color:#ef4444;">
+      <strong>Atenção:</strong> Esta atividade tem limitação
+      ({{ requisicao.tipo_limitacao }}{% if requisicao.tipo_limitacao=='total' %}, limite = {{ requisicao.limite_horas_total }}h{% elif requisicao.tipo_limitacao=='semestral' %}, limite = {{ requisicao.limite_horas_semestral }}h/semestre{% endif %}).
+    </div>
+  {% endif %}
+
+  <form method="post" class="form-grid">
+    <label>
+      <div class="help">Status</div>
+      <select class="input" name="status" required>
+        {% for s in ['Deferida','Deferida Parcialmente','Indeferida'] %}
+          <option value="{{ s }}">{{ s }}</option>
+        {% endfor %}
+      </select>
+    </label>
+
+    <label>
+      <div class="help">Horas Deferidas (obrigatório se "Deferida Parcialmente")</div>
+      <input class="input" type="number" step="0.01" min="0" name="horas_deferidas" />
+    </label>
+
+    <label>
+      <div class="help">Observação</div>
+      <textarea class="input" name="observacao" rows="3" placeholder="Comentário opcional..."></textarea>
+    </label>
+
+    <div style="display:flex; gap:8px;">
+      <button class="btn primary" type="submit"><i class="lucide" data-lucide="save"></i>Salvar</button>
+      <a class="btn" href="{{ url_for('admin_requisicoes') }}">Cancelar</a>
+    </div>
+  </form>
+</div>
+{% endblock %}

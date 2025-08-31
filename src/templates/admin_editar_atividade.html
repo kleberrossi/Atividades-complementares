@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block title %}Editar Atividade{% endblock %}
+{% block content %}
+<h1 class="main-title">Editar Atividade</h1>
+
+<form method="post" class="form-grid form-2" style="max-width:900px;">
+  <label><div class="help">Grupo</div><input class="input" type="text" name="grupo" value="{{ atividade.grupo }}" required/></label>
+  <label><div class="help">Nome</div><input class="input" type="text" name="nome" value="{{ atividade.nome }}" required/></label>
+  <label><div class="help">Limite de horas (por grupo)</div><input class="input" type="number" name="limite_horas" value="{{ atividade.limite_horas }}"/></label>
+  <label>
+    <div class="help">Tipo</div>
+    <select class="input" name="tipo_atividade" required>
+      {% for opt in ['Acadêmica Complementar','Extensão Universitária'] %}
+        <option value="{{ opt }}" {% if atividade.tipo_atividade==opt %}selected{% endif %}>{{ opt }}</option>
+      {% endfor %}
+    </select>
+  </label>
+
+  <label style="grid-column:1/-1; display:flex; align-items:center; gap:10px;">
+    <input type="checkbox" name="tem_limitacao" {% if atividade.tem_limitacao %}checked{% endif %}/>
+    <span>Atividade com limitação</span>
+  </label>
+
+  <label>
+    <div class="help">Tipo de limitação</div>
+    <select class="input" name="tipo_limitacao">
+      <option value="" {% if not atividade.tipo_limitacao %}selected{% endif %}>—</option>
+      <option value="total" {% if atividade.tipo_limitacao=='total' %}selected{% endif %}>Total</option>
+      <option value="semestral" {% if atividade.tipo_limitacao=='semestral' %}selected{% endif %}>Semestral</option>
+    </select>
+  </label>
+
+  <label><div class="help">Limite Total (h)</div><input class="input" type="number" name="limite_horas_total" value="{{ atividade.limite_horas_total }}"/></label>
+  <label><div class="help">Limite Semestral (h)</div><input class="input" type="number" name="limite_horas_semestral" value="{{ atividade.limite_horas_semestral }}"/></label>
+
+  <div style="grid-column:1/-1; display:flex; gap:8px;">
+    <button class="btn primary" type="submit"><i class="lucide" data-lucide="save"></i>Salvar</button>
+    <a class="btn" href="{{ url_for('admin_atividades') }}">Cancelar</a>
+  </div>
+</form>
+{% endblock %}

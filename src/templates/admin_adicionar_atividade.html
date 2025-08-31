@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block title %}Nova Atividade{% endblock %}
+{% block content %}
+<h1 class="main-title">Adicionar Atividade</h1>
+
+<form method="post" class="form-grid form-2" style="max-width:900px;">
+  <label><div class="help">Grupo</div><input class="input" type="text" name="grupo" required/></label>
+  <label><div class="help">Nome</div><input class="input" type="text" name="nome" required/></label>
+  <label><div class="help">Limite de horas (por grupo)</div><input class="input" type="number" name="limite_horas" min="0"/></label>
+  <label>
+    <div class="help">Tipo</div>
+    <select class="input" name="tipo_atividade" required>
+      <option>Acadêmica Complementar</option>
+      <option>Extensão Universitária</option>
+    </select>
+  </label>
+
+  <label style="grid-column:1/-1; display:flex; align-items:center; gap:10px;">
+    <input type="checkbox" name="tem_limitacao"/>
+    <span>Atividade com limitação</span>
+  </label>
+
+  <label>
+    <div class="help">Tipo de limitação</div>
+    <select class="input" name="tipo_limitacao">
+      <option value="">—</option>
+      <option value="total">Total</option>
+      <option value="semestral">Semestral</option>
+    </select>
+  </label>
+
+  <label><div class="help">Limite Total (h)</div><input class="input" type="number" name="limite_horas_total" min="0"/></label>
+  <label><div class="help">Limite Semestral (h)</div><input class="input" type="number" name="limite_horas_semestral" min="0"/></label>
+
+  <div style="grid-column:1/-1; display:flex; gap:8px;">
+    <button class="btn primary" type="submit"><i class="lucide" data-lucide="save"></i>Salvar</button>
+    <a class="btn" href="{{ url_for('admin_atividades') }}">Cancelar</a>
+  </div>
+</form>
+{% endblock %}

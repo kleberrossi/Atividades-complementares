@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% set active_page = 'atividades' %}
+{% block title %}Atividades{% endblock %}
+{% block content %}
+<h1 class="main-title">Atividades</h1>
+
+<div style="display:flex;gap:8px;margin-bottom:16px;">
+  <a class="btn {% if tipo_atual=='Acadêmica Complementar' %}primary{% endif %}" href="{{ url_for('admin_atividades', tipo='Acadêmica Complementar') }}">Acadêmica Complementar</a>
+  <a class="btn {% if tipo_atual=='Extensão Universitária' %}primary{% endif %}" href="{{ url_for('admin_atividades', tipo='Extensão Universitária') }}">Extensão Universitária</a>
+  <a class="btn" href="{{ url_for('admin_adicionar_atividade') }}"><i class="lucide" data-lucide="plus-circle"></i>Nova Atividade</a>
+</div>
+
+<table class="table">
+  <thead>
+    <tr><th>ID</th><th>Grupo</th><th>Nome</th><th>Limite (h)</th><th>Ações</th></tr>
+  </thead>
+  <tbody>
+    {% for a in atividades %}
+      <tr>
+        <td>{{ a.id }}</td>
+        <td>{{ a.grupo }}</td>
+        <td>{{ a.nome }}</td>
+        <td>{{ a.limite_horas or '—' }}</td>
+        <td>
+          <a class="btn" href="{{ url_for('admin_editar_atividade', atividade_id=a.id) }}"><i class="lucide" data-lucide="pencil"></i>Editar</a>
+        </td>
+      </tr>
+    {% else %}
+      <tr><td colspan="5">Nenhuma atividade.</td></tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock %}

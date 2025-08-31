@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Login</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    :root{--bg:#f9fafb;--surface:#fff;--border:#e5e7eb;--text:#1f2937;--muted:#6b7280;--brand:#003366;--radius:8px}
+    *{box-sizing:border-box} body{margin:0;background:var(--bg);font-family:'Inter',sans-serif;color:var(--text)}
+    .wrap{min-height:100vh;display:grid;place-items:center;padding:24px}
+    .card{width:100%;max-width:380px;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:24px}
+    .brand{display:flex;align-items:center;gap:10px;margin-bottom:16px}
+    .brand img{height:28px}
+    h1{font-size:18px;margin:0 0 8px 0}
+    .muted{color:var(--muted);font-size:13px;margin-bottom:16px}
+    .field{display:flex;flex-direction:column;gap:6px;margin-bottom:12px}
+    .field label{font-size:12px;color:var(--muted)}
+    .field input{padding:10px 12px;border:1px solid var(--border);border-radius:6px;background:#fff}
+    .btn{width:100%;display:inline-flex;justify-content:center;align-items:center;gap:8px;padding:10px 14px;border:1px solid var(--border);border-radius:6px;background:var(--brand);color:#fff;font-weight:600}
+    .flash{margin:0 0 12px 0;border:1px solid var(--border);background:#fff;border-radius:6px;padding:10px 12px;color:var(--muted)}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <form class="card" method="POST">
+      <div class="brand">
+        <img src="{{ url_for('static', filename='images/ej_logo_blue.png') }}" alt="Logo">
+        <strong>Atividades Complementares</strong>
+      </div>
+      <h1>Entrar</h1>
+      <p class="muted">Use seu e-mail e senha para acessar o sistema.</p>
+
+      {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+          {% for category, message in messages %}
+            <div class="flash">{{ message }}</div>
+          {% endfor %}
+        {% endif %}
+      {% endwith %}
+
+      <div class="field"><label>E-mail</label><input type="email" name="email" required></div>
+      <div class="field"><label>Senha</label><input type="password" name="senha" required></div>
+      <button class="btn" type="submit"><i class="lucide" data-lucide="log-in"></i>Entrar</button>
+    </form>
+  </div>
+  <script>lucide.createIcons();</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block title %}Novo Aluno{% endblock %}
+{% block content %}
+<h1 class="main-title">Adicionar Aluno</h1>
+
+<form method="post" class="form-grid form-2" style="max-width:900px;">
+  <label><div class="help">Nome</div><input class="input" type="text" name="nome" required/></label>
+  <label><div class="help">E-mail</div><input class="input" type="email" name="email" required/></label>
+  <label><div class="help">Senha</div><input class="input" type="password" name="senha" required/></label>
+  <label><div class="help">Matrícula</div><input class="input" type="text" name="matricula" required/></label>
+  <label><div class="help">Turma</div><input class="input" type="text" name="turma"/></label>
+  <label>
+    <div class="help">Status</div>
+    <select class="input" name="status">
+      <option value="Ativo">Ativo</option>
+      <option value="Inativo">Inativo</option>
+    </select>
+  </label>
+
+  <div style="grid-column:1/-1; display:flex; gap:8px;">
+    <button class="btn primary" type="submit"><i class="lucide" data-lucide="save"></i>Salvar</button>
+    <a class="btn" href="{{ url_for('admin_alunos') }}">Cancelar</a>
+  </div>
+</form>
+{% endblock %}

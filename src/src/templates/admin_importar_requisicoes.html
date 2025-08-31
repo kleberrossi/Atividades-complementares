@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% set active_page = 'importar' %}
+{% block title %}Importar Requisições{% endblock %}
+{% block content %}
+<h1 class="main-title">Importar Requisições (Excel)</h1>
+
+<form method="POST" enctype="multipart/form-data" class="grid-2">
+  <div class="content-block">
+    <div class="grid-1">
+      <label style="display:flex;align-items:center;gap:8px;">
+        <input type="checkbox" name="usar_arquivo_padrao"> Usar arquivo padrão na pasta de uploads
+      </label>
+      <div class="field">
+        <label>Ou selecione um arquivo (.xlsx)</label>
+        <input type="file" name="arquivo_excel" accept=".xlsx">
+      </div>
+      <button class="btn primary"><i class="lucide" data-lucide="upload"></i>Importar</button>
+      <a class="btn" href="{{ url_for('admin_requisicoes') }}">Voltar</a>
+    </div>
+  </div>
+</form>
+{% endblock %}

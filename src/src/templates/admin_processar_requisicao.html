@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% set active_page = 'requisicoes' %}
+{% block title %}Processar Requisição{% endblock %}
+{% block content %}
+<h1 class="main-title">Processar Requisição #{{ requisicao.id }}</h1>
+
+<form method="POST" class="grid-2">
+  <div class="content-block">
+    <div class="content-block-header">Decisão</div>
+    <div class="grid-1">
+      <div class="field">
+        <label for="status">Status</label>
+        <select id="status" name="status" required>
+          <option value="Deferida">Deferida</option>
+          <option value="Deferida Parcialmente">Deferida Parcialmente</option>
+          <option value="Indeferida">Indeferida</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="horas_deferidas">Horas deferidas</label>
+        <input type="number" step="0.5" min="0" id="horas_deferidas" name="horas_deferidas" value="{{ requisicao.horas_solicitadas or '' }}">
+      </div>
+      <div class="field">
+        <label for="observacao">Observação</label>
+        <textarea id="observacao" name="observacao" rows="4">{{ requisicao.observacao or '' }}</textarea>
+      </div>
+      <div style="display:flex;gap:8px;">
+        <button class="btn primary" type="submit"><i class="lucide" data-lucide="save"></i>Salvar</button>
+        <a class="btn" href="{{ url_for('admin_requisicoes') }}"><i class="lucide" data-lucide="x"></i>Cancelar</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="content-block">
+    <div class="content-block-header">Resumo</div>
+    <div class="grid-1">
+      <div><strong>Aluno:</strong> {{ requisicao.AlunoNome }} ({{ requisicao.AlunoMatricula }})</div>
+      <div><strong>Atividade:</strong> {{ requisicao.AtividadeNome }} • {{ requisicao.tipo_atividade }}</div>
+      <div><strong>Evento:</strong> {{ requisicao.data_evento }}</div>
+      <div><strong>Horas solicitadas:</strong> {{ requisicao.horas_solicitadas }}</div>
+      <div><strong>Status atual:</strong> {{ requisicao.status }}</div>
+    </div>
+  </div>
+</form>
+{% endblock %}

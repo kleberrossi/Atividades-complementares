@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block title %}Detalhes da Requisição{% endblock %}
+{% block content %}
+<h1 class="main-title">Detalhes da Requisição #{{ requisicao.id }}</h1>
+
+<div class="content-block" style="max-width:900px;">
+  <div class="form-grid">
+    <div><span class="help">Aluno</span><div>{{ requisicao.AlunoNome or '-' }} ({{ requisicao.AlunoMatricula or '-' }})</div></div>
+    <div><span class="help">Atividade</span><div>{{ requisicao.AtividadeNome }}</div></div>
+    <div><span class="help">Data do Evento</span><div>{{ requisicao.data_evento }}</div></div>
+    <div><span class="help">Horas Solicitadas</span><div>{{ requisicao.horas_solicitadas }}</div></div>
+    <div><span class="help">Status</span><div>{{ requisicao.status }}</div></div>
+    <div><span class="help">Horas Deferidas</span><div>{{ requisicao.horas_deferidas or '-' }}</div></div>
+    <div><span class="help">Observação</span><div>{{ requisicao.observacao or '-' }}</div></div>
+    {% if requisicao.arquivo_comprovante %}
+      <div><span class="help">Comprovante</span><div><a class="btn" href="{{ url_for('uploaded_file', filename=requisicao.arquivo_comprovante) }}" target="_blank">Abrir</a></div></div>
+    {% endif %}
+    {% if requisicao.AdminNome %}
+      <div><span class="help">Processado por</span><div>{{ requisicao.AdminNome }}</div></div>
+    {% endif %}
+  </div>
+</div>
+{% endblock %}
